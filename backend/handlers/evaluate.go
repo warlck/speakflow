@@ -36,12 +36,8 @@ func EvaluateHandler(c *gin.Context) {
 
 	apiKey := os.Getenv("GEMINI_API_KEY")
 	if apiKey == "" {
-		// Attempting to get key from headers instead
-		apiKey = c.GetHeader("X-API-Key")
-		if apiKey == "" {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "API key not configured"})
-			return
-		}
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "API key not configured"})
+		return
 	}
 
 	ctx := context.Background()
