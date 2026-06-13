@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpeakFlow — AI Public Speaking Coach</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar Navigation -->
+    <aside>
+      <div class="logo-container">
+        <div class="logo-icon">S</div>
+        <div class="logo-text">SpeakFlow</div>
+      </div>
+      <ul class="nav-links">
+        <li class="nav-item active" data-view="dashboard"><a href="#dashboard"><span class="nav-icon">📊</span> Dashboard</a></li>
+        <li class="nav-item" data-view="practice"><a href="#practice"><span class="nav-icon">🎤</span> Free Practice</a></li>
+        <li class="nav-item" data-view="exercises"><a href="#exercises"><span class="nav-icon">🧩</span> Exercises</a></li>
+        <li class="nav-item" data-view="settings"><a href="#settings"><span class="nav-icon">⚙️</span> Settings</a></li>
+      </ul>
+      <div class="user-status">
+        <span id="api-status-badge" class="api-badge missing">Key Missing</span>
+      </div>
+    </aside>
+
+    <!-- Main Views Workspace -->
+    <main>
+      <!-- View: Dashboard -->
+      <section id="dashboard" class="view-section active">
+        <div class="card-glass">
+          <h2>Welcome to SpeakFlow</h2>
+          <p style="color: var(--text-secondary); margin-top: 0.5rem;">Track your fluency, improve your word-recall speed, and conquer tip-of-the-tongue moments.</p>
+        </div>
+
+        <div class="dashboard-grid">
+          <div>
+            <div class="card-glass">
+              <h3>Overall Diagnostics</h3>
+              <div class="metrics-row" style="margin-top: 1.5rem;">
+                <div class="metric-box">
+                  <div class="metric-label">Fluency Score</div>
+                  <div id="metric-avg-fluency" class="metric-value">0%</div>
+                </div>
+                <div class="metric-box">
+                  <div class="metric-label">Word Recall Index</div>
+                  <div id="metric-avg-recall" class="metric-value">0%</div>
+                </div>
+                <div class="metric-box">
+                  <div class="metric-label">Avg Pace (WPM)</div>
+                  <div id="metric-avg-wpm" class="metric-value">0</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-glass">
+              <h3>Practice History</h3>
+              <div id="history-container" class="history-list" style="margin-top: 1rem;">
+                <p style="color: var(--text-muted); text-align: center; padding: 2rem 0;">No sessions recorded yet. Start a Practice session or Exercise!</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card-glass">
+              <h3>Word-Recall Streak</h3>
+              <div style="font-size: 3rem; text-align: center; margin: 1rem 0;">🔥</div>
+              <h4 style="text-align: center; margin-bottom: 0.5rem;">Streak Active</h4>
+              <p style="color: var(--text-secondary); text-align: center; font-size: 0.9rem;">Practice daily to build rapid lexical neural pathways.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- View: Free Practice -->
+      <section id="practice" class="view-section">
+        <div class="card-glass">
+          <h2>Free Practice Session</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Speak freely about any topic. SpeakFlow will analyze fillers, gaps, and produce an AI Coaching report.</p>
+
+          <div class="recording-workspace">
+            <div class="metrics-row">
+              <div class="metric-box">
+                <div class="metric-label">Live WPM</div>
+                <div id="live-wpm" class="metric-value">0</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">Fillers Count</div>
+                <div id="live-fillers" class="metric-value">0</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">Long Pauses</div>
+                <div id="live-pauses" class="metric-value">0</div>
+              </div>
+            </div>
+
+            <div class="visualizer-container">
+              <canvas id="visualizer"></canvas>
+            </div>
+
+            <div id="transcript-box" class="transcript-display">
+              <span class="interim-transcript">Your speech transcript will show up here as you talk...</span>
+            </div>
+
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+              <button id="btn-start-practice" class="btn btn-primary">⏺️ Start Recording</button>
+              <button id="btn-stop-practice" class="btn btn-danger" disabled>⏹️ Stop & Analyze</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- View: Guided Exercises -->
+      <section id="exercises" class="view-section">
+        <div class="card-glass">
+          <h2>Guided Exercises</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Drills targeting active recall and circumlocution strategy building.</p>
+          <div id="exercise-list-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <!-- Exercise cards dynamically rendered here -->
+          </div>
+        </div>
+
+        <!-- Exercise Active Screen (hidden by default) -->
+        <div id="exercise-active-container" class="card-glass" style="display: none;">
+          <h3 id="active-ex-title">Exercise</h3>
+          <p id="active-ex-desc" style="color: var(--text-secondary); margin-bottom: 1rem;"></p>
+
+          <div style="background: rgba(0,0,0,0.2); border-radius: var(--radius-md); padding: 2rem; margin-bottom: 1.5rem; text-align: center;">
+            <h2 id="active-ex-prompt" style="font-size: 2rem; margin-bottom: 1rem;">Prompt...</h2>
+            <div id="active-ex-timer" style="font-size: 1.5rem; font-weight: 700; color: var(--accent-pink);">00:00</div>
+          </div>
+
+          <div id="ex-transcript-box" class="transcript-display" style="height: 150px; margin-bottom: 1.5rem;">
+            <span class="interim-transcript">Transcript will display here...</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <button id="btn-ex-next" class="btn btn-secondary">Next Clue ➡️</button>
+            <button id="btn-ex-stop" class="btn btn-danger">Stop Exercise</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- View: Settings -->
+      <section id="settings" class="view-section">
+        <div class="card-glass">
+          <h2>Settings</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Manage your Gemini API tokens and configurations. Data remains secure locally inside your browser.</p>
+
+          <div class="form-group">
+            <label for="gemini-key">Gemini API Key</label>
+            <input type="password" id="gemini-key" class="form-control" placeholder="Enter AIzaSy... API key">
+          </div>
+
+          <button id="btn-save-settings" class="btn btn-primary">Save Settings</button>
+        </div>
+      </section>
+
+      <!-- View: Feedback Coaching Report -->
+      <section id="feedback" class="view-section">
+        <div class="card-glass">
+          <h2>AI coaching Report</h2>
+          <div id="feedback-report-loading" style="text-align: center; padding: 3rem 0;">
+            <div style="font-size: 3rem; animation: spin 1.5s linear infinite; display: inline-block;">🌀</div>
+            <h3 style="margin-top: 1rem;">Analyzing speech patterns...</h3>
+          </div>
+
+          <div id="feedback-report-content" style="display: none;">
+            <div class="dashboard-grid">
+              <div>
+                <div class="card-glass" style="background: rgba(255,255,255,0.02);">
+                  <h4>Overall Assessment</h4>
+                  <p id="rep-assessment" style="color: var(--text-secondary); margin-top: 0.5rem;"></p>
+                </div>
+
+                <div class="card-glass" style="background: rgba(255,255,255,0.02);">
+                  <h4>Word Recall Insights</h4>
+                  <p id="rep-tot-insights" style="color: var(--text-secondary); margin-top: 0.5rem;"></p>
+                </div>
+
+                <div id="history-player-wrapper">
+                  <!-- Custom audio player appended here if recording available -->
+                </div>
+              </div>
+
+              <div>
+                <div class="card-glass" style="background: rgba(255,255,255,0.02);">
+                  <h4 style="color: var(--accent-green);">Strengths</h4>
+                  <ul id="rep-strengths" style="margin-top: 0.5rem; padding-left: 1.2rem; color: var(--text-secondary);"></ul>
+                </div>
+                <div class="card-glass" style="background: rgba(255,255,255,0.02);">
+                  <h4 style="color: var(--accent-pink);">Suggested Improvements</h4>
+                  <ul id="rep-improvements" style="margin-top: 0.5rem; padding-left: 1.2rem; color: var(--text-secondary);"></ul>
+                </div>
+              </div>
+            </div>
+
+            <button id="btn-back-dashboard" class="btn btn-secondary">Back to Dashboard</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
