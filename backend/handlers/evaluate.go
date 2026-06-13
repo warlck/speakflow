@@ -53,7 +53,7 @@ func EvaluateHandler(c *gin.Context) {
 	}
 	defer client.Close()
 
-	model := client.GenerativeModel("gemini-1.5-pro-latest")
+	model := client.GenerativeModel("gemini-3.1-pro")
 	model.SystemInstruction = &genai.Content{
 		Parts: []genai.Part{
 			genai.Text("You are an Elite Executive Communications Coach. Evaluate the following transcript for:\n1. Executive Presence: Decisiveness, lack of fluff.\n2. Brevity & Conviction: Penalty for hedging words.\n3. Structural Elegance: Did they follow the outline? Did they use the Rule of Three?\nRespond strictly in JSON format with keys: overallAssessment (string), strengths (array of strings), improvements (array of strings), and executiveScore (integer 0-100). Do NOT wrap in markdown backticks."),
