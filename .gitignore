@@ -2,3 +2,8 @@ node_modules/
 dist/
 .DS_Store
 *.local
+
+# Local SQLite database (generated at runtime; lessons come from data/lessons_seed.json)
+backend/data/*.db
+backend/data/*.db-shm
+backend/data/*.db-wal
