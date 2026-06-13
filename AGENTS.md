@@ -21,11 +21,11 @@ Welcome! This document defines the standard operating procedures, guidelines, an
 ## 2. Commit Sizing and Frequency (Small Commits Only)
 - **NO HUGE COMMITS:** We do NOT allow large, monolithic commits. They are impossible to review.
 - **Commit Granularity:** Make small, logical, atomic commits. A single commit should cover one specific, self-contained change (e.g., adding a single test, implementing a helper function, updating a config file).
-- **Conventional Commits:** Write clean, descriptive commit messages following the Conventional Commits specification:
-  - `feat(component): add speech rate analyzer`
-  - `test(analyzer): add tests for speech rate threshold`
-  - `fix(audio): handle permission denial grace period`
-  - `docs(agents): add agents instruction file`
+- **Conventional Commits:** Write clean, descriptive commit messages following the Conventional Commits specification. Use appropriate scopes to distinguish frontend and backend changes:
+  - `feat(frontend): add speech rate analyzer React component`
+  - `feat(backend): add audio processing Go endpoint`
+  - `test(backend): add tests for speech rate calculation in Go`
+  - `fix(frontend): handle audio permission denial in React UI`
 - **Frequency:** Commit frequently. Once a test is written and failing: commit. Once the test passes: commit.
 
 ---
@@ -38,21 +38,19 @@ All code changes must be self-verifiable. Agents must write tests *before* writi
 - **Refactoring Phase:** Clean up the implementation while keeping tests green.
 
 ### Recommended Test Stack
-- Since this is a Vite-based project, the recommended testing framework is **Vitest**.
-- If tests are not configured in `package.json`, the agent's first task when implementing a feature should be to set up the testing framework and script (`npm run test` or `npm run test:unit`) using Vitest.
+- **Frontend (React):** The recommended testing framework is **Vitest** (for Vite-based setups) or **Jest**. If tests are not configured in `package.json`, the first task should be to set up Vitest.
+- **Backend (Go):** Use the standard library `testing` package (along with testify/assert if needed). Set up tests using standard Go patterns.
 
 ---
 
 ## 4. Testing & Regression Prevention
-- **Run All Tests:** Before submitting any change or finalizing work, execute the full test suite (both unit and integration tests) to verify that existing functionality is not broken:
-  ```bash
-  npm run test
-  ```
+- **Run All Tests:** Before submitting any change or finalizing work, execute the full test suites for both frontend and backend to verify that existing functionality is not broken:
+  - **Frontend tests:** `npm run test` or equivalent.
+  - **Backend tests:** `go test ./...`
 - **Zero Failures:** Code must not be proposed if there is a single failing test.
-- **Validation:** Check the application build locally to ensure it builds correctly:
-  ```bash
-  npm run build
-  ```
+- **Validation:** Check the application builds locally to ensure correctness:
+  - **Frontend build:** `npm run build`
+  - **Backend build:** `go build ./...`
 
 ---
 
@@ -62,7 +60,7 @@ All changes must be thoroughly documented, and progress must be tracked in real-
 - **Track Progress:** Document the step-by-step progress of your work in the exact same design/implementation document. Mark completed tasks, in-progress tasks, and blockers explicitly.
 - **Structure of Design/Implementation Document:**
   - **Goal / Problem Statement**
-  - **Proposed Changes & Architecture**
+  - **Proposed Changes & Architecture** (demarcate frontend React changes vs. backend Go changes)
   - **Verification Plan (Automated and Manual)**
   - **Task List / Progress Tracker** (e.g., checkboxes `- [x]` for completed and `- [ ]` for pending tasks).
 
@@ -72,5 +70,7 @@ All changes must be thoroughly documented, and progress must be tracked in real-
 - **Maintain Comments:** Preserve existing comments and docstrings unless they are directly contradicted by your new implementation. Do not delete explanatory context.
 - **SEO & Accessibility:**
   - Follow proper semantic HTML structures (one `<h1>` per page, interactive elements have unique and descriptive `id` attributes).
-  - Use modern styling, avoiding raw placeholders. If images/assets are needed, generate them or use proper placeholder assets.
-- **Local Dev Server:** Run `npm run dev` to test changes locally and inspect using the browser.
+  - Use modern styling, avoiding raw placeholders.
+- **Local Dev Servers:**
+  - **Frontend:** Run `npm run dev` to start the React development server.
+  - **Backend:** Run the Go server using `go run main.go` or the repository's specified run script.
