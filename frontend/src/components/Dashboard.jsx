@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSpeechRecognition } from '../hooks/useSpeechRecognition';
 import { useSpeechAnalyzer } from '../hooks/useSpeechAnalyzer';
 import { useAppContext } from '../context/AppContext';
-import { Mic, Square, Layout, Presentation, Play } from 'lucide-react';
+import { Mic, Square, Layout, Presentation, Play, BookOpen } from 'lucide-react';
 import glassStyles from '../styles/glass.module.css';
 
 const Dashboard = ({ setCurrentView }) => {
@@ -78,6 +78,9 @@ const Dashboard = ({ setCurrentView }) => {
           <Presentation /> SpeakFlow Executive
         </h1>
         <div style={{ display: 'flex', gap: '1rem' }}>
+          <button className={glassStyles.button} onClick={() => setCurrentView('learn')}>
+            <BookOpen size={18} style={{ marginRight: '0.5rem' }} /> Learn
+          </button>
           <button className={glassStyles.button} onClick={() => setCurrentView('outliner')}>
             <Layout size={18} style={{ marginRight: '0.5rem' }} /> Outliner
           </button>
