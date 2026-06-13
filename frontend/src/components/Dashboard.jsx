@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { useSpeechRecognition } from '../hooks/useSpeechRecognition';
 import { useSpeechAnalyzer } from '../hooks/useSpeechAnalyzer';
 import { useAppContext } from '../context/AppContext';
-import { Mic, Square, Settings, Layout, Presentation, Play } from 'lucide-react';
+import { Mic, Square, Layout, Presentation, Play } from 'lucide-react';
 import glassStyles from '../styles/glass.module.css';
 
 const Dashboard = ({ setCurrentView }) => {
   const { isListening, transcript, startListening, stopListening, error, setTranscript } = useSpeechRecognition();
   const { analyzeTranscript, hedgingCount, wpm } = useSpeechAnalyzer();
-  const { apiKey, activeOutline } = useAppContext();
+  const { activeOutline } = useAppContext();
 
   const [startTime, setStartTime] = useState(null);
   const [duration, setDuration] = useState(0);
@@ -50,8 +50,7 @@ const Dashboard = ({ setCurrentView }) => {
       const response = await fetch(`${apiUrl}/api/evaluate`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'X-API-Key': apiKey
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(payload)
       });
@@ -85,17 +84,8 @@ const Dashboard = ({ setCurrentView }) => {
           <button className={glassStyles.button} onClick={() => setCurrentView('drills')}>
             <Play size={18} style={{ marginRight: '0.5rem' }} /> Drills
           </button>
-          <button className={glassStyles.button} onClick={() => setCurrentView('settings')}>
-            <Settings size={18} style={{ marginRight: '0.5rem' }} /> Settings
-          </button>
         </div>
       </header>
-
-      {!apiKey && (
-        <div className={glassStyles.container} style={{ marginBottom: '2rem', backgroundColor: 'rgba(255, 100, 100, 0.2)' }}>
-          <p>Please configure your Gemini API Key in Settings to enable AI evaluation.</p>
-        </div>
-      )}
 
       {error && (
         <div className={glassStyles.container} style={{ marginBottom: '2rem', backgroundColor: 'rgba(255, 100, 100, 0.2)' }}>
