@@ -52,14 +52,15 @@ const Outliner = ({ setCurrentView }) => {
               <div
                 key={template.id}
                 onClick={() => handleSelectTemplate(template)}
-                style={{
-                  padding: '1rem',
-                  borderRadius: '8px',
-                  background: selectedTemplateId === template.id ? 'rgba(78, 205, 196, 0.2)' : 'rgba(255, 255, 255, 0.05)',
-                  border: `1px solid ${selectedTemplateId === template.id ? '#4ecdc4' : 'rgba(255,255,255,0.1)'}`,
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease'
-                }}
+                  style={{
+                    padding: '1rem',
+                    borderRadius: '8px',
+                    background: selectedTemplateId === template.id ? 'rgba(45, 212, 191, 0.05)' : 'rgba(255, 255, 255, 0.02)',
+                    border: `1px solid ${selectedTemplateId === template.id ? 'var(--accent-teal-light)' : 'var(--glass-border)'}`,
+                    boxShadow: selectedTemplateId === template.id ? '0 0 10px var(--accent-teal-glow)' : 'none',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease'
+                  }}
               >
                 <h3 style={{ marginBottom: '0.5rem' }}>{template.title}</h3>
                 <p style={{ opacity: 0.7, fontSize: '0.9rem' }}>{template.segments.length} segments • ~{template.segments.reduce((acc, s) => acc + s.durationMinutes, 0)} mins</p>
@@ -79,7 +80,7 @@ const Outliner = ({ setCurrentView }) => {
                 <button
                   className={glassStyles.button}
                   onClick={() => setCurrentView('dashboard')}
-                  style={{ background: '#4ecdc4', color: '#1a1a2e', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+                  style={{ background: 'var(--accent-teal-light)', color: 'var(--bg-primary)', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
                 >
                   <Play size={16} /> Start Practice
                 </button>
@@ -87,7 +88,7 @@ const Outliner = ({ setCurrentView }) => {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {activeOutline.segments.map((segment, index) => (
-                  <div key={index} style={{ background: 'rgba(0,0,0,0.2)', padding: '1rem', borderRadius: '8px', borderLeft: '4px solid #4ecdc4' }}>
+                  <div key={index} style={{ background: 'rgba(0, 0, 0, 0.15)', border: '1px solid var(--glass-border)', borderLeft: '4px solid var(--accent-teal-light)', padding: '1rem', borderRadius: '8px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                       <h4 style={{ margin: 0 }}>Step {index + 1}: {segment.title}</h4>
                       <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', opacity: 0.7, fontSize: '0.9rem' }}>
