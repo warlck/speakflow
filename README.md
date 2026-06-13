@@ -18,6 +18,40 @@ SpeakFlow is a decoupled web application designed to help you practice public sp
 
 ---
 
+## Quick Start (via Makefile)
+Exposes simple commands to setup, build, test, and run the frontend and backend concurrently.
+
+1. **Setup dependencies:**
+   ```bash
+   make setup
+   ```
+
+2. **Configure Gemini API Key:**
+   Configure your key as an environment variable in your terminal:
+   ```bash
+   export GEMINI_API_KEY="your-gemini-api-key"
+   ```
+
+3. **Run the full application:**
+   ```bash
+   make run
+   ```
+   This command starts both the Go API (`http://localhost:8080`) and Vite web application (`http://localhost:5173`) concurrently.
+
+4. **Run both test suites:**
+   ```bash
+   make test
+   ```
+
+5. **Build for production:**
+   ```bash
+   make build
+   ```
+
+For help and other commands, run `make help`.
+
+---
+
 ## Backend Setup & Run
 
 1. Navigate to the backend directory:
