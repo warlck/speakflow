@@ -1,29 +1,37 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Play, Square, CheckCircle } from 'lucide-react';
 import glassStyles from '../styles/glass.module.css';
+import { useAppContext } from '../context/AppContext';
 
 const DRILLS = [
   {
     id: 'bluf',
     title: 'BLUF (Bottom Line Up Front)',
     scenario: 'Explain why we missed Q3 targets. Start with the core conclusion.',
-    durationSecs: 30
+    durationSecs: 30,
+    explanation: 'Bottom Line Up Front keeps executives engaged by presenting recommendations first.',
+    lessonId: 'lesson-bluf-core'
   },
   {
     id: 'dehedging',
     title: 'De-Hedging',
     scenario: 'Restate this with high conviction: "I think we might want to consider pivoting our strategy sort of soon..."',
-    durationSecs: 20
+    durationSecs: 20,
+    explanation: 'Hedging language weakens your authority. Speak directly and confidently.',
+    lessonId: 'lesson-dehedging-core'
   },
   {
     id: 'rule3',
     title: 'Rule of Three',
     scenario: 'Describe the core trait "Resilience" using three parallel, punchy phrases.',
-    durationSecs: 45
+    durationSecs: 45,
+    explanation: 'Triads are highly memorable. Structure ideas in groups of three.',
+    lessonId: 'lesson-rule-of-three'
   }
 ];
 
 const Drills = ({ setCurrentView }) => {
+  const { setActiveLessonId } = useAppContext();
   const [activeDrill, setActiveDrill] = useState(null);
   const [timeLeft, setTimeLeft] = useState(0);
   const [isActive, setIsActive] = useState(false);
@@ -77,17 +85,32 @@ const Drills = ({ setCurrentView }) => {
                 }}
               >
                 <h3 style={{ marginBottom: '0.5rem' }}>{drill.title}</h3>
-                <p style={{ opacity: 0.8, marginBottom: '1rem', fontSize: '0.9rem' }}>{drill.scenario}</p>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ opacity: 0.6, fontSize: '0.9rem' }}>{drill.durationSecs} seconds</span>
-                  <button
-                    className={glassStyles.button}
-                    onClick={() => startDrill(drill)}
-                    disabled={isActive && activeDrill?.id !== drill.id}
-                    style={{ background: 'rgba(255,255,255,0.1)' }}
-                  >
-                    Start Drill
-                  </button>
+                <p style={{ opacity: 0.8, marginBottom: '0.5rem', fontSize: '0.9rem' }}>{drill.scenario}</p>
+                <p style={{ opacity: 0.6, fontSize: '0.8rem', fontStyle: 'italic', marginBottom: '1rem' }}>
+                  <strong>Why it matters:</strong> {drill.explanation}
+                </p>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <span style={{ opacity: 0.6, fontSize: '0.85rem' }}>{drill.durationSecs} seconds</span>
+                  <div style={{ display: 'flex', gap: '0.5rem' }}>
+                    <button
+                      className={glassStyles.button}
+                      onClick={() => {
+                        setActiveLessonId(drill.lessonId);
+                        setCurrentView('lesson');
+                      }}
+                      style={{ padding: '6px 12px', fontSize: '0.8rem' }}
+                    >
+                      Learn the concept
+                    </button>
+                    <button
+                      className={glassStyles.button}
+                      onClick={() => startDrill(drill)}
+                      disabled={isActive && activeDrill?.id !== drill.id}
+                      style={{ background: 'rgba(255,255,255,0.1)', padding: '6px 12px', fontSize: '0.8rem' }}
+                    >
+                      Start Drill
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}

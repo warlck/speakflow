@@ -7,6 +7,7 @@ const TEMPLATES = [
   {
     id: 'vision',
     title: 'Vision-Strategy-Execution',
+    lessonId: 'lesson-rule-of-three',
     segments: [
       { title: 'The Vision (Where we are going)', durationMinutes: 2 },
       { title: 'The Strategy (How we will get there)', durationMinutes: 3 },
@@ -16,6 +17,7 @@ const TEMPLATES = [
   {
     id: 'psb',
     title: 'Problem-Solution-Benefit',
+    lessonId: 'lesson-problem-solution-benefit',
     segments: [
       { title: 'The Problem (The pain point)', durationMinutes: 1 },
       { title: 'The Solution (Our approach)', durationMinutes: 2 },
@@ -25,7 +27,7 @@ const TEMPLATES = [
 ];
 
 const Outliner = ({ setCurrentView }) => {
-  const { activeOutline, setActiveOutline } = useAppContext();
+  const { activeOutline, setActiveOutline, setActiveLessonId } = useAppContext();
   const [selectedTemplateId, setSelectedTemplateId] = useState(activeOutline ? activeOutline.id : null);
 
   const handleSelectTemplate = (template) => {
@@ -63,7 +65,18 @@ const Outliner = ({ setCurrentView }) => {
                   }}
               >
                 <h3 style={{ marginBottom: '0.5rem' }}>{template.title}</h3>
-                <p style={{ opacity: 0.7, fontSize: '0.9rem' }}>{template.segments.length} segments • ~{template.segments.reduce((acc, s) => acc + s.durationMinutes, 0)} mins</p>
+                <p style={{ opacity: 0.7, fontSize: '0.9rem', marginBottom: '0.5rem' }}>{template.segments.length} segments • ~{template.segments.reduce((acc, s) => acc + s.durationMinutes, 0)} mins</p>
+                <button
+                  className={glassStyles.button}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setActiveLessonId(template.lessonId);
+                    setCurrentView('lesson');
+                  }}
+                  style={{ padding: '4px 8px', fontSize: '0.75rem', marginTop: '0.25rem', width: '100%', display: 'block' }}
+                >
+                  Learn about this structure
+                </button>
               </div>
             ))}
           </div>

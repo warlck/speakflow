@@ -8,7 +8,7 @@ import glassStyles from '../styles/glass.module.css';
 const Dashboard = ({ setCurrentView }) => {
   const { isListening, transcript, startListening, stopListening, error, setTranscript } = useSpeechRecognition();
   const { analyzeTranscript, hedgingCount, wpm } = useSpeechAnalyzer();
-  const { activeOutline } = useAppContext();
+  const { activeOutline, setActiveLessonId } = useAppContext();
 
   const [startTime, setStartTime] = useState(null);
   const [duration, setDuration] = useState(0);
@@ -162,6 +162,24 @@ const Dashboard = ({ setCurrentView }) => {
                 <h4 style={{ marginBottom: '0.5rem' }}>Overall Assessment</h4>
                 <p style={{ opacity: 0.9 }}>{report.overallAssessment}</p>
               </div>
+              {hedgingCount > 2 && (
+                <div style={{ background: 'rgba(251, 113, 133, 0.05)', border: '1px solid rgba(251, 113, 133, 0.2)', padding: '1.25rem', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+                  <div>
+                    <h4 style={{ color: 'var(--accent-coral-light)', margin: 0 }}>Recommended Practice: Speak with Conviction</h4>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', margin: '0.25rem 0 0 0' }}>We detected {hedgingCount} hedging words in your speech. Take our lesson on de-hedging to improve conviction.</p>
+                  </div>
+                  <button
+                    className={glassStyles.button}
+                    onClick={() => {
+                      setActiveLessonId('lesson-dehedging-core');
+                      setCurrentView('lesson');
+                    }}
+                    style={{ background: 'var(--accent-coral-light)', color: 'var(--bg-primary)', fontWeight: 'bold', border: 'none' }}
+                  >
+                    Start Lesson
+                  </button>
+                </div>
+              )}
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div style={{ background: 'rgba(45, 212, 191, 0.02)', border: '1px solid rgba(45, 212, 191, 0.1)', padding: '1rem', borderRadius: '8px' }}>
                   <h4 style={{ color: 'var(--accent-teal-light)', marginBottom: '0.5rem' }}>Strengths</h4>
