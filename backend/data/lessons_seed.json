@@ -1,0 +1,181 @@
+{
+  "modules": [
+    {
+      "id": "mod-lead-with-impact",
+      "title": "Lead with Impact",
+      "description": "Open executive updates with decisive conclusions.",
+      "position": 1
+    },
+    {
+      "id": "mod-speak-with-conviction",
+      "title": "Speak with Conviction",
+      "description": "Remove hedging and communicate with authority.",
+      "position": 2
+    },
+    {
+      "id": "mod-structure-and-rhetoric",
+      "title": "Structure & Rhetoric",
+      "description": "Use clear structure and memorable rhetorical patterns.",
+      "position": 3
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-bluf-core",
+      "moduleId": "mod-lead-with-impact",
+      "title": "BLUF Core",
+      "summary": "Lead with your recommendation before context.",
+      "estimatedMinutes": 10,
+      "body": {
+        "blocks": [
+          {
+            "heading": "Why BLUF works",
+            "text": "Leaders need decision-ready information quickly; BLUF reduces processing time."
+          },
+          {
+            "heading": "Simple BLUF template",
+            "text": "Recommendation -> reason -> required action."
+          }
+        ],
+        "examples": [
+          {
+            "before": "I wanted to share a few things we learned over the last month...",
+            "after": "We should shift 20% of budget to retention because churn rose 8%, and I need approval today.",
+            "note": "Conclusion first, then evidence, then ask."
+          }
+        ],
+        "takeaways": [
+          "State the decision in your first sentence.",
+          "Keep context after the recommendation.",
+          "Always end with a concrete ask."
+        ]
+      },
+      "relatedDrill": "bluf",
+      "practicePrompt": "Deliver a 30-second status update using BLUF.",
+      "position": 1
+    },
+    {
+      "id": "lesson-dehedging-core",
+      "moduleId": "mod-speak-with-conviction",
+      "title": "De-Hedging Core",
+      "summary": "Replace uncertain qualifiers with accountable language.",
+      "estimatedMinutes": 12,
+      "body": {
+        "blocks": [
+          {
+            "heading": "What hedging signals",
+            "text": "Phrases like \"I think\" or \"maybe\" can read as uncertainty when clarity is required."
+          },
+          {
+            "heading": "How to de-hedge",
+            "text": "Name the decision, the owner, and the timeline directly."
+          }
+        ],
+        "examples": [
+          {
+            "before": "I think we might want to consider delaying launch.",
+            "after": "We should delay launch by one week to fix checkout stability issues.",
+            "note": "Specific recommendation with rationale."
+          }
+        ],
+        "takeaways": [
+          "Avoid stacking multiple qualifiers in one sentence.",
+          "Use active voice with clear ownership.",
+          "State constraints as facts, not guesses."
+        ]
+      },
+      "relatedDrill": "dehedging",
+      "practicePrompt": "Rewrite three hedged statements from your last meeting.",
+      "position": 1
+    },
+    {
+      "id": "lesson-conviction-under-qa",
+      "moduleId": "mod-speak-with-conviction",
+      "title": "Conviction Under Q&A",
+      "summary": "Stay decisive during pushback without overclaiming.",
+      "estimatedMinutes": 9,
+      "body": {
+        "blocks": [
+          {
+            "heading": "Acknowledge + answer",
+            "text": "Briefly acknowledge the concern, then return to your recommendation."
+          }
+        ],
+        "examples": [
+          {
+            "before": "Maybe we're wrong, but hopefully this works.",
+            "after": "That risk is real, and our mitigation plan covers it. We should proceed with phased rollout.",
+            "note": "Confidence plus risk ownership."
+          }
+        ],
+        "takeaways": [
+          "Do not abandon your recommendation under pressure.",
+          "Address risk with a mitigation plan."
+        ]
+      },
+      "practicePrompt": "Answer a skeptical stakeholder question in 20 seconds.",
+      "position": 2
+    },
+    {
+      "id": "lesson-rule-of-three",
+      "moduleId": "mod-structure-and-rhetoric",
+      "title": "Rule of Three",
+      "summary": "Use parallel triads to improve clarity and memorability.",
+      "estimatedMinutes": 11,
+      "body": {
+        "blocks": [
+          {
+            "heading": "Why three is sticky",
+            "text": "Three points are easy to process, recall, and repeat."
+          },
+          {
+            "heading": "Parallel structure",
+            "text": "Keep grammar and cadence similar across all three points."
+          }
+        ],
+        "examples": [
+          {
+            "before": "Our goals are improving quality, we need to move faster, and ownership is also important.",
+            "after": "Our priorities are quality, speed, and ownership.",
+            "note": "Concise and parallel."
+          }
+        ],
+        "takeaways": [
+          "Use short, parallel phrasing across each point.",
+          "Avoid mixing abstract and concrete levels in one triad."
+        ]
+      },
+      "relatedDrill": "rule3",
+      "practicePrompt": "Describe your team strategy in three parallel bullets.",
+      "position": 1
+    },
+    {
+      "id": "lesson-problem-solution-benefit",
+      "moduleId": "mod-structure-and-rhetoric",
+      "title": "Problem-Solution-Benefit",
+      "summary": "Frame proposals in a persuasive, executive-ready arc.",
+      "estimatedMinutes": 8,
+      "body": {
+        "blocks": [
+          {
+            "heading": "Narrative arc",
+            "text": "Define pain clearly, propose the fix, then quantify value."
+          }
+        ],
+        "examples": [
+          {
+            "before": "We built a new dashboard and it has many features.",
+            "after": "Reporting delays cost us weekly. This dashboard automates reporting, saving six analyst hours per week.",
+            "note": "Business outcome focus."
+          }
+        ],
+        "takeaways": [
+          "Always tie your solution to business impact.",
+          "Quantify benefits when possible."
+        ]
+      },
+      "practicePrompt": "Pitch a process improvement using PSB in under 40 seconds.",
+      "position": 2
+    }
+  ]
+}
