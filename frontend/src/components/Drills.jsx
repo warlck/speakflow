@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { ArrowLeft, Play, Square, CheckCircle } from 'lucide-react';
 import glassStyles from '../styles/glass.module.css';
 import { useAppContext } from '../context/AppContext';
+import { useSpeechRecognition } from '../hooks/useSpeechRecognition';
 
 const DRILLS = [
   {
@@ -32,9 +33,48 @@ const DRILLS = [
 
 const Drills = ({ setCurrentView }) => {
   const { setActiveLessonId } = useAppContext();
+  const { isListening, transcript, startListening, stopListening, error: speechError, setTranscript } = useSpeechRecognition();
+
   const [activeDrill, setActiveDrill] = useState(null);
   const [timeLeft, setTimeLeft] = useState(0);
   const [isActive, setIsActive] = useState(false);
+  const [isFinished, setIsFinished] = useState(false);
+
+  const [coachingReport, setCoachingReport] = useState(null);
+  const [isCoachingLoading, setIsCoachingLoading] = useState(false);
+  const [coachingError, setCoachingError] = useState(null);
+
+  const getCoaching = useCallback(async (text) => {
+    if (!text || text.trim().length === 0) return;
+    setIsCoachingLoading(true);
+    setCoachingError(null);
+    setCoachingReport(null);
+    try {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+      const payload = {
+        conceptKey: activeDrill?.id || '',
+        scenario: activeDrill?.scenario || '',
+        transcript: text
+      };
+      const response = await fetch(`${apiUrl}/api/coach`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+      if (!response.ok) {
+        throw new Error(`Coaching request failed with status: ${response.status}`);
+      }
+      const data = await response.json();
+      setCoachingReport(data);
+    } catch (err) {
+      console.error(err);
+      setCoachingError(err.message || 'Failed to fetch coaching feedback.');
+    } finally {
+      setIsCoachingLoading(false);
+    }
+  }, [activeDrill]);
 
   // Simplified timer logic for prototype
   React.useEffect(() => {
@@ -45,18 +85,29 @@ const Drills = ({ setCurrentView }) => {
       }, 1000);
     } else if (timeLeft === 0 && isActive) {
       setIsActive(false);
+      setIsFinished(true);
+      stopListening();
+      getCoaching(transcript);
     }
     return () => clearInterval(interval);
-  }, [isActive, timeLeft]);
+  }, [isActive, timeLeft, stopListening, transcript, getCoaching]);
 
   const startDrill = (drill) => {
     setActiveDrill(drill);
     setTimeLeft(drill.durationSecs);
+    setTranscript('');
+    setCoachingReport(null);
+    setCoachingError(null);
     setIsActive(true);
+    setIsFinished(false);
+    startListening();
   };
 
-  const stopDrill = () => {
+  const stopDrill = async () => {
     setIsActive(false);
+    setIsFinished(true);
+    stopListening();
+    await getCoaching(transcript);
   };
 
   return (
@@ -130,17 +181,67 @@ const Drills = ({ setCurrentView }) => {
               </div>
 
               {isActive ? (
-                <button className={glassStyles.button} onClick={stopDrill} style={{ backgroundColor: 'var(--accent-coral-glow)', borderColor: 'var(--accent-coral-light)', color: 'var(--accent-coral-light)', width: '200px' }}>
-                  <Square size={16} style={{ marginRight: '0.5rem', display: 'inline' }} /> Finish
-                </button>
-              ) : timeLeft === 0 && !isActive ? (
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
-                  <span style={{ color: 'var(--accent-teal-light)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <>
+                  {transcript && (
+                    <div style={{ width: '100%', padding: '1rem', background: 'rgba(0,0,0,0.1)', borderRadius: '8px', marginBottom: '1.5rem', minHeight: '80px', textAlign: 'left' }}>
+                      <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Live Transcript:</span>
+                      <p style={{ margin: '0.25rem 0 0 0', fontStyle: 'italic', fontSize: '0.95rem' }}>{transcript}</p>
+                    </div>
+                  )}
+                  <button className={glassStyles.button} onClick={stopDrill} style={{ backgroundColor: 'var(--accent-coral-glow)', borderColor: 'var(--accent-coral-light)', color: 'var(--accent-coral-light)', width: '200px' }}>
+                    <Square size={16} style={{ marginRight: '0.5rem', display: 'inline' }} /> Finish
+                  </button>
+                </>
+              ) : isFinished ? (
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', width: '100%' }}>
+                  <span style={{ color: 'var(--accent-teal-light)', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: '600' }}>
                     <CheckCircle size={20} /> Drill Complete
                   </span>
+                  
+                  {isCoachingLoading && <p style={{ opacity: 0.8 }}>Generating targeted coaching feedback...</p>}
+                  {coachingError && <p style={{ color: 'var(--accent-coral-light)' }}>Coaching error: {coachingError}</p>}
+                  
+                  {coachingReport && (
+                    <div style={{ textAlign: 'left', width: '100%', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                      <div style={{ background: 'rgba(0,0,0,0.15)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--glass-border)' }}>
+                        <strong style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Your Transcript:</strong>
+                        <p style={{ fontStyle: 'italic', margin: '0.25rem 0 0 0', color: 'var(--text-secondary)' }}>
+                          "{transcript || 'No speech recorded.'}"
+                        </p>
+                      </div>
+                      
+                      <div style={{ background: 'rgba(45, 212, 191, 0.05)', border: '1px solid rgba(45, 212, 191, 0.2)', padding: '1.25rem', borderRadius: '12px' }}>
+                        <h4 style={{ color: 'var(--accent-teal-light)', margin: '0 0 0.5rem 0' }}>Coach's Feedback</h4>
+                        <p style={{ margin: 0, lineHeight: 1.5, fontSize: '0.95rem' }}>{coachingReport.feedback}</p>
+                      </div>
+
+                      {coachingReport.suggestedRewrite && (
+                        <div style={{ background: 'rgba(255, 255, 255, 0.02)', border: '1px solid var(--glass-border)', borderLeft: '4px solid var(--accent-teal-light)', padding: '1.25rem', borderRadius: '12px' }}>
+                          <h4 style={{ color: 'var(--accent-platinum-light)', margin: '0 0 0.5rem 0' }}>Suggested Rewrite</h4>
+                          <p style={{ margin: 0, fontStyle: 'italic', fontWeight: '500', fontSize: '0.95rem' }}>"{coachingReport.suggestedRewrite}"</p>
+                        </div>
+                      )}
+
+                      {coachingReport.tips && coachingReport.tips.length > 0 && (
+                        <div>
+                          <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '0.95rem' }}>Specific Tips</h4>
+                          <ul style={{ paddingLeft: '1.2rem', margin: 0, display: 'flex', flexDirection: 'column', gap: '0.25rem', fontSize: '0.95rem' }}>
+                            {coachingReport.tips.map((tip, i) => (
+                              <li key={i} style={{ color: 'var(--text-secondary)' }}>{tip}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
                   <button className={glassStyles.button} onClick={() => startDrill(activeDrill)}>Retry Drill</button>
                 </div>
-              ) : null}
+              ) : (
+                <button className={glassStyles.button} onClick={() => startDrill(activeDrill)} style={{ width: '200px' }}>
+                  Start Drill
+                </button>
+              )}
             </>
           ) : (
             <div style={{ opacity: 0.5 }}>
