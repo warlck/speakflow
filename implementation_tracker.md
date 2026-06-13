@@ -25,13 +25,13 @@ Migrate SpeakFlow from a Vanilla JS prototype to a decoupled architecture (Golan
 - [x] Set up State Management (React Context).
 - [x] Port Core Engines to Hooks.
   - [x] `useSpeechRecognition.js`
-  - [ ] `useAudioRecorder.js` (Not needed currently, using SpeechRecognition)
+  - [x] `useAudioRecorder.js` (Not needed currently, using SpeechRecognition)
   - [x] `useSpeechAnalyzer.js` with Hedging Tracker.
 - [x] Build UI Components (Modern, Sleek, Glassmorphism).
   - [x] `<Dashboard />`
-  - [x] `<Settings />`
+  - [x] `<Settings />` (Removed Gemini API configuration from frontend)
   - [x] `<FeedbackReport />`
-- [ ] Write frontend tests.
+- [x] Write frontend tests.
 
 ### Phase 4: Executive Features Implementation
 - [x] Executive Speech Outliner (`<Outliner />`).
@@ -45,8 +45,8 @@ Migrate SpeakFlow from a Vanilla JS prototype to a decoupled architecture (Golan
   - [x] Rule of Three Drill.
 
 ## Verification Plan (Automated and Manual)
-- [ ] Frontend tests passing (`npm run test`).
-- [ ] Backend tests passing (`go test ./...`).
-- [ ] Verify frontend build (`npm run build`).
-- [ ] Verify backend build (`go build ./...`).
-- [ ] Manual full flow testing.
+- [x] Frontend tests passing (`npm run test`).
+- [x] Backend tests passing (`go test ./...`).
+- [x] Verify frontend build (`npm run build`).
+- [x] Verify backend build (`go build ./...`).
+- [x] Manual full flow testing.

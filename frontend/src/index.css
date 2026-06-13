@@ -1,3 +1,34 @@
+:root {
+  /* Color Palette - Premium Obsidian & Platinum */
+  --bg-primary: #0a0a0c;
+  --bg-secondary: #121216;
+  --bg-gradient: radial-gradient(circle at 50% 10%, #1e1e24 0%, #08080a 100%);
+  
+  --glass-bg: rgba(18, 18, 24, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-hover: rgba(255, 255, 255, 0.16);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  /* Semantic Accent Colors */
+  --accent-teal: #0f766e;
+  --accent-teal-light: #2dd4bf;
+  --accent-teal-glow: rgba(45, 212, 191, 0.12);
+  
+  --accent-coral: #be123c;
+  --accent-coral-light: #fb7185;
+  --accent-coral-glow: rgba(251, 113, 133, 0.12);
+  
+  --accent-amber: #b45309;
+  --accent-amber-light: #fbbf24;
+  
+  --accent-platinum: #cbd5e1;
+  --accent-platinum-light: #f1f5f9;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,11 +37,19 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 code {
