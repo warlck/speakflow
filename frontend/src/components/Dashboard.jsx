@@ -98,11 +98,11 @@ const Dashboard = ({ setCurrentView }) => {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
             <h2>Practice Session</h2>
             {isListening ? (
-              <button className={glassStyles.button} onClick={handleStop} style={{ backgroundColor: 'rgba(255, 50, 50, 0.3)' }}>
+              <button className={glassStyles.button} onClick={handleStop} style={{ backgroundColor: 'var(--accent-coral-glow)', borderColor: 'var(--accent-coral-light)', color: 'var(--accent-coral-light)' }}>
                 <Square size={16} style={{ marginRight: '0.5rem', display: 'inline' }} /> Stop
               </button>
             ) : (
-              <button className={glassStyles.button} onClick={handleStart} style={{ backgroundColor: 'rgba(50, 255, 50, 0.3)' }}>
+              <button className={glassStyles.button} onClick={handleStart} style={{ backgroundColor: 'var(--accent-teal-glow)', borderColor: 'var(--accent-teal-light)', color: 'var(--accent-teal-light)' }}>
                 <Mic size={16} style={{ marginRight: '0.5rem', display: 'inline' }} /> Start
               </button>
             )}
@@ -120,12 +120,12 @@ const Dashboard = ({ setCurrentView }) => {
             <h3>Live Metrics</h3>
             <div style={{ marginTop: '1rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                <span>Hedging Words:</span>
-                <span style={{ fontWeight: 'bold', color: hedgingCount > 2 ? '#ff6b6b' : '#4ecdc4' }}>{hedgingCount}</span>
+                <span style={{ color: 'var(--text-secondary)' }}>Hedging Words:</span>
+                <span style={{ fontWeight: 'bold', color: hedgingCount > 2 ? 'var(--accent-coral-light)' : 'var(--accent-teal-light)' }}>{hedgingCount}</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span>Pacing (WPM):</span>
-                <span style={{ fontWeight: 'bold' }}>{wpm}</span>
+                <span style={{ color: 'var(--text-secondary)' }}>Pacing (WPM):</span>
+                <span style={{ fontWeight: 'bold', color: 'var(--accent-platinum-light)' }}>{wpm}</span>
               </div>
             </div>
           </div>
@@ -151,25 +151,25 @@ const Dashboard = ({ setCurrentView }) => {
             <p style={{ color: '#ff6b6b', marginTop: '1rem' }}>{report.error}</p>
           ) : (
             <div style={{ marginTop: '1rem', display: 'grid', gap: '1rem' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(255,255,255,0.05)', padding: '1rem', borderRadius: '8px' }}>
-                <span style={{ fontSize: '1.2rem' }}>Executive Score:</span>
-                <span style={{ fontSize: '2rem', fontWeight: 'bold', color: report.executiveScore > 80 ? '#4ecdc4' : '#ffce56' }}>{report.executiveScore}/100</span>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--glass-border)', padding: '1rem', borderRadius: '8px' }}>
+                <span style={{ fontSize: '1.2rem', color: 'var(--text-secondary)' }}>Executive Score:</span>
+                <span style={{ fontSize: '2rem', fontWeight: 'bold', color: report.executiveScore > 80 ? 'var(--accent-teal-light)' : 'var(--accent-amber-light)' }}>{report.executiveScore}/100</span>
               </div>
               <div>
                 <h4 style={{ marginBottom: '0.5rem' }}>Overall Assessment</h4>
                 <p style={{ opacity: 0.9 }}>{report.overallAssessment}</p>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                <div>
-                  <h4 style={{ color: '#4ecdc4', marginBottom: '0.5rem' }}>Strengths</h4>
-                  <ul style={{ paddingLeft: '1.5rem', opacity: 0.9 }}>
-                    {report.strengths?.map((s, i) => <li key={i}>{s}</li>)}
+                <div style={{ background: 'rgba(45, 212, 191, 0.02)', border: '1px solid rgba(45, 212, 191, 0.1)', padding: '1rem', borderRadius: '8px' }}>
+                  <h4 style={{ color: 'var(--accent-teal-light)', marginBottom: '0.5rem' }}>Strengths</h4>
+                  <ul style={{ paddingLeft: '1.2rem', opacity: 0.9, color: 'var(--text-primary)' }}>
+                    {report.strengths?.map((s, i) => <li key={i} style={{ marginBottom: '0.25rem' }}>{s}</li>)}
                   </ul>
                 </div>
-                <div>
-                  <h4 style={{ color: '#ff6b6b', marginBottom: '0.5rem' }}>Areas for Improvement</h4>
-                  <ul style={{ paddingLeft: '1.5rem', opacity: 0.9 }}>
-                    {report.improvements?.map((s, i) => <li key={i}>{s}</li>)}
+                <div style={{ background: 'rgba(251, 113, 133, 0.02)', border: '1px solid rgba(251, 113, 133, 0.1)', padding: '1rem', borderRadius: '8px' }}>
+                  <h4 style={{ color: 'var(--accent-coral-light)', marginBottom: '0.5rem' }}>Areas for Improvement</h4>
+                  <ul style={{ paddingLeft: '1.2rem', opacity: 0.9, color: 'var(--text-primary)' }}>
+                    {report.improvements?.map((s, i) => <li key={i} style={{ marginBottom: '0.25rem' }}>{s}</li>)}
                   </ul>
                 </div>
               </div>
