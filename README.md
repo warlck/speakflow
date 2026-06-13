@@ -38,12 +38,18 @@ Exposes simple commands to setup, build, test, and run the frontend and backend 
    ```
    This command starts both the Go API (`http://localhost:8080`) and Vite web application (`http://localhost:5173`) concurrently.
 
-4. **Run both test suites:**
+4. **Stop the application cleanly:**
+   ```bash
+   make stop
+   ```
+   This command terminates any active frontend and backend server processes and frees the ports.
+
+5. **Run both test suites:**
    ```bash
    make test
    ```
 
-5. **Build for production:**
+6. **Build for production:**
    ```bash
    make build
    ```

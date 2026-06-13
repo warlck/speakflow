@@ -1,4 +1,4 @@
-.PHONY: help setup run run-frontend run-backend test test-frontend test-backend build build-frontend build-backend
+.PHONY: help setup run run-frontend run-backend stop test test-frontend test-backend build build-frontend build-backend
 
 help:
 	@echo "SpeakFlow Commands:"
@@ -6,6 +6,7 @@ help:
 	@echo "  make run            - Run both frontend and backend concurrently (requires GEMINI_API_KEY)"
 	@echo "  make run-frontend   - Run Vite React development server only"
 	@echo "  make run-backend    - Run Go backend server only"
+	@echo "  make stop           - Stop any running frontend and backend servers cleanly"
 	@echo "  make test           - Run both frontend and backend tests"
 	@echo "  make test-frontend  - Run frontend Vitest suite"
 	@echo "  make test-backend   - Run backend Go tests"
@@ -33,6 +34,14 @@ run-backend:
 run:
 	@echo "=== Starting Full Application ==="
 	npx --yes concurrently --kill-others --names "backend,frontend" --prefix-colors "cyan,magenta" "make run-backend" "make run-frontend"
+
+stop:
+	@echo "=== Stopping SpeakFlow Servers ==="
+	@echo "Stopping backend on port 8080..."
+	@lsof -t -i :8080 | xargs kill -9 2>/dev/null || true
+	@echo "Stopping frontend on port 5173..."
+	@lsof -t -i :5173 | xargs kill -9 2>/dev/null || true
+	@echo "Stopped."
 
 test-frontend:
 	cd frontend && npm run test
