@@ -73,3 +73,4 @@ Build interactive drill cards for the following exercises:
 ## Deployment & Verification
 - Ensure the React frontend correctly proxies or fetches from the Go backend port (e.g., `8080`).
 - Test the full flow: Select an Executive Outline -> Add notes -> Start Practice -> Speak -> End Practice -> Frontend sends data to Go Backend -> Go Backend queries Gemini -> React displays the Executive Coaching Report.
+
