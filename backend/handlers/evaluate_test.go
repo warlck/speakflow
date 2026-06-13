@@ -41,6 +41,6 @@ func TestEvaluateHandler_NoAPIKey(t *testing.T) {
 	req.Header.Set("Content-Type", "application/json")
 	router.ServeHTTP(w, req)
 
-	// Since we don't have an API key set in the env or headers, we expect a 500 error
+	// Since we don't have an API key set in the environment, we expect a 500 error
 	assert.Equal(t, http.StatusInternalServerError, w.Code)
 }
