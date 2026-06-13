@@ -68,7 +68,13 @@ const Drills = ({ setCurrentView }) => {
               <div
                 key={drill.id}
                 className={glassStyles.container}
-                style={{ padding: '1.5rem', background: activeDrill?.id === drill.id ? 'rgba(78, 205, 196, 0.1)' : '' }}
+                style={{
+                  padding: '1.5rem',
+                  transition: 'all 0.3s ease',
+                  border: activeDrill?.id === drill.id ? '1px solid var(--accent-teal-light)' : '1px solid var(--glass-border)',
+                  boxShadow: activeDrill?.id === drill.id ? '0 0 15px var(--accent-teal-glow)' : 'none',
+                  background: activeDrill?.id === drill.id ? 'rgba(45, 212, 191, 0.04)' : 'transparent'
+                }}
               >
                 <h3 style={{ marginBottom: '0.5rem' }}>{drill.title}</h3>
                 <p style={{ opacity: 0.8, marginBottom: '1rem', fontSize: '0.9rem' }}>{drill.scenario}</p>
@@ -91,22 +97,22 @@ const Drills = ({ setCurrentView }) => {
         <div className={glassStyles.container} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '400px' }}>
           {activeDrill ? (
             <>
-              <h2 style={{ marginBottom: '1rem', color: '#4ecdc4' }}>{activeDrill.title}</h2>
+              <h2 style={{ marginBottom: '1rem', color: 'var(--accent-teal-light)' }}>{activeDrill.title}</h2>
               <div style={{ padding: '2rem', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', marginBottom: '2rem', width: '100%' }}>
                 <p style={{ fontSize: '1.2rem', lineHeight: 1.5 }}>"{activeDrill.scenario}"</p>
               </div>
 
-              <div style={{ fontSize: '4rem', fontWeight: 'bold', marginBottom: '2rem', color: timeLeft <= 5 && timeLeft > 0 ? '#ff6b6b' : 'white' }}>
+              <div style={{ fontSize: '4rem', fontWeight: 'bold', marginBottom: '2rem', color: timeLeft <= 5 && timeLeft > 0 ? 'var(--accent-coral-light)' : 'var(--text-primary)' }}>
                 00:{timeLeft.toString().padStart(2, '0')}
               </div>
 
               {isActive ? (
-                <button className={glassStyles.button} onClick={stopDrill} style={{ backgroundColor: 'rgba(255, 50, 50, 0.3)', width: '200px' }}>
+                <button className={glassStyles.button} onClick={stopDrill} style={{ backgroundColor: 'var(--accent-coral-glow)', borderColor: 'var(--accent-coral-light)', color: 'var(--accent-coral-light)', width: '200px' }}>
                   <Square size={16} style={{ marginRight: '0.5rem', display: 'inline' }} /> Finish
                 </button>
               ) : timeLeft === 0 && !isActive ? (
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
-                  <span style={{ color: '#4ecdc4', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <span style={{ color: 'var(--accent-teal-light)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     <CheckCircle size={20} /> Drill Complete
                   </span>
                   <button className={glassStyles.button} onClick={() => startDrill(activeDrill)}>Retry Drill</button>
