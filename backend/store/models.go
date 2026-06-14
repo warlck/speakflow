@@ -16,6 +16,11 @@ type Example struct {
 	Note   string `json:"note,omitempty"`
 }
 
+type LessonLink struct {
+	Title string `json:"title"`
+	URL   string `json:"url"`
+}
+
 // LessonBody holds the structured, teachable content of a lesson. It is stored
 // as a JSON document in the lessons.body column so the schema can evolve
 // without database migrations.
@@ -23,6 +28,7 @@ type LessonBody struct {
 	Blocks    []LessonBlock `json:"blocks"`
 	Examples  []Example     `json:"examples"`
 	Takeaways []string      `json:"takeaways"`
+	Links     []LessonLink  `json:"links,omitempty"`
 }
 
 // Lesson is a single unit of teaching content belonging to a module.

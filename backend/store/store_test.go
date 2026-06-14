@@ -34,6 +34,9 @@ func sampleCurriculum() ([]Module, []Lesson) {
 				Blocks:    []LessonBlock{{Heading: "Why hedging hurts", Text: "It dilutes authority."}},
 				Examples:  []Example{{Before: "I think we might revisit this.", After: "We will revisit this now.", Note: "Ownership."}},
 				Takeaways: []string{"State conclusions directly.", "Avoid stacked qualifiers."},
+				Links: []LessonLink{
+					{Title: "HBR on De-hedging", URL: "https://hbr.org/dehedging"},
+				},
 			},
 			RelatedDrill:   "dehedging",
 			PracticePrompt: "Reframe a recommendation decisively.",
@@ -61,6 +64,9 @@ func TestSQLiteStore_UpsertCurriculum_IsIdempotent(t *testing.T) {
 	assert.Equal(t, "lesson-dehedging", gotLessons[0].ID)
 	assert.Equal(t, "dehedging", gotLessons[0].RelatedDrill)
 	assert.Len(t, gotLessons[0].Body.Takeaways, 2)
+	assert.Len(t, gotLessons[0].Body.Links, 1)
+	assert.Equal(t, "HBR on De-hedging", gotLessons[0].Body.Links[0].Title)
+	assert.Equal(t, "https://hbr.org/dehedging", gotLessons[0].Body.Links[0].URL)
 }
 
 func TestSQLiteStore_ListLessons_FilterByModuleID(t *testing.T) {
