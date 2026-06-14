@@ -57,7 +57,8 @@ func LessonGenerateHandler(c *gin.Context) {
 		Parts: []genai.Part{
 			genai.Text(`You design executive public speaking lessons. Return JSON only with keys:
 id, moduleId, title, summary, estimatedMinutes (int), body, relatedDrill, practicePrompt, position (int).
-body is an object with: blocks (array of {heading, text}), examples (array of {before, after, note}), takeaways (array of strings).
+body is an object with: blocks (array of {heading, text}), examples (array of {before, after, note}), takeaways (array of strings), and links (array of {title, url}).
+For links, generate 2-3 real or high-quality illustrative external resources (e.g. Harvard Business Review, Toastmasters, TED, YouTube) with specific titles and URLs for further reading/listening/watching.
 Keep it practical, concise, and actionable. Do NOT wrap in markdown backticks.`),
 		},
 	}
