@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
 import Learn from './Learn';
 import { useAppContext } from '../context/AppContext';
@@ -72,7 +72,7 @@ describe('Learn Component', () => {
 
     render(<Learn setCurrentView={mockSetCurrentView} />);
 
-    expect(screen.getByText('Module 1: Foundations')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Module 1: Foundations', level: 2 })).toBeInTheDocument();
     expect(screen.getByText('Learn the fundamentals of executive speech.')).toBeInTheDocument();
     expect(screen.getByText('Lesson 1: BLUF')).toBeInTheDocument();
     expect(screen.getByText('Lesson 2: De-hedging')).toBeInTheDocument();
@@ -152,5 +152,77 @@ describe('Learn Component', () => {
     const backBtn = screen.getByRole('button', { name: '' }); // ArrowLeft button inside header
     fireEvent.click(backBtn);
     expect(mockSetCurrentView).toHaveBeenCalledWith('dashboard');
+  });
+
+  it('handles AI lesson drafting and publishing lifecycle', async () => {
+    const mockModules = [
+      { id: 'm1', title: 'Module 1', description: 'Desc', lessons: [] }
+    ];
+    const mockRefresh = vi.fn();
+
+    useCurriculum.mockReturnValue({
+      modules: mockModules,
+      loading: false,
+      error: null,
+      refresh: mockRefresh,
+    });
+
+    vi.stubGlobal('fetch', vi.fn());
+
+    // Mock response for /api/lessons/generate
+    fetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({
+        draft: {
+          id: 'lesson-temp',
+          moduleId: 'm1',
+          title: 'Generated Lesson Title',
+          summary: 'Generated summary',
+          estimatedMinutes: 8,
+          body: {
+            blocks: [{ heading: 'Gen Heading', text: 'Gen Text' }],
+            examples: [],
+            takeaways: ['Takeaway 1'],
+            links: [{ title: 'Resource Link', url: 'https://resource.com' }]
+          },
+          practicePrompt: 'Gen prompt',
+          position: 1
+        }
+      })
+    });
+
+    render(<Learn setCurrentView={mockSetCurrentView} />);
+
+    expect(screen.getByText('AI Lesson Architect')).toBeInTheDocument();
+    
+    const topicInput = screen.getByPlaceholderText(/e.g. Storytelling in Presentations/i);
+    fireEvent.change(topicInput, { target: { value: 'Storytelling' } });
+
+    const moduleSelect = screen.getByLabelText(/Target Module/i);
+    fireEvent.change(moduleSelect, { target: { value: 'm1' } });
+
+    const draftBtn = screen.getByRole('button', { name: /Draft with AI/i });
+    fireEvent.click(draftBtn);
+
+    // Wait for preview to render
+    expect(await screen.findByText('Draft Preview: Generated Lesson Title')).toBeInTheDocument();
+    expect(screen.getByText(/Gen Heading/i)).toBeInTheDocument();
+    expect(screen.getByText('Resource Link')).toBeInTheDocument();
+
+    // Now mock response for /api/lessons publish
+    fetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({ success: true })
+    });
+
+    const publishBtn = screen.getByRole('button', { name: /Publish to Academy/i });
+    fireEvent.click(publishBtn);
+
+    await waitFor(() => {
+      expect(fetch).toHaveBeenCalledTimes(2);
+      expect(mockRefresh).toHaveBeenCalled();
+    });
+
+    expect(screen.queryByText('Draft Preview: Generated Lesson Title')).not.toBeInTheDocument();
   });
 });

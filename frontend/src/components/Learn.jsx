@@ -6,7 +6,96 @@ import glassStyles from '../styles/glass.module.css';
 
 const Learn = ({ setCurrentView }) => {
   const { completedLessons, isLessonComplete, setActiveLessonId } = useAppContext();
-  const { modules, loading, error } = useCurriculum();
+  const { modules, loading, error, refresh } = useCurriculum();
+
+  const [topic, setTopic] = React.useState('');
+  const [targetModuleId, setTargetModuleId] = React.useState('');
+  const [audience, setAudience] = React.useState('');
+  const [difficulty, setDifficulty] = React.useState('');
+  const [draftLesson, setDraftLesson] = React.useState(null);
+  const [isGenerating, setIsGenerating] = React.useState(false);
+  const [isPublishing, setIsPublishing] = React.useState(false);
+  const [architectError, setArchitectError] = React.useState(null);
+
+  // Set default target module once modules load
+  React.useEffect(() => {
+    if (modules && modules.length > 0 && !targetModuleId) {
+      setTargetModuleId(modules[0].id);
+    }
+  }, [modules, targetModuleId]);
+
+  const handleGenerateDraft = async (e) => {
+    e.preventDefault();
+    if (!topic || !targetModuleId) return;
+
+    setIsGenerating(true);
+    setArchitectError(null);
+    setDraftLesson(null);
+
+    try {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+      const response = await fetch(`${apiUrl}/api/lessons/generate`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          topic,
+          moduleId: targetModuleId,
+          audience,
+          difficulty,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Drafting failed with status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      setDraftLesson(data.draft);
+    } catch (err) {
+      console.error(err);
+      setArchitectError(err.message || 'Failed to draft lesson. Check your backend connection.');
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
+  const handlePublishDraft = async () => {
+    if (!draftLesson) return;
+
+    setIsPublishing(true);
+    setArchitectError(null);
+
+    try {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+      const response = await fetch(`${apiUrl}/api/lessons`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(draftLesson),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Publishing failed with status: ${response.status}`);
+      }
+
+      // Success! Refresh curriculum, clear inputs and draft
+      if (refresh) {
+        await refresh();
+      }
+      setDraftLesson(null);
+      setTopic('');
+      setAudience('');
+      setDifficulty('');
+    } catch (err) {
+      console.error(err);
+      setArchitectError(err.message || 'Failed to publish lesson.');
+    } finally {
+      setIsPublishing(false);
+    }
+  };
 
   // Calculate overall progress stats
   const stats = React.useMemo(() => {
@@ -176,6 +265,181 @@ const Learn = ({ setCurrentView }) => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* AI Lesson Architect Section */}
+      <div className={glassStyles.container} style={{ marginTop: '3rem', padding: '2rem' }}>
+        <h2 style={{ color: 'var(--accent-teal-light)', marginBottom: '0.5rem' }}>AI Lesson Architect</h2>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '0.95rem' }}>
+          Dynamically generate a new interactive lesson using Gemini AI, review the draft, and publish it to the Academy curriculum.
+        </p>
+
+        <form onSubmit={handleGenerateDraft} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', maxWidth: '600px' }}>
+          <div>
+            <label htmlFor="topic-input" style={{ display: 'block', fontWeight: '600', marginBottom: '0.5rem', fontSize: '0.9rem' }}>
+              Lesson Topic
+            </label>
+            <input
+              id="topic-input"
+              type="text"
+              className={glassStyles.input}
+              placeholder="e.g. Storytelling in Presentations"
+              value={topic}
+              onChange={(e) => setTopic(e.target.value)}
+              required
+              style={{ width: '100%' }}
+            />
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div>
+              <label htmlFor="moduleId-select" style={{ display: 'block', fontWeight: '600', marginBottom: '0.5rem', fontSize: '0.9rem' }}>
+                Target Module
+              </label>
+              <select
+                id="moduleId-select"
+                className={glassStyles.input}
+                value={targetModuleId}
+                onChange={(e) => setTargetModuleId(e.target.value)}
+                required
+                style={{ width: '100%', background: 'rgba(0,0,0,0.4)', color: 'var(--text-primary)' }}
+              >
+                <option value="" disabled>Select a module</option>
+                {modules.map((m) => (
+                  <option key={m.id} value={m.id}>{m.title}</option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="difficulty-input" style={{ display: 'block', fontWeight: '600', marginBottom: '0.5rem', fontSize: '0.9rem' }}>
+                Difficulty Level
+              </label>
+              <input
+                id="difficulty-input"
+                type="text"
+                className={glassStyles.input}
+                placeholder="e.g. Advanced, Intermediate"
+                value={difficulty}
+                onChange={(e) => setDifficulty(e.target.value)}
+                style={{ width: '100%' }}
+              />
+            </div>
+          </div>
+
+          <div>
+            <label htmlFor="audience-input" style={{ display: 'block', fontWeight: '600', marginBottom: '0.5rem', fontSize: '0.9rem' }}>
+              Target Audience
+            </label>
+            <input
+              id="audience-input"
+              type="text"
+              className={glassStyles.input}
+              placeholder="e.g. Senior Leaders, Technical Teams"
+              value={audience}
+              onChange={(e) => setAudience(e.target.value)}
+              style={{ width: '100%' }}
+            />
+          </div>
+
+          {architectError && (
+            <p style={{ color: 'var(--accent-coral-light)', fontSize: '0.9rem', margin: 0 }}>
+              {architectError}
+            </p>
+          )}
+
+          <button
+            type="submit"
+            className={glassStyles.button}
+            disabled={isGenerating || !topic || !targetModuleId}
+            style={{
+              alignSelf: 'flex-start',
+              background: 'var(--accent-teal-light)',
+              color: 'var(--bg-primary)',
+              fontWeight: '600',
+              borderColor: 'transparent',
+              marginTop: '0.5rem',
+            }}
+          >
+            {isGenerating ? 'Drafting with AI...' : 'Draft with AI'}
+          </button>
+        </form>
+
+        {/* Draft Preview Panel */}
+        {draftLesson && (
+          <div className={glassStyles.container} style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(45, 212, 191, 0.3)' }}>
+            <h3 style={{ color: 'var(--accent-teal-light)', marginBottom: '1rem' }}>Draft Preview: {draftLesson.title}</h3>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '1.5rem' }}>
+              <p><strong>Summary:</strong> {draftLesson.summary}</p>
+              <p><strong>Estimated Reading Time:</strong> {draftLesson.estimatedMinutes} minutes</p>
+              
+              <div>
+                <strong>Teachable Content:</strong>
+                <ul style={{ paddingLeft: '1.2rem', marginTop: '0.5rem' }}>
+                  {draftLesson.body.blocks?.map((b, i) => (
+                    <li key={i} style={{ marginBottom: '0.5rem' }}>
+                      <strong>{b.heading}:</strong> {b.text}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {draftLesson.body.examples && draftLesson.body.examples.length > 0 && (
+                <div>
+                  <strong>Worked Examples:</strong>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '0.5rem' }}>
+                    {draftLesson.body.examples.map((ex, i) => (
+                      <div key={i} style={{ background: 'rgba(0,0,0,0.2)', padding: '0.75rem', borderRadius: '6px', fontSize: '0.9rem' }}>
+                        <div><span style={{ color: 'var(--accent-coral-light)' }}>Before:</span> "{ex.before || ex.Before}"</div>
+                        <div style={{ marginTop: '0.25rem' }}><span style={{ color: 'var(--accent-teal-light)' }}>After:</span> "{ex.after || ex.After}"</div>
+                        {(ex.note || ex.Note) && <div style={{ opacity: 0.7, marginTop: '0.25rem' }}>Note: {ex.note || ex.Note}</div>}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {draftLesson.body.links && draftLesson.body.links.length > 0 && (
+                <div>
+                  <strong>Further Resources:</strong>
+                  <ul style={{ paddingLeft: '1.2rem', marginTop: '0.5rem' }}>
+                    {draftLesson.body.links.map((link, i) => (
+                      <li key={i}>
+                        <a href={link.url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-teal-light)' }}>
+                          {link.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            <div style={{ display: 'flex', gap: '1rem' }}>
+              <button
+                className={glassStyles.button}
+                onClick={handlePublishDraft}
+                disabled={isPublishing}
+                style={{
+                  background: 'var(--accent-teal-light)',
+                  color: 'var(--bg-primary)',
+                  fontWeight: '600',
+                  borderColor: 'transparent',
+                }}
+              >
+                {isPublishing ? 'Publishing...' : 'Publish to Academy'}
+              </button>
+              <button
+                className={glassStyles.button}
+                onClick={() => setDraftLesson(null)}
+                style={{ background: 'transparent', borderColor: 'var(--glass-border)' }}
+              >
+                Discard
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
