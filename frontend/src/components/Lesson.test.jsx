@@ -33,7 +33,10 @@ describe('Lesson Component', () => {
       examples: [
         { Before: 'I just think we should probably wait.', After: 'We should wait.', Note: 'Clear and assertive.' }
       ],
-      takeaways: ['Hedges reduce authority.', 'State facts clearly.']
+      takeaways: ['Hedges reduce authority.', 'State facts clearly.'],
+      links: [
+        { title: 'TED Talk on Confidence', url: 'https://ted.com/confidence' }
+      ]
     },
     practicePrompt: 'Tell us about your next project without using hedges.',
     relatedDrill: null
@@ -168,5 +171,14 @@ describe('Lesson Component', () => {
     const backBtn = screen.getByRole('button', { name: '' }); // ArrowLeft button inside header
     fireEvent.click(backBtn);
     expect(mockSetCurrentView).toHaveBeenCalledWith('learn');
+  });
+
+  it('renders lesson links correctly when present', () => {
+    render(<Lesson setCurrentView={mockSetCurrentView} />);
+    expect(screen.getByText('Further Resources')).toBeInTheDocument();
+    const linkEl = screen.getByText('TED Talk on Confidence');
+    expect(linkEl).toBeInTheDocument();
+    expect(linkEl).toHaveAttribute('href', 'https://ted.com/confidence');
+    expect(linkEl).toHaveAttribute('target', '_blank');
   });
 });

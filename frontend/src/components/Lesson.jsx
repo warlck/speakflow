@@ -151,6 +151,29 @@ const Lesson = ({ setCurrentView }) => {
             </div>
           )}
 
+          {/* Further Resources */}
+          {lesson.body.links && lesson.body.links.length > 0 && (
+            <div className={glassStyles.container}>
+              <h3 style={{ marginBottom: '1rem' }}>Further Resources</h3>
+              <ul style={{ paddingLeft: '1.2rem', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.95rem' }}>
+                {lesson.body.links.map((link, i) => (
+                  <li key={i}>
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: 'var(--accent-teal-light)', textDecoration: 'none', fontWeight: '500' }}
+                      onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'underline'}
+                      onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'none'}
+                    >
+                      {link.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {/* Practice Card & Completion Actions */}
           <div className={glassStyles.container} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--accent-teal-light)' }}>Action Step</h3>
