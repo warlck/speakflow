@@ -48,6 +48,10 @@
           "State the decision in your first sentence.",
           "Keep context after the recommendation.",
           "Always end with a concrete ask."
+        ],
+        "links": [
+          { "title": "HBR: How to Write an Email That People Will Actually Read (BLUF)", "url": "https://hbr.org/2016/11/how-to-write-an-email-that-people-will-actually-read" },
+          { "title": "YouTube: Lead with the Bottom Line Up Front (BLUF)", "url": "https://www.youtube.com/watch?v=kYJjZia9iAw" }
         ]
       },
       "relatedDrill": "bluf",
@@ -82,6 +86,10 @@
           "Avoid stacking multiple qualifiers in one sentence.",
           "Use active voice with clear ownership.",
           "State constraints as facts, not guesses."
+        ],
+        "links": [
+          { "title": "TED: Speak with conviction by avoiding hedges", "url": "https://www.ted.com/talks" },
+          { "title": "Toastmasters: Eliminating Qualifiers and Fillers", "url": "https://www.toastmasters.org" }
         ]
       },
       "relatedDrill": "dehedging",
@@ -143,6 +151,10 @@
         "takeaways": [
           "Use short, parallel phrasing across each point.",
           "Avoid mixing abstract and concrete levels in one triad."
+        ],
+        "links": [
+          { "title": "Rule of Three: Why Triads Make Communication Memorable", "url": "https://www.mindtools.com" },
+          { "title": "Classic Rhetoric: The Power of Three", "url": "https://wikipedia.org/wiki/Rule_of_three_(writing)" }
         ]
       },
       "relatedDrill": "rule3",
