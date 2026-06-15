@@ -5,37 +5,51 @@ const HEDGING_WORDS = [
   'perhaps', 'basically', 'actually', 'literally'
 ];
 
+// Conservative discourse-filler list. These add no meaning and signal
+// thinking-aloud; the de-fillering lesson teaches replacing them with a pause.
+const FILLER_WORDS = [
+  'um', 'uh', 'er', 'ah', 'hmm', 'you know', 'i mean', 'like', 'so', 'well'
+];
+
+const countMatches = (haystack, phrases) => {
+  let total = 0;
+  phrases.forEach(phrase => {
+    const regex = new RegExp(`\\b${phrase}\\b`, 'gi');
+    const matches = haystack.match(regex);
+    if (matches) {
+      total += matches.length;
+    }
+  });
+  return total;
+};
+
 export const useSpeechAnalyzer = () => {
   const [hedgingCount, setHedgingCount] = useState(0);
+  const [fillerCount, setFillerCount] = useState(0);
   const [wpm, setWpm] = useState(0);
 
   const analyzeTranscript = useCallback((transcript, durationSeconds) => {
     if (!transcript) {
       setHedgingCount(0);
+      setFillerCount(0);
       setWpm(0);
-      return;
+      return { hedgingCount: 0, fillerCount: 0, wpm: 0 };
     }
 
     const lowerTranscript = transcript.toLowerCase();
-    let hedges = 0;
-
-    HEDGING_WORDS.forEach(word => {
-      const regex = new RegExp(`\\b${word}\\b`, 'gi');
-      const matches = lowerTranscript.match(regex);
-      if (matches) {
-        hedges += matches.length;
-      }
-    });
+    const hedges = countMatches(lowerTranscript, HEDGING_WORDS);
+    const fillers = countMatches(lowerTranscript, FILLER_WORDS);
 
     setHedgingCount(hedges);
+    setFillerCount(fillers);
 
     const words = transcript.trim().split(/\s+/).length;
     const minutes = durationSeconds / 60;
     const calculatedWpm = minutes > 0 ? Math.round(words / minutes) : 0;
     setWpm(calculatedWpm);
 
-    return { hedgingCount: hedges, wpm: calculatedWpm };
+    return { hedgingCount: hedges, fillerCount: fillers, wpm: calculatedWpm };
   }, []);
 
-  return { analyzeTranscript, hedgingCount, wpm };
+  return { analyzeTranscript, hedgingCount, fillerCount, wpm };
 };

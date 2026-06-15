@@ -18,6 +18,7 @@ type EvaluateRequest struct {
 	OutlineStructure []string `json:"outlineStructure"`
 	PacingMetrics    int      `json:"pacingMetrics"`
 	HedgingCount     int      `json:"hedgingCount"`
+	FillerCount      int      `json:"fillerCount"`
 }
 
 type EvaluateResponse struct {
@@ -52,11 +53,11 @@ func EvaluateHandler(c *gin.Context) {
 	model := client.GenerativeModel("gemini-3.5-flash")
 	model.SystemInstruction = &genai.Content{
 		Parts: []genai.Part{
-			genai.Text("You are an Elite Executive Communications Coach. Evaluate the following transcript for:\n1. Executive Presence: Decisiveness, lack of fluff.\n2. Brevity & Conviction: Penalty for hedging words.\n3. Structural Elegance: Did they follow the outline? Did they use the Rule of Three?\nRespond strictly in JSON format with keys: overallAssessment (string), strengths (array of strings), improvements (array of strings), and executiveScore (integer 0-100). Do NOT wrap in markdown backticks."),
+			genai.Text("You are an elite clear-communication and public-speaking coach. Evaluate the transcript across these dimensions:\n1. Clarity: Is the core message easy to follow and free of rambling?\n2. Structure: Logical organization (e.g. BLUF, Rule of Three, clear signposting); did they follow any provided outline?\n3. Audience-awareness: Is it framed for the listener (what's in it for them)?\n4. Confidence & Conviction: Penalize hedging words; reward decisive, declarative phrasing.\n5. Delivery: Pacing (WPM \u2014 ideal ~130-150) and verbal fillers (penalize high filler use such as um/uh/like/you know).\nWeigh strengths and weaknesses fairly and tailor advice to the metrics provided.\nRespond strictly in JSON format with keys: overallAssessment (string), strengths (array of strings), improvements (array of strings), and executiveScore (integer 0-100). Do NOT wrap in markdown backticks."),
 		},
 	}
 
-	prompt := fmt.Sprintf("Transcript: %s\nOutline: %v\nPacing (WPM): %d\nHedging Count: %d", req.Transcript, req.OutlineStructure, req.PacingMetrics, req.HedgingCount)
+	prompt := fmt.Sprintf("Transcript: %s\nOutline: %v\nPacing (WPM): %d\nHedging Count: %d\nFiller Count: %d", req.Transcript, req.OutlineStructure, req.PacingMetrics, req.HedgingCount, req.FillerCount)
 
 	resp, err := model.GenerateContent(ctx, genai.Text(prompt))
 	if err != nil {

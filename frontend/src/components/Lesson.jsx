@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAppContext } from '../context/AppContext';
 import { useCurriculum } from '../hooks/useCurriculum';
 import { ArrowLeft, CheckCircle2, Circle, Clock, ArrowRight, Play } from 'lucide-react';
@@ -6,6 +6,7 @@ import glassStyles from '../styles/glass.module.css';
 
 const Lesson = ({ setCurrentView }) => {
   const { activeLessonId, setActiveLessonId, markLessonComplete, isLessonComplete, completedLessons, setActiveOutline } = useAppContext();
+  const [showModelAnswers, setShowModelAnswers] = useState({});
   const { lessons, getLessonById, loading, error } = useCurriculum();
 
   const lesson = React.useMemo(() => {
@@ -108,6 +109,88 @@ const Lesson = ({ setCurrentView }) => {
             ))}
           </div>
 
+          {/* Watch & Learn */}
+          {lesson.body.videos && lesson.body.videos.length > 0 && (
+            <div className={glassStyles.container}>
+              <h3 style={{ marginBottom: '1.25rem' }}>🎬 Watch & Learn</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                {lesson.body.videos.map((video, i) => (
+                  <div key={i} style={{ background: 'rgba(0,0,0,0.15)', padding: '1.25rem', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                    <iframe
+                      width="100%"
+                      height="315"
+                      src={`https://www.youtube.com/embed/${video.youtubeId}${video.startSec ? `?start=${video.startSec}` : ''}${video.endSec ? `&end=${video.endSec}` : ''}`}
+                      title={video.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      style={{ borderRadius: '12px', display: 'block' }}
+                    />
+                    <p style={{ fontWeight: 'bold', marginTop: '0.75rem', marginBottom: '0.25rem' }}>{video.title}</p>
+                    {video.watchFor && (
+                      <p style={{ fontStyle: 'italic', color: 'var(--text-secondary)', margin: 0 }}>
+                        👁️ {video.watchFor}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Step-by-Step Practice */}
+          {lesson.body.steps && lesson.body.steps.length > 0 && (
+            <div className={glassStyles.container}>
+              <h3 style={{ marginBottom: '1.25rem' }}>📋 Step-by-Step Practice Guide</h3>
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                {lesson.body.steps.map((step, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '1rem',
+                      padding: '0.75rem 0',
+                      borderBottom: i < lesson.body.steps.length - 1 ? '1px solid var(--glass-border)' : 'none',
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: '32px',
+                        height: '32px',
+                        background: 'var(--accent-teal-light)',
+                        color: 'var(--bg-primary)',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontWeight: 'bold',
+                        fontSize: '0.85rem',
+                        flexShrink: 0,
+                      }}
+                    >
+                      {step.step}
+                    </div>
+                    <span style={{ flex: 1 }}>{step.instruction}</span>
+                    {step.durationSecs && (
+                      <span
+                        style={{
+                          background: 'rgba(255,255,255,0.05)',
+                          padding: '2px 8px',
+                          borderRadius: '12px',
+                          fontSize: '0.75rem',
+                          flexShrink: 0,
+                        }}
+                      >
+                        {step.durationSecs}s
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Before/After Examples */}
           {lesson.body.examples && lesson.body.examples.length > 0 && (
             <div className={glassStyles.container}>
@@ -118,17 +201,89 @@ const Lesson = ({ setCurrentView }) => {
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', flexWrap: 'wrap' }}>
                       <div style={{ borderLeft: '3px solid var(--accent-coral)', paddingLeft: '0.75rem' }}>
                         <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--accent-coral-light)', textTransform: 'uppercase', display: 'block', marginBottom: '0.25rem' }}>Weak Phrasing</span>
-                        <p style={{ fontSize: '0.95rem', fontStyle: 'italic', color: 'var(--text-secondary)' }}>"{ex.Before}"</p>
+                        <p style={{ fontSize: '0.95rem', fontStyle: 'italic', color: 'var(--text-secondary)' }}>"{ex.before}"</p>
                       </div>
                       <div style={{ borderLeft: '3px solid var(--accent-teal-light)', paddingLeft: '0.75rem' }}>
                         <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--accent-teal-light)', textTransform: 'uppercase', display: 'block', marginBottom: '0.25rem' }}>Executive Phrasing</span>
-                        <p style={{ fontSize: '0.95rem', fontWeight: '500', color: 'var(--text-primary)' }}>"{ex.After}"</p>
+                        <p style={{ fontSize: '0.95rem', fontWeight: '500', color: 'var(--text-primary)' }}>"{ex.after}"</p>
                       </div>
                     </div>
-                    {ex.Note && (
+                    {ex.note && (
                       <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: '0.5rem 0 0 0', borderTop: '1px dashed var(--glass-border)', paddingTop: '0.5rem' }}>
-                        <strong>Coach Note:</strong> {ex.Note}
+                        <strong>Coach Note:</strong> {ex.note}
                       </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Try It Now – Inline Drills */}
+          {lesson.body.drills && lesson.body.drills.length > 0 && (
+            <div className={glassStyles.container} style={{ border: '1px solid rgba(45, 212, 191, 0.2)' }}>
+              <h3 style={{ marginBottom: '1.25rem' }}>🎙️ Try It Now</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                {lesson.body.drills.map((drill, i) => (
+                  <div key={drill.id || i} style={{ display: 'flex', flexDirection: 'column' }}>
+                    {/* Situation */}
+                    <div style={{ marginBottom: '1rem' }}>
+                      <span style={{ fontSize: '0.75rem', color: 'var(--accent-teal-light)', fontWeight: 'bold', letterSpacing: '0.05em', textTransform: 'uppercase', display: 'block', marginBottom: '0.25rem' }}>THE SITUATION</span>
+                      <p style={{ margin: 0, lineHeight: '1.5' }}>{drill.situation}</p>
+                    </div>
+
+                    {/* Background */}
+                    {drill.background && (
+                      <div style={{ marginBottom: '1rem' }}>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 'bold', letterSpacing: '0.05em', textTransform: 'uppercase', display: 'block', marginBottom: '0.25rem' }}>BACKGROUND</span>
+                        <div style={{ background: 'rgba(0,0,0,0.1)', padding: '1rem', borderRadius: '8px', fontSize: '0.9rem', fontStyle: 'italic' }}>
+                          {drill.background}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Task */}
+                    <div style={{ marginBottom: '1rem' }}>
+                      <span style={{ fontSize: '0.75rem', color: 'var(--accent-teal-light)', fontWeight: 'bold', letterSpacing: '0.05em', textTransform: 'uppercase', display: 'block', marginBottom: '0.25rem' }}>YOUR TASK</span>
+                      <p style={{ margin: 0, fontWeight: 500, lineHeight: '1.5' }}>{drill.task}</p>
+                    </div>
+
+                    {/* Starter Phrase */}
+                    {drill.starterPhrase && (
+                      <div style={{ marginBottom: '1rem' }}>
+                        <span>Start with: </span>
+                        <span style={{ color: 'var(--accent-teal-light)', fontWeight: 600 }}>"{drill.starterPhrase}"</span>
+                      </div>
+                    )}
+
+                    {/* Model Answer (collapsible) */}
+                    {drill.modelAnswer && (
+                      <div style={{ marginBottom: '1rem' }}>
+                        <button
+                          className={glassStyles.button}
+                          onClick={() => setShowModelAnswers((prev) => ({ ...prev, [i]: !prev[i] }))}
+                          style={{ background: 'transparent', borderColor: 'var(--glass-border)', fontSize: '0.85rem', padding: '6px 12px' }}
+                        >
+                          💡 {showModelAnswers[i] ? 'Hide' : 'Show'} Model Answer
+                        </button>
+                        {showModelAnswers[i] && (
+                          <div style={{ borderLeft: '3px solid var(--accent-teal-light)', paddingLeft: '0.75rem', fontStyle: 'italic', marginTop: '0.75rem', lineHeight: '1.6' }}>
+                            {drill.modelAnswer}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Success Criteria */}
+                    {drill.successCriteria && drill.successCriteria.length > 0 && (
+                      <div>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--accent-teal-light)', fontWeight: 'bold', letterSpacing: '0.05em', textTransform: 'uppercase', display: 'block', marginBottom: '0.5rem' }}>SUCCESS CRITERIA</span>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                          {drill.successCriteria.map((criterion, ci) => (
+                            <span key={ci} style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>✅ {criterion}</span>
+                          ))}
+                        </div>
+                      </div>
                     )}
                   </div>
                 ))}

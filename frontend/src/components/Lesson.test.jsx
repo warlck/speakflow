@@ -31,7 +31,7 @@ describe('Lesson Component', () => {
         { heading: 'De-hedging Explained', text: 'Avoid hedging words like "just" and "probably".' }
       ],
       examples: [
-        { Before: 'I just think we should probably wait.', After: 'We should wait.', Note: 'Clear and assertive.' }
+        { before: 'I just think we should probably wait.', after: 'We should wait.', note: 'Clear and assertive.' }
       ],
       takeaways: ['Hedges reduce authority.', 'State facts clearly.'],
       links: [

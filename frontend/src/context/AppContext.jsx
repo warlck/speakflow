@@ -14,6 +14,11 @@ export const AppProvider = ({ children }) => {
 
   const [activeOutline, setActiveOutline] = useState(null);
 
+  // activeDrillId lets a lesson deep-link into the Drills view with a specific
+  // drill preselected. It is ephemeral (not persisted) since it is only used
+  // for a single navigation handoff.
+  const [activeDrillId, setActiveDrillId] = useState(null);
+
   const [activeLessonId, setActiveLessonIdState] = useState(() => {
     return localStorage.getItem('active_lesson_id') || null;
   });
@@ -24,6 +29,15 @@ export const AppProvider = ({ children }) => {
       return stored ? JSON.parse(stored) : [];
     } catch {
       return [];
+    }
+  });
+
+  const [diagnosticResult, setDiagnosticResultState] = useState(() => {
+    try {
+      const stored = localStorage.getItem('diagnostic_result');
+      return stored ? JSON.parse(stored) : null;
+    } catch {
+      return null;
     }
   });
 
@@ -56,6 +70,15 @@ export const AppProvider = ({ children }) => {
     return completedLessons.includes(id);
   };
 
+  const setDiagnosticResult = (result) => {
+    setDiagnosticResultState(result);
+    if (result) {
+      localStorage.setItem('diagnostic_result', JSON.stringify(result));
+    } else {
+      localStorage.removeItem('diagnostic_result');
+    }
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -63,11 +86,15 @@ export const AppProvider = ({ children }) => {
         addSession,
         activeOutline,
         setActiveOutline,
+        activeDrillId,
+        setActiveDrillId,
         activeLessonId,
         setActiveLessonId,
         completedLessons,
         markLessonComplete,
         isLessonComplete,
+        diagnosticResult,
+        setDiagnosticResult,
       }}
     >
       {children}

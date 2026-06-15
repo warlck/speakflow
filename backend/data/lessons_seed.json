@@ -1,192 +1,1353 @@
 {
   "modules": [
     {
-      "id": "mod-lead-with-impact",
-      "title": "Lead with Impact",
-      "description": "Open executive updates with decisive conclusions.",
+      "id": "mod-foundations",
+      "title": "Module 1: Foundations & Mindset",
+      "description": "Start here. Conquer speaking anxiety, turn nerves into energy, and learn to analyze and adapt to any audience before you say a word.",
       "position": 1
     },
     {
-      "id": "mod-speak-with-conviction",
-      "title": "Speak with Conviction",
-      "description": "Remove hedging and communicate with authority.",
+      "id": "mod-vocal-foundations",
+      "title": "Module 2: Vocal & Physical Delivery",
+      "description": "Master your instrument. Learn breath control, the four dials of delivery (pace, pitch, tone, volume), strategic silence, body language, and how to eliminate filler words.",
       "position": 2
     },
     {
-      "id": "mod-structure-and-rhetoric",
-      "title": "Structure & Rhetoric",
-      "description": "Use clear structure and memorable rhetorical patterns.",
+      "id": "mod-executive-clarity",
+      "title": "Module 3: Structure & Clarity",
+      "description": "Military and consulting frameworks for crystal-clear communication. Lead with conclusions, structure your thinking, use the Rule of Three, and craft openings and closings that land.",
       "position": 3
+    },
+    {
+      "id": "mod-persuasion",
+      "title": "Module 4: Persuasion & Influence",
+      "description": "Move people to action. Master Aristotle's ethos, pathos, and logos, and Monroe's Motivated Sequence — the structures behind every great persuasive talk.",
+      "position": 4
+    },
+    {
+      "id": "mod-storytelling",
+      "title": "Module 5: Storytelling & Narrative",
+      "description": "The techniques TED speakers use to make ideas unforgettable. Learn narrative arcs, sensory language, and how vulnerability creates trust.",
+      "position": 5
+    },
+    {
+      "id": "mod-thinking-on-feet",
+      "title": "Module 6: Thinking on Your Feet",
+      "description": "Speak well with zero warning. Master impromptu structures like PREP and learn to handle Q&A, hostile questions, and being put on the spot.",
+      "position": 6
+    },
+    {
+      "id": "mod-great-orators",
+      "title": "Module 7: Great Orators Masterclass",
+      "description": "Study the most impactful speakers of our time — Jobs, Obama, Sinek, Brown — through embedded video analysis. Learn what makes them extraordinary.",
+      "position": 7
+    },
+    {
+      "id": "mod-capstone",
+      "title": "Module 8: Capstone Challenges",
+      "description": "Put it all together. Deliver full speeches using every technique you've learned and receive comprehensive AI evaluation.",
+      "position": 8
     }
   ],
   "lessons": [
     {
-      "id": "lesson-bluf-core",
-      "moduleId": "mod-lead-with-impact",
-      "title": "BLUF Core",
-      "summary": "Lead with your recommendation before context.",
-      "estimatedMinutes": 10,
-      "body": {
-        "blocks": [
-          {
-            "heading": "Why BLUF works",
-            "text": "Leaders need decision-ready information quickly; BLUF reduces processing time."
-          },
-          {
-            "heading": "Simple BLUF template",
-            "text": "Recommendation -> reason -> required action."
-          }
-        ],
-        "examples": [
-          {
-            "before": "I wanted to share a few things we learned over the last month...",
-            "after": "We should shift 20% of budget to retention because churn rose 8%, and I need approval today.",
-            "note": "Conclusion first, then evidence, then ask."
-          }
-        ],
-        "takeaways": [
-          "State the decision in your first sentence.",
-          "Keep context after the recommendation.",
-          "Always end with a concrete ask."
-        ],
-        "links": [
-          { "title": "HBR: How to Write an Email That People Will Actually Read (BLUF)", "url": "https://hbr.org/2016/11/how-to-write-an-email-that-people-will-actually-read" },
-          { "title": "YouTube: Lead with the Bottom Line Up Front (BLUF)", "url": "https://www.youtube.com/watch?v=kYJjZia9iAw" }
-        ]
-      },
-      "relatedDrill": "bluf",
-      "practicePrompt": "Deliver a 30-second status update using BLUF.",
-      "position": 1
-    },
-    {
-      "id": "lesson-dehedging-core",
-      "moduleId": "mod-speak-with-conviction",
-      "title": "De-Hedging Core",
-      "summary": "Replace uncertain qualifiers with accountable language.",
+      "id": "lesson-vocal-warmups",
+      "moduleId": "mod-vocal-foundations",
+      "title": "Lesson 2.1: Vocal Warm-ups & Protection",
+      "summary": "Your voice is a muscle. Learn how to warm it up, protect it, and prepare it for high-stakes speaking.",
       "estimatedMinutes": 12,
       "body": {
         "blocks": [
           {
-            "heading": "What hedging signals",
-            "text": "Phrases like \"I think\" or \"maybe\" can read as uncertainty when clarity is required."
+            "heading": "Why Warm-ups Matter",
+            "text": "Imagine a sprinter running a 100-meter dash without stretching. They'd pull a muscle. Your vocal cords work the same way. When you speak cold — first thing in the morning, or jumping straight into a high-stakes presentation — your voice lacks resonance, flexibility, and projection. Professional speakers, actors, and broadcasters never skip warm-ups. Neither should you."
           },
           {
-            "heading": "How to de-hedge",
-            "text": "Name the decision, the owner, and the timeline directly."
+            "heading": "The Core Four Warm-ups",
+            "text": "These four exercises take only 3-5 minutes and will transform your vocal quality:\n\n1. **Diaphragmatic Breathing** — Place one hand on your chest and one on your belly. Breathe in through your nose so only your belly rises (not your chest). Exhale slowly through your mouth on a 'sssss' sound for 10 seconds. This builds the breath support needed for projection without straining your throat.\n\n2. **Lip Trills** — Vibrate your lips together (like a horse sound or a child making engine noises: 'brrrrr') while sliding your pitch from low to high and back. This relaxes your facial muscles and gently stretches your vocal range.\n\n3. **The Siren** — Start at your lowest comfortable pitch and smoothly glide to your highest, then back down, like an ambulance siren. Do this 5 times. It warms up your full vocal range without sudden jumps.\n\n4. **The Yawn-Sigh** — Take a deep, genuine yawn, then exhale with an audible 'ahhhhh' sigh. This opens your throat and releases jaw tension, which is where most people hold stress."
+          },
+          {
+            "heading": "When to Warm Up",
+            "text": "Do these exercises:\n• Before any meeting where you'll be presenting (even a 5-minute standup)\n• In the car or shower before your workday\n• In a private room 5 minutes before going on stage\n• After a long period of silence (working heads-down all morning, then jumping into a call)\n\nPro tip: Drink room-temperature water, not cold. Cold water tightens vocal cords."
           }
         ],
         "examples": [
           {
-            "before": "I think we might want to consider delaying launch.",
-            "after": "We should delay launch by one week to fix checkout stability issues.",
-            "note": "Specific recommendation with rationale."
+            "before": "Speaking immediately in a 9am meeting after being silent all morning. Voice cracks, sounds thin and monotone.",
+            "after": "Doing 2 minutes of lip trills and sirens while making coffee. Voice is warm, resonant, and projects naturally.",
+            "note": "The difference is immediate and audible. Even 60 seconds of warm-ups makes a noticeable change."
           }
         ],
         "takeaways": [
-          "Avoid stacking multiple qualifiers in one sentence.",
-          "Use active voice with clear ownership.",
-          "State constraints as facts, not guesses."
+          "Never skip warm-ups before a speech, presentation, or important call.",
+          "The four core exercises: Diaphragmatic Breathing, Lip Trills, The Siren, The Yawn-Sigh.",
+          "Drink room-temperature water, not cold, to keep your cords relaxed.",
+          "Even 2 minutes of warm-ups dramatically improves vocal quality."
         ],
         "links": [
-          { "title": "TED: Speak with conviction by avoiding hedges", "url": "https://www.ted.com/talks" },
-          { "title": "Toastmasters: Eliminating Qualifiers and Fillers", "url": "https://www.toastmasters.org" }
+          {"title": "National Theatre: An Actor's Vocal Warm-Up (Full Session)", "url": "https://www.youtube.com/watch?v=CFXqyl4C1J4"},
+          {"title": "VirtualSpeech: Vocal Exercises for Public Speaking", "url": "https://virtualspeech.com/blog/vocal-exercises-for-public-speaking"}
+        ],
+        "videos": [
+          {
+            "title": "National Theatre: Full Vocal Warm-Up with Jeannette Nelson",
+            "youtubeId": "CFXqyl4C1J4",
+            "watchFor": "Follow along with the exercises in real time. Pay attention to how Jeannette demonstrates diaphragmatic breathing starting at 0:30 and lip trills at 2:15."
+          }
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Find a quiet space. Stand up or sit with your spine straight.", "durationSecs": 10},
+          {"step": 2, "instruction": "Diaphragmatic Breathing: Hand on belly, breathe in through nose (belly rises), exhale on 'sssss' for 10 seconds. Repeat 3 times.", "durationSecs": 40},
+          {"step": 3, "instruction": "Lip Trills: Make a 'brrrr' sound while sliding pitch low to high to low. Repeat 5 times.", "durationSecs": 30},
+          {"step": 4, "instruction": "The Siren: Glide from your lowest to highest pitch and back. Repeat 5 times.", "durationSecs": 30},
+          {"step": 5, "instruction": "Yawn-Sigh: Do 3 deep yawns with audible 'ahhh' sighs.", "durationSecs": 20},
+          {"step": 6, "instruction": "Speak a test sentence aloud: 'Good morning, I'm excited to share our progress today.' Notice how much warmer your voice sounds.", "durationSecs": 15}
+        ],
+        "drills": [
+          {
+            "id": "warmup-practice",
+            "title": "Morning Warm-Up Run-Through",
+            "situation": "It's 8:55am. You have a critical board presentation at 9:00am. You've been silent all morning coding.",
+            "background": "Your voice feels tight and thin. You have 2 minutes before the meeting starts. You're in a quiet hallway.",
+            "task": "Do a rapid warm-up routine aloud: Start with 3 deep belly breaths, then 30 seconds of lip trills, then say your opening line with full projection.",
+            "starterPhrase": "(Start with deep breaths, then lip trills, then say:) Good morning everyone, I'm here to share...",
+            "modelAnswer": "(3 deep breaths with audible exhale) (30 seconds of lip trills sliding pitch) Good morning everyone, I'm here to share our Q3 results and the three actions we're taking to hit our annual target.",
+            "successCriteria": ["You did audible diaphragmatic breaths (belly breathing)", "You did lip trills with pitch variation", "Your opening sentence sounds warm, projected, and confident"],
+            "durationSecs": 60
+          }
         ]
       },
-      "relatedDrill": "dehedging",
-      "practicePrompt": "Rewrite three hedged statements from your last meeting.",
+      "relatedDrill": "strategic-pausing",
+      "practicePrompt": "Do the full 4-step warm-up routine right now, then deliver a test sentence.",
       "position": 1
     },
     {
-      "id": "lesson-conviction-under-qa",
-      "moduleId": "mod-speak-with-conviction",
-      "title": "Conviction Under Q&A",
-      "summary": "Stay decisive during pushback without overclaiming.",
-      "estimatedMinutes": 9,
+      "id": "lesson-the-dials",
+      "moduleId": "mod-vocal-foundations",
+      "title": "Lesson 2.2: The Four Dials of Delivery",
+      "summary": "Your voice has four adjustable controls: pace, pitch, tone, and volume. Learn to use each one deliberately.",
+      "estimatedMinutes": 15,
       "body": {
         "blocks": [
           {
-            "heading": "Acknowledge + answer",
-            "text": "Briefly acknowledge the concern, then return to your recommendation."
+            "heading": "Think of Your Voice as a Mixing Board",
+            "text": "Professional audio engineers have sliders for bass, treble, reverb, and volume. Your voice has four equivalent dials, and great speakers adjust them constantly — not randomly, but with intent.\n\nMost untrained speakers leave all four dials at a flat, middle setting throughout their entire talk. This is called 'monotone delivery' and it is the #1 reason audiences zone out. The fix isn't about being louder or faster. It's about variation with purpose."
+          },
+          {
+            "heading": "Dial 1: Pace (How Fast You Speak)",
+            "text": "Average conversational speech is 130-150 words per minute. Most nervous speakers rush to 170+ WPM.\n\n• Speed UP when building excitement, listing items, or telling action sequences\n• Slow DOWN when making a critical point, delivering a key number, or landing a conclusion\n• The most powerful tool is the PAUSE — a full 2-3 second silence after a key statement forces the audience to process and absorb\n\nRule of thumb: If a sentence contains your main argument, cut your speed by 30% and add a pause after it."
+          },
+          {
+            "heading": "Dial 2: Pitch (How High or Low Your Voice Goes)",
+            "text": "Pitch signals meaning:\n• High pitch → questions, excitement, surprise\n• Low pitch → authority, certainty, finality\n• Rising pitch at the end of statements ('upspeak') signals uncertainty — avoid it when making declarations\n\nThe fix: Drop your pitch on the last word of important sentences. Say 'We will launch on Friday' and let 'Friday' be the lowest note."
+          },
+          {
+            "heading": "Dial 3: Tone (The Emotional Color)",
+            "text": "Tone is not about what you say, but how it feels. The same words — 'That's interesting' — can convey genuine curiosity, dismissive sarcasm, or polite boredom depending on your tone.\n\nTone is driven by your actual emotional intent. If you genuinely care about what you're saying, your tone will follow naturally. The problem is when speakers go on autopilot and deliver everything in a neutral, flat affect."
+          },
+          {
+            "heading": "Dial 4: Volume (How Loud or Quiet You Speak)",
+            "text": "Volume is not about shouting. True projection comes from the diaphragm, not the throat.\n\n• Get LOUDER when you want to signal energy, urgency, or a call to action\n• Get QUIETER — even dropping to a near-whisper — when you want to create intimacy and force the audience to lean in\n\nOne of the most powerful techniques in public speaking is the volume drop. When everyone expects you to get louder, you get softer instead. It's magnetic."
           }
         ],
         "examples": [
           {
-            "before": "Maybe we're wrong, but hopefully this works.",
-            "after": "That risk is real, and our mitigation plan covers it. We should proceed with phased rollout.",
-            "note": "Confidence plus risk ownership."
+            "before": "Reading a quote in a flat, steady pace at medium volume with no pitch variation. The audience glazes over.",
+            "after": "Slowing the pace by 30%, dropping volume to a near-whisper, pausing for 2 full seconds before the final word, and landing the last word at a low pitch. The audience leans in.",
+            "note": "The content was identical. Only the delivery dials changed."
+          },
+          {
+            "before": "'We need to move fast on this' delivered in a monotone, medium pace.",
+            "after": "'We need to move FAST...' (volume up on FAST) '...on this.' (slow, low pitch, quiet) — the urgency is palpable.",
+            "note": "Varying just two dials (volume and pace) within a single sentence transforms the impact."
           }
         ],
         "takeaways": [
-          "Do not abandon your recommendation under pressure.",
-          "Address risk with a mitigation plan."
+          "Your voice has 4 dials: Pace, Pitch, Tone, Volume.",
+          "Monotone delivery is the #1 audience killer. Variation is everything.",
+          "Slow down and pause for key points. Speed up for energy.",
+          "Drop your pitch at the end of declarations to signal authority.",
+          "The volume drop (getting quieter) is more powerful than getting louder."
+        ],
+        "links": [
+          {"title": "VirtualSpeech: Vocal Exercises for Public Speaking", "url": "https://virtualspeech.com/blog/vocal-exercises-for-public-speaking"}
+        ],
+        "videos": [
+          {
+            "title": "Steve Jobs' Stanford Speech — Master of Pace & Pause",
+            "youtubeId": "UF8uR6Z6KLc",
+            "startSec": 690,
+            "endSec": 780,
+            "watchFor": "Watch from 11:30 to 13:00. Notice how Jobs slows his pace dramatically when he says 'Stay hungry. Stay foolish.' He pauses for a full 3 seconds after each phrase. His pitch drops on the final word. This is not accidental — it's all four dials working in concert."
+          }
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Pick any sentence: 'Our results this quarter exceeded expectations.'", "durationSecs": 5},
+          {"step": 2, "instruction": "Say it at your normal pace and volume. Just a baseline.", "durationSecs": 10},
+          {"step": 3, "instruction": "Now say it FAST, as if you're excited to share great news.", "durationSecs": 10},
+          {"step": 4, "instruction": "Now say it SLOW, dropping your pitch on 'expectations' and pausing 3 seconds after.", "durationSecs": 15},
+          {"step": 5, "instruction": "Now say it in a WHISPER, as if sharing a secret with someone across the table.", "durationSecs": 10},
+          {"step": 6, "instruction": "Now say it LOUD, as if announcing it to a room of 200 people.", "durationSecs": 10},
+          {"step": 7, "instruction": "Notice how four completely different deliveries create four completely different feelings — with the same words.", "durationSecs": 5}
+        ],
+        "drills": [
+          {
+            "id": "ham-sandwich-inline",
+            "title": "The 'Ham Sandwich' Tone Drill",
+            "situation": "You are an actor auditioning for a role. The director asks you to say one mundane line four completely different ways to prove your emotional range.",
+            "background": "The line is: 'I ate a ham sandwich today.' That's it. The words carry zero inherent emotion — YOUR delivery must carry 100% of the meaning.",
+            "task": "Deliver this exact line FOUR times: (1) as devastating tragedy, (2) as a furious accusation, (3) as a hushed secret, (4) as an inspirational stadium speech. Make each one sound completely different.",
+            "starterPhrase": "I ate a ham sandwich today.",
+            "modelAnswer": "Tragic: (slow, breaking voice) 'I... ate a ham sandwich... today.' Furious: (sharp, loud) 'I ATE a ham sandwich TODAY!' Secret: (hushed, leaning in) 'I ate... a ham sandwich... today.' Inspirational: (booming, arms wide) 'I ATE a HAM SANDWICH... TODAY!'",
+            "successCriteria": ["Each delivery sounds emotionally distinct", "You varied pace, volume, and pitch across all four", "A listener could identify the emotion without seeing your face", "You committed fully — no half-hearted attempts"],
+            "durationSecs": 60
+          }
         ]
       },
-      "practicePrompt": "Answer a skeptical stakeholder question in 20 seconds.",
+      "relatedDrill": "ham-sandwich",
+      "practicePrompt": "Pick any sentence and say it four ways: fast, slow, whispered, projected.",
       "position": 2
     },
     {
-      "id": "lesson-rule-of-three",
-      "moduleId": "mod-structure-and-rhetoric",
-      "title": "Rule of Three",
-      "summary": "Use parallel triads to improve clarity and memorability.",
-      "estimatedMinutes": 11,
+      "id": "lesson-strategic-pausing",
+      "moduleId": "mod-vocal-foundations",
+      "title": "Lesson 2.3: The Power of Strategic Silence",
+      "summary": "Silence isn't empty — it's a power tool. Learn to use pauses for emphasis, authority, and audience connection.",
+      "estimatedMinutes": 10,
       "body": {
         "blocks": [
           {
-            "heading": "Why three is sticky",
-            "text": "Three points are easy to process, recall, and repeat."
+            "heading": "Why Silence Scares Us (And Why It Shouldn't)",
+            "text": "Most speakers rush to fill every second with words because silence feels awkward. But that instinct is backwards. In a conversation, 3 seconds of silence feels like an eternity. From the stage, 3 seconds of silence feels like confident authority.\n\nThe audience needs time to process what you've said. When you rush from point to point without pausing, your ideas blur together like scenery through a train window."
           },
           {
-            "heading": "Parallel structure",
-            "text": "Keep grammar and cadence similar across all three points."
+            "heading": "Three Types of Powerful Pauses",
+            "text": "1. **The Setup Pause** — Pause BEFORE your key statement. This creates anticipation. 'The single most important thing I've learned in 20 years is...' [PAUSE 3 seconds] '...that speed kills quality.'\n\n2. **The Landing Pause** — Pause AFTER your key statement. This lets it sink in. 'We are cutting the product line by 50%.' [PAUSE 3 seconds] Let the room absorb it.\n\n3. **The Transition Pause** — Pause between sections of your talk. This signals 'I'm moving to a new topic' and gives the audience a mental reset."
+          },
+          {
+            "heading": "How Long Should You Pause?",
+            "text": "• 1 second = natural sentence break (barely noticeable)\n• 2 seconds = deliberate emphasis (audience notices, feels intentional)\n• 3-5 seconds = dramatic effect (use sparingly for your biggest moments)\n• 5+ seconds = only for the most dramatic speakers in the most dramatic moments\n\nWhen in doubt, your pauses are probably too short. What feels like an eternity to you feels like confidence to the audience."
           }
         ],
         "examples": [
           {
-            "before": "Our goals are improving quality, we need to move faster, and ownership is also important.",
-            "after": "Our priorities are quality, speed, and ownership.",
-            "note": "Concise and parallel."
+            "before": "'We need to cut costs and also we need to move faster and we should probably also hire better talent and improve our process.'",
+            "after": "'We need to do three things. [PAUSE] Cut costs. [PAUSE] Move faster. [PAUSE] Hire better. [PAUSE] Everything else is noise.'",
+            "note": "Same ideas, but the pauses transform a run-on ramble into a commanding directive."
           }
         ],
         "takeaways": [
-          "Use short, parallel phrasing across each point.",
-          "Avoid mixing abstract and concrete levels in one triad."
+          "Silence is a power tool, not an awkward gap.",
+          "Three types of pauses: Setup (before), Landing (after), Transition (between).",
+          "If it feels like you're pausing too long, you're probably pausing just right.",
+          "Pair pauses with pitch drops for maximum authority."
         ],
-        "links": [
-          { "title": "Rule of Three: Why Triads Make Communication Memorable", "url": "https://www.mindtools.com" },
-          { "title": "Classic Rhetoric: The Power of Three", "url": "https://wikipedia.org/wiki/Rule_of_three_(writing)" }
+        "steps": [
+          {"step": 1, "instruction": "Read this sentence aloud with NO pauses: 'Our strategy is simple. We will reduce costs. We will accelerate shipping. And most importantly we will delight our customers.'", "durationSecs": 15},
+          {"step": 2, "instruction": "Now read it again, inserting a full 3-SECOND pause after every period. Count silently: one-Mississippi, two-Mississippi, three-Mississippi.", "durationSecs": 45},
+          {"step": 3, "instruction": "Read it a third time, adding a VOLUME DROP on the last sentence. Whisper 'we will delight our customers' after a 3-second pause.", "durationSecs": 30},
+          {"step": 4, "instruction": "Notice how the paused version feels slower to YOU but more commanding to a listener.", "durationSecs": 5}
         ]
       },
-      "relatedDrill": "rule3",
-      "practicePrompt": "Describe your team strategy in three parallel bullets.",
+      "practicePrompt": "Read any paragraph from a news article, inserting a 3-second pause after every sentence.",
+      "position": 3
+    },
+    {
+      "id": "lesson-bluf",
+      "moduleId": "mod-executive-clarity",
+      "title": "Lesson 3.1: BLUF (Bottom Line Up Front)",
+      "summary": "The #1 rule of executive communication: state your conclusion first, then explain why.",
+      "estimatedMinutes": 12,
+      "body": {
+        "blocks": [
+          {
+            "heading": "The Executive's Scarcest Resource: Attention",
+            "text": "Executives don't have time for build-ups. They are mentally triaging dozens of decisions per hour. When you walk into a room and start with context — 'So, as you know, last quarter we had some challenges with the supply chain, and there were also some staffing issues...' — the executive's brain is screaming: 'GET TO THE POINT.'\n\nBLUF (Bottom Line Up Front) is a military communication standard adopted by the best business communicators in the world. It means: state your conclusion, recommendation, or request in your FIRST sentence. Then provide supporting context."
+          },
+          {
+            "heading": "The BLUF Formula",
+            "text": "Every BLUF statement has three parts, always in this order:\n\n1. **The Bottom Line** (your conclusion or recommendation)\n2. **The Reason** (1-2 sentences of supporting evidence)\n3. **The Ask** (what you need from the listener)\n\nExample: 'We should delay the launch by one week [bottom line] because the checkout flow has a critical bug that crashes on mobile [reason]. I need your approval to notify the marketing team by end of day [ask].'"
+          },
+          {
+            "heading": "Common BLUF Mistakes",
+            "text": "❌ 'I think we might want to consider...' — Don't hedge your bottom line.\n❌ Starting with 'So, as you know...' — Skip the preamble entirely.\n❌ 'There are a few things I want to share...' — How many? What's the point?\n✅ 'We need to [action] because [reason]. I need [ask].' — Clear, actionable, decisive."
+          }
+        ],
+        "examples": [
+          {
+            "before": "So, I wanted to share a few things we learned over the last month. It's been a challenging quarter with the supply chain issues, and we've also had some turnover on the team. After looking at all the data and talking to the vendors, we think we should probably shift some budget around.",
+            "after": "We need to shift 20% of budget from acquisition to retention. Churn rose 8% this quarter, and our analysis shows retention ROI is 3x acquisition. I need your sign-off by Friday.",
+            "note": "The 'after' version is shorter, but contains more actionable information."
+          },
+          {
+            "before": "Hey, I wanted to chat about the candidate we interviewed last week. She had really strong technical skills and great references. But there were a few concerns that came up during the process...",
+            "after": "I recommend we pass on Sarah Chen. Despite strong technical skills, she was 30 minutes late, was dismissive to the receptionist, and demanded a salary 40% above our band. I suggest we move forward with candidate #2.",
+            "note": "BLUF works for bad news too. Don't bury the lead."
+          },
+          {
+            "before": "The marketing campaign launched last week and there are some mixed results. The click-through rates are actually quite good, but we've noticed some issues with the landing page...",
+            "after": "The campaign is generating clicks but not sales — conversions are down 10% because the landing page crashes on mobile. I've deployed a fix and need 24 hours to validate. I'll have confirmed results by Wednesday.",
+            "note": "Includes the problem, the action already taken, and a specific timeline."
+          }
+        ],
+        "takeaways": [
+          "Your first sentence should contain your conclusion or recommendation.",
+          "Follow the formula: Bottom Line → Reason → Ask.",
+          "BLUF works for good news, bad news, and everything in between.",
+          "If you catch yourself saying 'So, as you know...' — stop and restart with the point."
+        ],
+        "links": [
+          {"title": "Wikipedia: BLUF (Communication)", "url": "https://en.wikipedia.org/wiki/BLUF_(communication)"}
+        ],
+        "drills": [
+          {
+            "id": "bluf-drill-1",
+            "title": "BLUF: The Hallway Ambush",
+            "situation": "You're VP of Operations. Your CEO catches you in the hallway and says: 'I just got out of a board meeting. What's the shipment status? Give it to me in 10 seconds.'",
+            "background": "Your supplier sent a rambling email: there was a Pacific storm, warehouse staffing is down 20%, parts were re-routed through a different port, customs clearance is delayed, and they 'hope to ship by the 14th but it could be the 20th.' There's also a 5% surcharge for expedited handling.",
+            "task": "Respond in ONE sentence. Your first words must be the outcome — no build-up, no context first. Include a clear next action.",
+            "starterPhrase": "The shipment is delayed...",
+            "modelAnswer": "The shipment is delayed two weeks — I'm activating our backup vendor today to keep production on schedule.",
+            "successCriteria": ["Your first sentence contains the core outcome (delayed, by how long)", "No hedging words (maybe, possibly, I think, sort of)", "You stated a clear next action you're taking", "Delivered in under 15 seconds"],
+            "durationSecs": 30
+          },
+          {
+            "id": "bluf-drill-2",
+            "title": "BLUF: The Hiring Decision",
+            "situation": "Your Head of HR pings you on Slack: 'Quick — what's your hiring recommendation for the Product Manager role? I need to make the offer call in 30 minutes.'",
+            "background": "You interviewed two final candidates. Candidate A has 8 years of experience and great references, but asked for a salary 35% above your budget and seemed disengaged during the culture fit round. Candidate B has 4 years of experience, lower salary expectations, crushed the case study, and every interviewer rated her 'strong hire.'",
+            "task": "Give your recommendation in two sentences max. State WHO to hire and WHY in sentence one. State the next action in sentence two.",
+            "starterPhrase": "Hire Candidate B.",
+            "modelAnswer": "Hire Candidate B — she outperformed on the case study, is within budget, and received unanimous 'strong hire' ratings. Make the offer today before we lose her to a competing process.",
+            "successCriteria": ["First sentence names the candidate and the recommendation", "You gave at least one concrete reason", "You included a next action with urgency", "No waffling between options"],
+            "durationSecs": 25
+          }
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Think of a real email you sent recently that was longer than 3 sentences.", "durationSecs": 15},
+          {"step": 2, "instruction": "Identify the actual point of that email — the one thing you wanted the reader to know or do.", "durationSecs": 15},
+          {"step": 3, "instruction": "Say that point aloud in one sentence, starting with the conclusion.", "durationSecs": 15},
+          {"step": 4, "instruction": "Add one sentence of supporting evidence.", "durationSecs": 10},
+          {"step": 5, "instruction": "Add one sentence with your specific ask and timeline.", "durationSecs": 10},
+          {"step": 6, "instruction": "Deliver all three sentences together. That's your BLUF.", "durationSecs": 15}
+        ]
+      },
+      "relatedDrill": "bluf-distillation",
+      "practicePrompt": "Take your last email and rewrite it as a 3-sentence BLUF: conclusion, evidence, ask.",
       "position": 1
     },
     {
-      "id": "lesson-problem-solution-benefit",
-      "moduleId": "mod-structure-and-rhetoric",
-      "title": "Problem-Solution-Benefit",
-      "summary": "Frame proposals in a persuasive, executive-ready arc.",
-      "estimatedMinutes": 8,
+      "id": "lesson-dehedging",
+      "moduleId": "mod-executive-clarity",
+      "title": "Lesson 3.2: De-Hedging & High Conviction",
+      "summary": "The words 'I think', 'maybe', and 'sort of' are credibility killers. Learn to speak with commanding authority.",
+      "estimatedMinutes": 10,
       "body": {
         "blocks": [
           {
-            "heading": "Narrative arc",
-            "text": "Define pain clearly, propose the fix, then quantify value."
+            "heading": "Hedging Is a Habit, Not Politeness",
+            "text": "Hedging words — 'I think', 'maybe', 'sort of', 'kind of', 'just', 'probably', 'hopefully', 'I feel like' — feel polite. They're actually a defense mechanism. By pre-qualifying everything, you're giving yourself an escape route: 'If I'm wrong, well, I said I wasn't sure.'\n\nBut leaders don't need escape routes. Leaders own their recommendations. When a CEO says 'We're pivoting,' nobody says 'Well, she did say maybe.' The certainty IS the message."
+          },
+          {
+            "heading": "The Hedging Hit List",
+            "text": "Train your ear to catch these in real-time:\n\n🚫 'I think we should...' → ✅ 'We should...'\n🚫 'Maybe we could try...' → ✅ 'Let's do...'\n🚫 'It sort of seems like...' → ✅ 'The data shows...'\n🚫 'I just wanted to say...' → ✅ (Delete this phrase entirely)\n🚫 'We could potentially...' → ✅ 'We will...'\n🚫 'Hopefully this works...' → ✅ 'Here's the plan and the fallback if it doesn't.'\n\nThe pattern: replace subjective qualifiers with objective facts and declarative actions."
+          },
+          {
+            "heading": "When Hedging IS Appropriate",
+            "text": "De-hedging is not about being arrogant or ignoring uncertainty. It's about being precise.\n\n❌ Bad: 'I think we might have a problem.'\n✅ Good: 'We have a risk. Here's the probability and the mitigation plan.'\n\nYou can acknowledge uncertainty with facts ('There's a 30% chance of delay') without hedging ('I think maybe it might be late, hopefully not')."
           }
         ],
         "examples": [
           {
-            "before": "We built a new dashboard and it has many features.",
-            "after": "Reporting delays cost us weekly. This dashboard automates reporting, saving six analyst hours per week.",
-            "note": "Business outcome focus."
+            "before": "I think maybe we should try to consider pausing the project for now, if that makes sense to everyone, because it sort of looks like the timeline might be slipping a little bit.",
+            "after": "The project timeline is slipping. We need to pause it today and reallocate engineering to the Q4 launch.",
+            "note": "13 hedging words removed. Same message, 100x more authority."
+          },
+          {
+            "before": "I was just wondering if we could potentially get a little more budget for the Q3 push, in my opinion.",
+            "after": "I'm requesting a $50K budget increase for Q3. Here's the ROI analysis showing a 4x return.",
+            "note": "Specific numbers and evidence replace vague qualifiers."
           }
         ],
         "takeaways": [
-          "Always tie your solution to business impact.",
-          "Quantify benefits when possible."
+          "Hedging is a habit, not politeness. It undermines your credibility.",
+          "Replace 'I think' with data. Replace 'maybe' with a plan.",
+          "You can acknowledge uncertainty without hedging — use specific probabilities.",
+          "Record yourself in meetings and count your hedging words. Awareness is the first step."
+        ],
+        "links": [
+          {"title": "TED: How to Speak So That People Want to Listen", "url": "https://www.ted.com/talks/julian_treasure_how_to_speak_so_that_people_want_to_listen"}
+        ],
+        "drills": [
+          {
+            "id": "dehedge-drill-1",
+            "title": "The De-Hedging Rapid Fire",
+            "situation": "You're in a leadership team meeting. A colleague just gave a wishy-washy recommendation. Your manager turns to you and says: 'Can you restate that with conviction?'",
+            "background": "Your colleague said: 'I think maybe we should try to consider pausing the project for now, if that makes sense to everyone, because it sort of looks like the timeline might be slipping a little bit and we could potentially reallocate some resources.'",
+            "task": "Restate your colleague's message using zero hedging words. State facts as facts. State actions as actions. Include a timeline.",
+            "starterPhrase": "The project timeline is slipping.",
+            "modelAnswer": "The project timeline is slipping. We need to pause it today and reallocate the engineering team to the Q4 launch. I'll send the revised plan by end of day.",
+            "successCriteria": ["Zero hedging words (no 'I think', 'maybe', 'sort of', 'try to', 'could')", "Contains a specific action with an owner", "Contains a timeline ('today', 'by Friday', etc.)", "Delivered with a steady, confident tone"],
+            "durationSecs": 25
+          }
         ]
       },
-      "practicePrompt": "Pitch a process improvement using PSB in under 40 seconds.",
+      "relatedDrill": "dehedging",
+      "practicePrompt": "Listen to yourself in your next meeting. Count how many times you say 'I think' or 'maybe'. Then redeliver those sentences without them.",
+      "position": 2
+    },
+    {
+      "id": "lesson-pyramid-principle",
+      "moduleId": "mod-executive-clarity",
+      "title": "Lesson 3.3: The Pyramid Principle",
+      "summary": "McKinsey's framework for structuring any argument: start with the answer, then group supporting evidence logically.",
+      "estimatedMinutes": 12,
+      "body": {
+        "blocks": [
+          {
+            "heading": "How McKinsey Consultants Think",
+            "text": "The Pyramid Principle was created by Barbara Minto at McKinsey in the 1960s. It's the foundation of how every major consulting firm structures communication.\n\nThe core idea: start with your answer at the top of a 'pyramid,' then provide 2-3 supporting arguments below it, each backed by evidence. The audience gets the conclusion immediately and can stop listening whenever they have enough detail."
+          },
+          {
+            "heading": "The Structure",
+            "text": "Level 1 (Top): Your main recommendation or conclusion — stated in ONE sentence.\n\nLevel 2 (Supporting): 2-3 key reasons that support your conclusion. Each reason should be a complete, standalone argument.\n\nLevel 3 (Evidence): Under each reason, the specific data, examples, or facts that prove it.\n\nExample:\nTop: 'We should expand into the European market.'\n├── Reason 1: 'Market demand is strong.' (Evidence: 40% of our web traffic is from EU)\n├── Reason 2: 'We have a regulatory advantage.' (Evidence: New competitor must wait 18 months for approval)\n└── Reason 3: 'The unit economics work.' (Evidence: Projected ROI of 3.2x within 12 months)"
+          }
+        ],
+        "examples": [
+          {
+            "before": "So we've been looking at the European market and there's some interesting data. Traffic from the EU is about 40% of our total. And the regulatory environment is actually favorable right now because competitors would have to wait for approval. Plus the numbers look good on unit economics.",
+            "after": "We should expand into Europe for three reasons: the demand is proven with 40% of our traffic already from EU, we have an 18-month regulatory head start over competitors, and projected ROI is 3.2x within a year. I recommend we approve the pilot by end of month.",
+            "note": "Same information, but structured as a pyramid: conclusion first, three supporting reasons, clear ask."
+          }
+        ],
+        "takeaways": [
+          "Always lead with your conclusion (the top of the pyramid).",
+          "Support it with 2-3 key reasons (the middle layer).",
+          "Back each reason with specific evidence (the base).",
+          "The audience should be able to stop listening at any point and still have the key message."
+        ]
+      },
+      "practicePrompt": "Take any recommendation you've made recently and restructure it as: Conclusion → 3 Reasons → Evidence for each.",
+      "position": 3
+    },
+    {
+      "id": "lesson-scqa",
+      "moduleId": "mod-executive-clarity",
+      "title": "Lesson 3.4: SCQA — Framing Problems for Executives",
+      "summary": "Situation-Complication-Question-Answer: the storytelling framework for business problems.",
+      "estimatedMinutes": 10,
+      "body": {
+        "blocks": [
+          {
+            "heading": "Why Context Matters (But Only the Right Context)",
+            "text": "BLUF says 'start with the answer.' But sometimes your audience doesn't even know there's a problem yet. If you walk in and say 'We need to fire our largest vendor,' the room will be confused and defensive.\n\nSCQA bridges this gap. It's a rapid storytelling framework that creates just enough context for your conclusion to make sense:\n\n• Situation (S): The stable current state everyone agrees on\n• Complication (C): The thing that just disrupted the status quo\n• Question (Q): The natural question that arises\n• Answer (A): Your recommendation"
+          },
+          {
+            "heading": "SCQA in Action",
+            "text": "S: 'Our vendor partnership with Acme Corp has been our backbone for five years, handling 60% of our fulfillment.'\nC: 'Last month, they raised prices 40% and missed three delivery windows, costing us $200K in SLA penalties.'\nQ: 'Should we continue this partnership or activate our backup vendor?'\nA: 'We should terminate Acme and shift to our backup vendor, who has been ready since January. Here's the transition plan.'\n\nTotal time: 30 seconds. The audience now has full context and a clear recommendation."
+          }
+        ],
+        "examples": [
+          {
+            "before": "So I've been doing some analysis on our vendor situation and there are some concerning trends I wanted to flag for the team...",
+            "after": "Acme Corp has been our fulfillment backbone for 5 years [S]. Last month they hiked prices 40% and missed 3 deliveries, costing us $200K [C]. Do we stay or switch? [Q] We switch. Our backup vendor is ready, and here's the 2-week transition plan [A].",
+            "note": "SCQA creates a micro-story that makes the recommendation feel inevitable."
+          }
+        ],
+        "takeaways": [
+          "Use SCQA when your audience needs context to understand your recommendation.",
+          "Keep S and C very brief — no more than 2 sentences each.",
+          "The Q should be the natural question a reasonable person would ask.",
+          "The A is your BLUF — state it with full conviction."
+        ],
+        "drills": [
+          {
+            "id": "scqa-drill",
+            "title": "SCQA: The Vendor Crisis",
+            "situation": "You're presenting to the CFO about a vendor problem. She has 2 minutes before her next meeting.",
+            "background": "Your company has used CloudHost for 3 years for server infrastructure ($500K/year). Last quarter, CloudHost had 4 major outages totaling 18 hours of downtime, costing your company $1.2M in lost revenue. A competitor, ServerPrime, is offering equivalent service at 20% lower cost with a 99.99% uptime SLA guarantee.",
+            "task": "Deliver the SCQA to the CFO in under 45 seconds. State each part clearly: the stable situation, the complication, the question, and your answer.",
+            "starterPhrase": "We've used CloudHost for three years...",
+            "modelAnswer": "We've used CloudHost for three years — they've been our infrastructure backbone at $500K annually. Last quarter, they had four major outages causing $1.2M in lost revenue and 18 hours of downtime. The question is: do we stay or switch? My recommendation: we switch to ServerPrime, who offers 99.99% uptime at 20% lower cost. I have a migration plan ready for your review.",
+            "successCriteria": ["Clearly stated all 4 components: Situation, Complication, Question, Answer", "Kept Situation and Complication brief (2 sentences max each)", "Included specific numbers ($, hours, percentages)", "Ended with a clear next action"],
+            "durationSecs": 45
+          }
+        ]
+      },
+      "practicePrompt": "Frame a current challenge at work using SCQA: Situation → Complication → Question → Answer.",
+      "position": 4
+    },
+    {
+      "id": "lesson-story-spine",
+      "moduleId": "mod-storytelling",
+      "title": "Lesson 5.1: The Narrative Arc — Building Stories That Move People",
+      "summary": "Learn the Story Spine framework used by Pixar and TED speakers to create unforgettable narratives.",
+      "estimatedMinutes": 15,
+      "body": {
+        "blocks": [
+          {
+            "heading": "Why Stories Beat Data",
+            "text": "Research from Stanford shows that stories are up to 22 times more memorable than facts alone. When you tell a story, the listener's brain doesn't just process information — it synchronizes with yours. Their cortisol rises with the tension, their oxytocin releases with the resolution.\n\nThis is why the best TED talks are 65% stories. This is why Steve Jobs didn't list specs — he told the story of why the product matters."
+          },
+          {
+            "heading": "The Story Spine (Pixar's Framework)",
+            "text": "Every Pixar movie follows this structure. So should your best presentations.\n\n1. **Once upon a time...** (The stable world — how things were)\n2. **Every day...** (The routine — what was normal)\n3. **But one day...** (The inciting incident — what disrupted everything)\n4. **Because of that...** (The consequences — what had to change)\n5. **Until finally...** (The resolution — what was learned or achieved)\n\nThe magic is in step 3: 'But one day.' Without conflict, there is no story. Without a disruption, there is no reason to listen."
+          },
+          {
+            "heading": "Applying the Story Spine to Business",
+            "text": "You don't need fairy tales. Every business challenge IS a story:\n\n'Once upon a time, our onboarding took 3 weeks. Every day, new hires would sit through 15 hours of training videos. But one day, we lost 3 senior engineers who said the onboarding was 'soul-crushing.' Because of that, we rebuilt the entire program around hands-on projects. Until finally, onboarding dropped to 5 days and our retention improved 40%.'\n\nThat's a business metric (onboarding time, retention) wrapped in a narrative arc. It's 10x more compelling than a slide with two bar charts."
+          }
+        ],
+        "examples": [
+          {
+            "before": "We reduced onboarding from 3 weeks to 5 days and improved retention by 40%.",
+            "after": "Once upon a time, new hires sat through 15 hours of training videos. But one day, three of our best engineers quit, calling the process 'soul-crushing.' Because of that, we rebuilt everything around hands-on projects. Until finally, onboarding dropped to 5 days and retention jumped 40%.",
+            "note": "The data is identical. But the story version makes you FEEL the problem and root for the solution."
+          }
+        ],
+        "takeaways": [
+          "Stories are 22x more memorable than facts alone.",
+          "The Story Spine: Once upon a time → Every day → But one day → Because of that → Until finally.",
+          "The 'But one day' moment is the most critical — without conflict, there's no story.",
+          "Every business metric can be wrapped in a narrative arc."
+        ],
+        "videos": [
+          {
+            "title": "Bryan Stevenson — 'We need to talk about an injustice'",
+            "youtubeId": "IKdwdPk_scU",
+            "startSec": 0,
+            "endSec": 180,
+            "watchFor": "Watch the first 3 minutes. Stevenson doesn't start with statistics about incarceration. He starts with a STORY about his grandmother. Notice how he builds trust and emotional connection before ever making his argument. This is the Story Spine in action: establishing the world, introducing conflict, revealing transformation."
+          }
+        ],
+        "drills": [
+          {
+            "id": "story-spine-drill",
+            "title": "The Story Spine: Your Professional Challenge",
+            "situation": "You're at a team offsite. Your manager asks everyone to share a 'lesson learned' moment from the past year as a storytelling exercise.",
+            "background": "Use the Story Spine framework to structure your story. You can use a real experience or imagine one. The key is hitting all five beats: (1) Once upon a time... (2) Every day... (3) But one day... (4) Because of that... (5) Until finally...",
+            "task": "Tell a 60-second story about a professional challenge. Make sure the 'But one day' moment introduces genuine conflict, and the 'Until finally' delivers a clear lesson or transformation.",
+            "starterPhrase": "Once upon a time, our team was...",
+            "modelAnswer": "Once upon a time, our team was the fastest-shipping squad in the company. Every day, we pushed features and felt unstoppable. But one day, a critical bug took down payments for 4 hours. Because of that, we had to rebuild our entire testing pipeline from scratch. Until finally, we emerged with zero-downtime deployments and became the team others came to for reliability advice.",
+            "successCriteria": ["Used all 5 story spine prompts", "The 'But one day' moment introduces genuine conflict or tension", "There is a clear transformation or lesson at the end", "Delivered in 60-90 seconds with vocal variety"],
+            "durationSecs": 90
+          }
+        ]
+      },
+      "relatedDrill": "story-spine",
+      "practicePrompt": "Tell a 60-second story about a recent challenge using the Story Spine.",
+      "position": 1
+    },
+    {
+      "id": "lesson-show-dont-tell",
+      "moduleId": "mod-storytelling",
+      "title": "Lesson 5.2: Show, Don't Tell — Painting Mental Movies",
+      "summary": "Replace abstract emotions with sensory details to create immersive, unforgettable moments in your speeches.",
+      "estimatedMinutes": 10,
+      "body": {
+        "blocks": [
+          {
+            "heading": "The Screenwriter's Rule",
+            "text": "In screenwriting, there's an iron law: never put an emotion in the script direction. Don't write 'Sarah is nervous.' Write 'Sarah's fingers drum the table. She glances at the door. Her coffee is untouched and cold.'\n\nThe same rule applies to public speaking. When you say 'I was really nervous,' the audience processes it intellectually: 'OK, they were nervous.' When you say 'My palms were slick with sweat and I could hear my own heartbeat,' the audience FEELS it."
+          },
+          {
+            "heading": "The Five Senses Toolkit",
+            "text": "When describing a key moment in your story, use the five senses:\n\n👁️ **Sight**: What did you see? Colors, light, movement, faces.\n👂 **Sound**: What did you hear? Silence, a notification ping, murmuring, a door clicking shut.\n✋ **Touch**: What did you feel physically? Temperature, texture, tension in your body.\n👃 **Smell**: Often the most evocative sense — coffee, rain, a new office.\n👅 **Taste**: The metallic taste of adrenaline, the celebratory champagne.\n\nYou don't need all five every time. But using even 2-3 transforms a flat statement into a vivid moment."
+          }
+        ],
+        "examples": [
+          {
+            "before": "I was really nervous before the presentation.",
+            "after": "My palms were slick with sweat. The fluorescent lights felt blinding. I could hear my own heartbeat thumping in my ears as I gripped the podium with both hands.",
+            "note": "The word 'nervous' never appears, but the audience feels it viscerally."
+          },
+          {
+            "before": "I was really relieved when we got the deal.",
+            "after": "I read the email three times. Then I leaned back in my chair — it creaked — and I just stared at the ceiling. The tension drained from my shoulders like water. I pressed my palms flat on the cool desk surface and breathed.",
+            "note": "Three senses (sound, touch, sight) create a cinematic moment."
+          }
+        ],
+        "takeaways": [
+          "Never say how you felt. Show what your body did.",
+          "Use 2-3 of the five senses to create vivid, immersive moments.",
+          "The most powerful emotions are the ones the audience infers, not the ones you state.",
+          "Ban the words 'happy', 'sad', 'nervous', 'excited' from your critical story moments."
+        ],
+        "drills": [
+          {
+            "id": "sensory-drill",
+            "title": "Sensory Translation",
+            "situation": "You're giving a keynote about a breakthrough moment in your career. You need to make the audience FEEL your relief without ever using the word.",
+            "background": "The scenario: You just received an email confirming your startup secured its first major client after 18 months of rejection. Describe this exact moment using only physical sensations — what you saw, heard, felt, smelled, tasted. NEVER use: 'happy', 'relieved', 'excited', 'grateful', 'thrilled'.",
+            "task": "Describe the moment for 60 seconds using only sensory details. What did your body do? What sounds surrounded you? What did you see?",
+            "starterPhrase": "I was sitting at my desk when the notification pinged...",
+            "modelAnswer": "I was sitting at my desk when the notification pinged. My eyes locked on the subject line and my breath caught. I read it twice — then my chair creaked as I leaned back, and I felt the tension drain from my shoulders like water. The office hummed with fluorescent lights, but I couldn't hear anything except my own heartbeat slowing down. I pressed my palms flat on the cool desk surface and just... breathed.",
+            "successCriteria": ["Used at least 3 of the 5 senses", "Did NOT use abstract emotion words", "The audience can infer the emotion without being told", "Includes at least one specific physical detail"],
+            "durationSecs": 60
+          }
+        ]
+      },
+      "relatedDrill": "sensory-translation",
+      "practicePrompt": "Describe the feeling of 'anticipation' for 60 seconds without ever using the word.",
+      "position": 2
+    },
+    {
+      "id": "lesson-vulnerability",
+      "moduleId": "mod-storytelling",
+      "title": "Lesson 5.3: Vulnerability as a Superpower",
+      "summary": "The counterintuitive truth: admitting failure builds more trust than projecting perfection.",
+      "estimatedMinutes": 10,
+      "body": {
+        "blocks": [
+          {
+            "heading": "Why Perfection Repels and Vulnerability Attracts",
+            "text": "When a speaker projects flawless success — 'Everything went perfectly and we crushed it' — the audience instinctively distrusts them. Nobody's path is that smooth. It feels performative.\n\nBut when Brené Brown opens her TED talk by admitting she had a breakdown after her first talk went viral, something shifts. The audience thinks: 'She's real. She's like me.' Vulnerability is the fastest shortcut to trust, because it signals: 'I'm not performing for you. I'm sharing with you.'"
+          },
+          {
+            "heading": "The Vulnerability Formula",
+            "text": "Strategic vulnerability is NOT oversharing or therapy. It follows a structure:\n\n1. **The admission** — Briefly acknowledge a failure, mistake, or fear\n2. **The lesson** — What you learned from it\n3. **The transformation** — How it made you better\n\nExample: 'My first presentation as a VP was a disaster. I talked for 40 minutes when I had a 10-minute slot. People started checking their phones. [Admission] That night, I realized I was hiding behind detail because I was afraid my conclusions weren't strong enough. [Lesson] I now start every talk with the punchline and cut everything that doesn't directly support it. [Transformation]'"
+          }
+        ],
+        "examples": [
+          {
+            "before": "I've always been a strong communicator and I'm here to share my expertise with you.",
+            "after": "Three years ago, I gave the worst presentation of my career. My boss pulled me aside and said, 'I have no idea what you just said.' That moment changed everything about how I communicate.",
+            "note": "The 'after' version creates instant empathy and curiosity. The audience wants to hear the transformation."
+          }
+        ],
+        "takeaways": [
+          "Vulnerability builds trust faster than perfection.",
+          "Follow the formula: Admission → Lesson → Transformation.",
+          "Vulnerability is strategic, not therapeutic — you control what you share.",
+          "Open with a failure story, not a success story. The audience will root for you."
+        ],
+        "videos": [
+          {
+            "title": "Brené Brown — 'The Power of Vulnerability'",
+            "youtubeId": "iCvmsMzlF7o",
+            "startSec": 0,
+            "endSec": 240,
+            "watchFor": "Watch the first 4 minutes. Notice how Brown uses self-deprecating humor to disarm the audience before sharing deeply personal research about shame and connection. She doesn't project expertise — she shares her journey of resistance and breakthrough. This is strategic vulnerability at its finest."
+          }
+        ]
+      },
+      "practicePrompt": "Share a 60-second story about a professional failure and what you learned from it.",
+      "position": 3
+    },
+    {
+      "id": "lesson-steve-jobs",
+      "moduleId": "mod-great-orators",
+      "title": "Lesson 7.1: Steve Jobs — The Art of Simplicity",
+      "summary": "Dissect how Jobs used the Rule of Three, emotional storytelling, and radical simplicity to deliver the most famous commencement speech ever.",
+      "estimatedMinutes": 15,
+      "body": {
+        "blocks": [
+          {
+            "heading": "Why Jobs Is the Gold Standard",
+            "text": "Steve Jobs' 2005 Stanford Commencement Address has been viewed over 45 million times. It's studied in business schools worldwide. Yet Jobs was not a 'natural' speaker — he rehearsed obsessively, sometimes for weeks. His genius was in structure and simplicity, not improvisation."
+          },
+          {
+            "heading": "Technique 1: The Rule of Three",
+            "text": "Jobs organized his entire 15-minute speech into exactly three stories:\n1. 'Connecting the dots' (about dropping out of college)\n2. 'Love and loss' (about getting fired from Apple)\n3. 'Death' (about his cancer diagnosis)\n\nHe told the audience upfront: 'Today I want to tell you three stories from my life. That's it. No big deal. Just three stories.' This immediately sets expectations and creates a simple mental framework for the audience to follow."
+          },
+          {
+            "heading": "Technique 2: Conversational Language",
+            "text": "Jobs used no jargon, no corporate-speak, no complex sentences. His Stanford speech reads at a 7th-grade reading level. Sentences like 'Stay hungry. Stay foolish.' are devastatingly simple.\n\nThis is not laziness — it's craft. Simple language is harder to write than complex language, because you have to distill your idea to its absolute essence."
+          },
+          {
+            "heading": "Technique 3: The Emotional Payoff",
+            "text": "Each of Jobs' three stories follows the vulnerability formula: a personal failure, a lesson learned, a transformation achieved. He was fired from his own company. He was diagnosed with cancer. He dropped out of college.\n\nBy sharing his failures, Jobs earned the right to give advice. The audience thinks: 'If he overcame THAT, maybe his advice is worth following.'"
+          }
+        ],
+        "examples": [
+          {
+            "before": "I'd like to discuss how a calligraphy class I took during my educational hiatus ultimately influenced the typographic design philosophy of our personal computing products.",
+            "after": "I dropped out of college. And since I had dropped out and didn't have to take normal classes, I decided to take a calligraphy class. Ten years later, when we were designing the first Macintosh, it all came back to me. And we designed it all into the Mac.",
+            "note": "Jobs tells the SAME story as the 'before' version, but with conversational language and narrative flow."
+          }
+        ],
+        "takeaways": [
+          "Structure your talk around exactly three points.",
+          "Use conversational, simple language — aim for a 7th-grade reading level.",
+          "Share personal failures to earn the right to give advice.",
+          "'Stay hungry. Stay foolish.' — end with a short, memorable directive."
+        ],
+        "videos": [
+          {
+            "title": "Steve Jobs' 2005 Stanford Commencement Address (Full)",
+            "youtubeId": "UF8uR6Z6KLc",
+            "watchFor": "Watch the full 15 minutes. Notice: (1) He announces 'three stories' in the first 10 seconds. (2) Each story has a clear failure and lesson. (3) His language is remarkably simple. (4) His final words — 'Stay hungry. Stay foolish.' — are a 4-word call to action that has become one of the most quoted lines in history."
+          }
+        ]
+      },
+      "practicePrompt": "Take any topic and structure a 2-minute mini-talk using three stories. Tell the audience upfront: 'I have three stories for you.'",
+      "position": 1
+    },
+    {
+      "id": "lesson-simon-sinek",
+      "moduleId": "mod-great-orators",
+      "title": "Lesson 7.2: Simon Sinek — Start With Why",
+      "summary": "Learn the Golden Circle framework: why the most inspiring leaders communicate from the inside out.",
+      "estimatedMinutes": 12,
+      "body": {
+        "blocks": [
+          {
+            "heading": "The Golden Circle",
+            "text": "Most speakers start with WHAT they do, then HOW they do it, then (maybe) WHY. Sinek's insight: inspiring leaders reverse the order.\n\n• WHY (your purpose, your belief, your cause)\n• HOW (your process, your differentiator)\n• WHAT (your product, your output)\n\nApple doesn't say: 'We make great computers (WHAT). They're beautifully designed and easy to use (HOW).' Apple says: 'Everything we do, we believe in challenging the status quo and thinking differently (WHY). We do this by making products that are beautifully designed and simple (HOW). We happen to make computers (WHAT).'"
+          },
+          {
+            "heading": "Why 'Why' Works",
+            "text": "The 'why' speaks to the limbic brain — the part that controls decision-making and emotions, not language. This is why people can 'feel' that something is right even when they can't articulate why.\n\nWhen you start with WHAT, you engage the rational brain. People analyze, compare, and scrutinize. When you start with WHY, you engage the emotional brain. People feel aligned with your mission."
+          }
+        ],
+        "examples": [
+          {
+            "before": "Our platform processes 10,000 transactions per second with 99.99% uptime. We use cloud-native architecture and AI-driven monitoring.",
+            "after": "We believe every business deserves infrastructure that just works — so they can focus on what actually matters. That's why we built a platform that processes 10,000 transactions per second with 99.99% uptime.",
+            "note": "Same features. But the 'why' version makes you care about the mission, not just the specs."
+          }
+        ],
+        "takeaways": [
+          "Start with WHY — your purpose and belief — before WHAT or HOW.",
+          "The Golden Circle: Why → How → What.",
+          "'People don't buy what you do, they buy why you do it.' — Sinek",
+          "Practice articulating your team's or project's WHY in one sentence."
+        ],
+        "videos": [
+          {
+            "title": "Simon Sinek — 'How Great Leaders Inspire Action' (TED)",
+            "youtubeId": "u4ZoJKF_VuA",
+            "watchFor": "Notice how Sinek draws the Golden Circle on a flipchart — a visual anchor that makes the framework unforgettable. Watch how he uses Apple and Martin Luther King Jr. as parallel examples. His delivery is conversational, unhurried, and uses repetition ('People don't buy WHAT you do, they buy WHY you do it') to drive the point home."
+          }
+        ]
+      },
+      "practicePrompt": "Describe your current project or company using the Golden Circle: WHY → HOW → WHAT.",
+      "position": 2
+    },
+    {
+      "id": "lesson-obama-rhetoric",
+      "moduleId": "mod-great-orators",
+      "title": "Lesson 7.3: Barack Obama — The Rhythm of Persuasion",
+      "summary": "Study Obama's use of anaphora, rhythmic repetition, and inclusive framing to move audiences.",
+      "estimatedMinutes": 12,
+      "body": {
+        "blocks": [
+          {
+            "heading": "Anaphora: The Power of Repetition",
+            "text": "Anaphora is the deliberate repetition of a word or phrase at the beginning of successive sentences. Obama is a master of this technique.\n\n'There is not a liberal America and a conservative America — there is the United States of America. There is not a Black America and a White America and a Latino America and an Asian America — there's the United States of America.'\n\nThe repetition creates rhythm. Rhythm creates momentum. Momentum creates emotion. By the end of the sequence, the audience isn't just agreeing — they're swept up."
+          },
+          {
+            "heading": "Inclusive Framing",
+            "text": "Obama's most effective technique is 'we' framing. He rarely says 'I believe' or 'you should.' He says 'we.' This single pronoun shift transforms a directive into an invitation.\n\n'Yes WE can.' Not 'Yes I can.' Not 'Yes you should.' WE.\n\nIn your own presentations, audit your pronoun use. Replace 'I think we should...' with 'Together, we will...' Replace 'you need to...' with 'what if we...'"
+          },
+          {
+            "heading": "Building to a Climax",
+            "text": "Obama structures speeches like music — they build. The pace increases, the pitch rises, the volume swells, and the pauses get longer. The final statement is always the loudest, slowest, and most emphatic.\n\nThis is the opposite of how most speakers end: trailing off, mumbling 'so, yeah, that's about it.' Your ending should be the emotional high point."
+          }
+        ],
+        "examples": [
+          {
+            "before": "I believe in unity and I think we should work together regardless of our differences.",
+            "after": "There is not a red state America and a blue state America. There is the UNITED States of America. [PAUSE] And together — TOGETHER — we will build the future our children deserve.",
+            "note": "Anaphora (There is not... There is...), inclusive framing (we, together), and a climactic ending."
+          }
+        ],
+        "takeaways": [
+          "Anaphora (repeating the opening phrase) creates rhythm and momentum.",
+          "Use 'we' instead of 'I' or 'you' to create inclusion.",
+          "Build your speech to a climax — the end should be the loudest, most emphatic moment.",
+          "End with a declaration, not a trailing-off."
+        ],
+        "videos": [
+          {
+            "title": "Barack Obama — 2004 DNC Keynote Address",
+            "youtubeId": "eWynt87PaJ0",
+            "watchFor": "This is the speech that launched Obama's political career. Notice the anaphora pattern: 'There is not a...' repeated multiple times. Watch how his volume and pace build throughout. By the final minutes, the audience is on their feet — not because he shouted, but because the RHYTHM carried them there."
+          }
+        ]
+      },
+      "practicePrompt": "Take any short message and deliver it using anaphora — repeat the opening phrase 3 times with building intensity.",
+      "position": 3
+    },
+    {
+      "id": "lesson-capstone-elevator",
+      "moduleId": "mod-capstone",
+      "title": "Lesson 8.1: Capstone — The 2-Minute Elevator Pitch",
+      "summary": "Combine everything you've learned into a polished 2-minute pitch about yourself, your team, or your project.",
+      "estimatedMinutes": 15,
+      "body": {
+        "blocks": [
+          {
+            "heading": "The Challenge",
+            "text": "You have 2 minutes to pitch something you care about. It could be your company, your team's work, or a personal project. The catch: you must use at least THREE techniques from this curriculum.\n\nThis is where everything comes together. BLUF for your opening. The Rule of Three for your structure. Show-Don't-Tell for your story. Strategic pauses for your delivery. The Golden Circle for your 'why.'"
+          },
+          {
+            "heading": "Scoring Criteria",
+            "text": "Your AI coach will evaluate you on:\n\n1. **Structure** — Did you lead with a clear BLUF or WHY statement?\n2. **Clarity** — Were there any hedging words or rambling?\n3. **Storytelling** — Did you include at least one vivid, sensory moment?\n4. **Delivery** — Did you use vocal variety (pace changes, pauses, pitch drops)?\n5. **Impact** — Did you end with a strong, memorable closing line?"
+          }
+        ],
+        "takeaways": [
+          "A great pitch combines BLUF, Rule of Three, storytelling, and vocal variety.",
+          "Lead with WHY or your bottom line — never with 'Hi, my name is...'",
+          "Include one personal story to make it memorable.",
+          "End with a strong, short call to action — not 'so, yeah, that's about it.'"
+        ],
+        "drills": [
+          {
+            "id": "capstone-pitch",
+            "title": "The 2-Minute Pitch",
+            "situation": "You're at a networking event. A potential investor/partner asks: 'So what do you do?' You have exactly 2 minutes of their attention.",
+            "background": "Choose something real: your current role, your team's mission, a side project, or your career story. Structure it using techniques from the curriculum: BLUF opening, Rule of Three for structure, one Story Spine moment for emotional hook, and a clear closing call to action.",
+            "task": "Deliver a 2-minute pitch. Open with your WHY or bottom line (not 'Hi, my name is'). Include three key points. Add one brief personal story. End with a memorable closing line.",
+            "starterPhrase": "The biggest problem in [your field] is...",
+            "modelAnswer": "The biggest problem in enterprise software is that teams spend 40% of their time on tasks a machine should handle. That's why we built [product] — an AI assistant that automates the three most painful workflows: reporting, scheduling, and data entry. I used to manage a team of 12, and I watched brilliant engineers spend their Fridays copying data between spreadsheets. Their eyes glazed over. That's the moment I knew this had to change. Today, our platform saves teams an average of 10 hours per week. We're looking for design partners who are tired of wasting talent on toil.",
+            "successCriteria": ["Opened with BLUF or WHY (not 'Hi, my name is')", "Used Rule of Three structure", "Included at least one vivid personal story or sensory detail", "Ended with a clear call to action", "Delivered in approximately 2 minutes", "No hedging words"],
+            "durationSecs": 120
+          }
+        ]
+      },
+      "practicePrompt": "Deliver a 2-minute pitch about your work using BLUF + Rule of Three + one personal story.",
+      "position": 1
+    },
+    {
+      "id": "lesson-capstone-keynote",
+      "moduleId": "mod-capstone",
+      "title": "Lesson 8.2: Capstone — The 5-Minute Keynote",
+      "summary": "Your final challenge: deliver a 5-minute keynote that integrates every technique in the curriculum.",
+      "estimatedMinutes": 20,
+      "body": {
+        "blocks": [
+          {
+            "heading": "The Ultimate Test",
+            "text": "This is the culmination of your training. You will prepare and deliver a 5-minute keynote on any topic of your choice. Your AI coach will evaluate every dimension: structure, clarity, storytelling, vocal delivery, and emotional impact.\n\nThe best keynotes are not about showing expertise. They are about sharing an idea worth spreading — something that changes how the audience thinks or acts."
+          },
+          {
+            "heading": "Recommended Structure",
+            "text": "1. **Opening hook** (30 seconds) — A startling fact, a provocative question, or a personal story. Never start with 'Good morning, my name is...'\n2. **The problem** (60 seconds) — Use SCQA to frame why this matters\n3. **Three key insights** (3 minutes) — Rule of Three, with at least one Story Spine narrative and one Show-Don't-Tell moment\n4. **The call to action** (30 seconds) — What should the audience DO differently after hearing this talk?\n\nWarm up your voice first. Stand up if possible. Record yourself and listen back."
+          }
+        ],
+        "takeaways": [
+          "The 5-minute keynote is the hardest format because every second must earn its place.",
+          "Integrate multiple techniques: BLUF, SCQA, Rule of Three, Story Spine, vulnerability, vocal variety.",
+          "Your opening hook determines whether the audience gives you their attention.",
+          "Always end with a clear, memorable call to action."
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Choose your topic — something you genuinely care about.", "durationSecs": 30},
+          {"step": 2, "instruction": "Write your opening hook: a question, a story, or a startling fact. NOT 'Good morning, I'm...'", "durationSecs": 60},
+          {"step": 3, "instruction": "Outline your three key points using the Rule of Three.", "durationSecs": 60},
+          {"step": 4, "instruction": "For at least one point, build a Story Spine narrative with a 'But one day' conflict.", "durationSecs": 60},
+          {"step": 5, "instruction": "Write your closing: a short, memorable call to action (like 'Stay hungry. Stay foolish.').", "durationSecs": 30},
+          {"step": 6, "instruction": "Do a vocal warm-up: lip trills, sirens, yawn-sigh.", "durationSecs": 60},
+          {"step": 7, "instruction": "Stand up, take a breath, and deliver the full 5 minutes. Use strategic pauses, pitch drops, and volume variation.", "durationSecs": 300}
+        ]
+      },
+      "practicePrompt": "Deliver a 5-minute keynote integrating at least 4 techniques from the curriculum.",
+      "position": 2
+    },
+    {
+      "id": "lesson-speaking-anxiety",
+      "moduleId": "mod-foundations",
+      "title": "Lesson 1.1: Managing Speaking Anxiety",
+      "summary": "Nerves before speaking aren't a flaw — they're adrenaline you can redirect. Learn the science of stage fright and a repeatable pre-talk routine that converts fear into focused energy.",
+      "estimatedMinutes": 14,
+      "body": {
+        "blocks": [
+          {"heading": "Why Your Body Panics (Fight-or-Flight)", "text": "Public speaking triggers an ancient survival circuit. The moment you sense judgment from a group, your amygdala flags it as a threat — and your body floods with adrenaline and cortisol. Your heart races, your breath goes shallow, your palms sweat, and blood drains from your hands to your large muscles. This is the fight-or-flight response, and it evolved to help you outrun predators, not deliver a Q3 update.\n\nThe key insight: your body cannot tell the difference between excitement and fear. The physical symptoms are nearly identical — racing heart, heightened alertness, a surge of energy. The ONLY thing that differs is the label your brain assigns. That label is something you can control."},
+          {"heading": "Reframe: Anxiety and Excitement Are the Same Fuel", "text": "Most people try to 'calm down' before a talk. That fails, because you're asking a revved-up nervous system to slam the brakes — like flooring the accelerator and the brake at once.\n\nResearch from Harvard's Alison Wood Brooks found a better move: 'anxiety reappraisal.' Speakers who said out loud 'I am excited' before performing were rated as more persuasive, confident, and competent than those who tried to relax. The trick isn't suppressing the energy — it's relabeling it.\n\nBefore you go on, say to yourself (out loud if you can): 'This is excitement. My body is getting me ready to perform.' You keep the energy and lose the dread."},
+          {"heading": "Evidence-Based Techniques That Actually Work", "text": "Use these in combination — no single trick is magic:\n\n1. **Box breathing** — Inhale 4 counts, hold 4, exhale 4, hold 4. Repeat 4 cycles. This is used by Navy SEALs before high-stress ops. The long exhale activates your parasympathetic nervous system and physically lowers your heart rate.\n\n2. **Over-rehearse the open, not the whole talk** — Anxiety peaks in the first 60 seconds. If your opening is on autopilot, the panic window passes before you can spiral. Rehearse your first 30 seconds 10+ times until it's muscle memory.\n\n3. **Anchor to the first 30 seconds** — Memorize your opening word-for-word. When the rest is loosely structured but the launch is locked, you start strong and momentum carries you.\n\n4. **Visualization** — Spend 2 minutes vividly imagining the talk going well. Athletes use this because the brain rehearses success as if it were real.\n\n5. **A note on power posing** — The honest science: the famous claim that a 'power pose' changes your hormones has NOT reliably replicated. Don't count on a hormonal change. BUT — standing tall, shoulders back, and taking up space genuinely makes most people *feel* more confident and improves breath support. Use it as a posture-and-mindset cue, not a magic hack.\n\n6. **Focus on the audience, not yourself** — Anxiety is self-focused ('Do I look nervous?'). Shift to a service mindset: 'What does this room need from me?' You can't be self-conscious and audience-focused at the same time — pick the one that helps."},
+          {"heading": "Your Pre-Talk Routine (Last 10 Minutes)", "text": "Consistency beats intensity. Run the same sequence every time so your body learns 'this is the on-ramp, not a threat':\n\n• T-10 min: 4 cycles of box breathing.\n• T-7 min: Quick physical loosen-up — roll shoulders, shake out hands, stand tall.\n• T-5 min: 2 minutes of visualization — see the open going well.\n• T-2 min: Reappraisal out loud: 'I'm excited. I'm ready. The room needs this.'\n• T-30 sec: Recite your locked-in opening line silently one last time, plant your feet, breathe out slow, and go.\n\nThe routine itself becomes a calming ritual because your brain associates it with being prepared."}
+        ],
+        "examples": [
+          {"before": "Backstage, gripped by nerves: 'Oh no, my heart is pounding, I'm going to mess this up, everyone will see how nervous I am. I need to calm down. Why can't I calm down?'", "after": "Backstage, same pounding heart: 'This is adrenaline — my body is getting me ready. I'm excited to share this. I know my first line cold. The room needs what I have.' (Then: 4 box breaths, plant feet, deliver the memorized open.)", "note": "Identical physiology. The only change is the label and a routine to channel it — and that changes everything downstream."},
+          {"before": "Opening cold and unscripted: 'Um, hi everyone, so, yeah, I guess I'll get started... can everyone hear me? Okay, so today I wanted to maybe talk about...'", "after": "Opening on a memorized anchor: 'Three months ago, we were losing a customer a day. Today, I'll show you exactly how we stopped the bleeding — and what it means for next quarter.'", "note": "A locked-in first 30 seconds carries you through the exact window where panic peaks."}
+        ],
+        "takeaways": [
+          "Stage fright is fight-or-flight: adrenaline meant to protect you, misfiring at a friendly audience.",
+          "Don't fight the energy — relabel it. 'I'm excited' beats 'calm down' in controlled studies.",
+          "Box breathing (4-4-4-4) physically lowers heart rate via the long exhale.",
+          "Over-rehearse and memorize your first 30 seconds — that's when panic peaks.",
+          "Shift focus from yourself to the audience — you can't be self-conscious and of-service at once."
+        ],
+        "links": [
+          {"title": "TED: Amy Cuddy — Your Body Language May Shape Who You Are", "url": "https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are"}
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Sit or stand tall. Do 4 cycles of box breathing: inhale 4, hold 4, exhale 4, hold 4.", "durationSecs": 60},
+          {"step": 2, "instruction": "Say out loud, with energy: 'This is excitement. My body is getting me ready to perform.'", "durationSecs": 15},
+          {"step": 3, "instruction": "Visualize: picture yourself walking up confident, the audience engaged, and nailing your opening line.", "durationSecs": 60},
+          {"step": 4, "instruction": "Stand tall, shoulders back, feet planted. Take up space and take one slow breath out.", "durationSecs": 15},
+          {"step": 5, "instruction": "Deliver your memorized opening line aloud with full conviction.", "durationSecs": 20}
+        ],
+        "drills": [
+          {"id": "calm-and-open", "title": "The Calm-and-Open Routine", "situation": "You're at an all-hands in 90 seconds. 200 colleagues are in the room and the leadership team is in the front row. Your heart is hammering and your hands are cold.", "background": "You're presenting the launch results of a product you led. The headline number is strong: the feature drove a 23% increase in weekly active users in its first month. You feel the classic adrenaline spike. You have a quiet corner for the next 60 seconds before you walk up.", "task": "Run the calming routine aloud, then deliver a strong, memorized opening line. First, do 2 audible box-breath cycles. Then say your reappraisal sentence. Then deliver a confident opening that leads with the headline result — no 'um', no 'can everyone hear me', no apology.", "starterPhrase": "(Box breaths, then:) This is excitement — I'm ready. (Then your opening:) Last month we asked one question...", "modelAnswer": "(Inhale 4, hold 4, exhale 4, hold 4 — twice, audibly.) This is excitement. My body is getting me ready, and this room needs what I have. (Steps up, plants feet.) Last month, we asked a simple question: what if onboarding took five minutes instead of fifty? Today I'll show you the answer — because that one change drove a 23% jump in weekly active users, and it's just the beginning.", "successCriteria": ["You did at least 2 audible box-breath cycles", "You said a reappraisal sentence out loud relabeling nerves as excitement", "Your opening line leads with substance, not filler or apology", "Your delivery sounds grounded and projected, not rushed"], "durationSecs": 90}
+        ]
+      },
+      "relatedDrill": "calm-and-open",
+      "practicePrompt": "Run your pre-talk routine right now: 4 box breaths, say 'I'm excited' aloud, then deliver a memorized opening line.",
+      "position": 1
+    },
+    {
+      "id": "lesson-audience-analysis",
+      "moduleId": "mod-foundations",
+      "title": "Lesson 1.2: Know Your Audience",
+      "summary": "The same talk can land or flop depending entirely on who's listening. Learn to analyze your audience's knowledge, motivations, and objections — then adapt your message so it always hits.",
+      "estimatedMinutes": 13,
+      "body": {
+        "blocks": [
+          {"heading": "Communication Is About Them, Not You", "text": "Amateurs prepare what they want to say. Professionals prepare what the audience needs to hear. These are rarely the same thing.\n\nEvery audience walks in with their own knowledge, priorities, and skepticism. A pitch that dazzles a room of engineers will bore a board of investors. A plan that excites your CFO will terrify your frontline team. The content might be 'correct' either way — but correct isn't the same as effective.\n\nBefore you write a single line, answer one question: 'Who is in the room, and what do they need from me?' Everything else follows from that."},
+          {"heading": "Gauge the Knowledge Level (Then Calibrate Jargon)", "text": "Mismatch the audience's expertise and you lose them instantly — either by talking over their heads or by boring them with basics.\n\n• **Novices** need the 'why it matters' and plain language. Define terms. Use analogies.\n• **Peers/practitioners** want substance and respect — get to the meaty insight fast.\n• **Executives** want the bottom line and the decision, not the mechanics.\n\nThe fastest way to alienate any audience is jargon they don't share. 'We need to optimize our CAC:LTV ratio via funnel instrumentation' is sharp to a growth team and gibberish to a board. When in doubt, translate every acronym the first time — or cut it."},
+          {"heading": "WIIFM: What's In It For Me?", "text": "Every listener silently asks one question throughout your talk: 'What's in it for me?' (WIIFM). If you never answer it, their attention drifts.\n\nYour job is to connect your message to THEIR self-interest — not yours. This is where demographics and psychographics matter:\n• **Demographics** = who they are objectively: role, seniority, industry, team size.\n• **Psychographics** = what drives them: their goals, fears, pressures, and what 'winning' looks like.\n\nA VP of Engineering fears outages and tech debt. A VP of Sales fears missing quota. Pitch the same tool — 'reduces deploy failures by 60%' — and frame it as 'fewer 2am pages' for the first and 'no demos crashing in front of prospects' for the second."},
+          {"heading": "The Single-Persona Technique & Anticipating Objections", "text": "Trying to speak to 'everyone' produces vague messaging. The fix is the **single-persona technique**: pick one specific, representative person and prepare as if you're speaking only to them. Give them a name and a role — 'Maria, the skeptical CFO who's been burned by vendor promises.' Speaking to one vivid person makes your language concrete. Counterintuitively, the whole room feels more spoken-to.\n\nThen, **anticipate objections** before they're raised. For your core ask, list the top 2-3 pushbacks your persona will have ('Too expensive', 'We tried this and it failed', 'No bandwidth'). Address them proactively. Naming the objection before they do signals confidence and disarms resistance."}
+        ],
+        "examples": [
+          {"before": "Pitching the same line to everyone: 'Our platform uses event-driven microservices and a CDC pipeline to deliver sub-100ms p99 latency at scale.'", "after": "To the CFO: 'Our platform keeps the app fast even on your busiest sales day — which means fewer abandoned carts and roughly $400K in recovered revenue a year.'", "note": "Identical product. The 'after' translates a technical spec into the CFO's WIIFM — money and risk — and drops the jargon."},
+          {"before": "Ignoring the obvious objection: '...and that's why we should adopt this tool company-wide next quarter.'", "after": "Naming it first: 'You're probably thinking we tried a tool like this in 2022 and it flopped. It did — because we rolled it out to everyone at once with no training. This time we pilot with one team for 30 days first.'", "note": "Pre-empting the objection turns a likely 'no' into curiosity. The audience feels understood, not sold to."}
+        ],
+        "takeaways": [
+          "Prepare what the audience needs to hear, not just what you want to say.",
+          "Calibrate depth and jargon to their knowledge level: novice, peer, or executive.",
+          "Answer WIIFM — connect your message to their self-interest, not yours.",
+          "Demographics tell you who they are; psychographics tell you what drives them.",
+          "Name the top 2-3 objections before your audience does — it disarms resistance."
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Name your audience's knowledge level for this topic: novice, peer, or executive.", "durationSecs": 20},
+          {"step": 2, "instruction": "Write their WIIFM in one sentence: what do THEY gain or avoid if they say yes?", "durationSecs": 30},
+          {"step": 3, "instruction": "Invent a single persona — give them a name, role, and their biggest fear or pressure.", "durationSecs": 30},
+          {"step": 4, "instruction": "List the top 2 objections that persona will raise, and a one-line response to each.", "durationSecs": 40},
+          {"step": 5, "instruction": "Rewrite your core message in that persona's language, cutting any jargon they wouldn't use.", "durationSecs": 40}
+        ],
+        "drills": [
+          {"id": "two-audiences", "title": "One Message, Two Audiences", "situation": "You're championing a new internal AI code-review tool. Today you pitch it twice: first to the engineering team in a standup, then to the executive leadership team in a budget review — back to back.", "background": "The core facts are fixed: the tool catches an estimated 35% more bugs before production, costs $80K/year, and adds about 90 seconds to each pull request. Audience A is senior engineers — deeply technical, allergic to anything that slows them down, skeptical of 'AI hype'. Audience B is the executive team — non-technical, focused on cost, risk, and revenue.", "task": "Deliver TWO short pitches (about 30 seconds each) for the SAME tool. Pitch 1: adapt it for engineers — speak to their WIIFM, address the 90-second cost and 'AI hype' objection, use peer-level language. Pitch 2: adapt it for executives — lead with the bottom line, frame in cost/risk/revenue, strip the jargon, address the $80K spend.", "starterPhrase": "(To engineers:) Look, I know nobody wants another bot in the PR queue... (To execs:) This is an $80K decision that pays for itself...", "modelAnswer": "To engineers: 'I know nobody wants another bot slowing down the PR queue. So here's the honest tradeoff: it adds about 90 seconds per review, and in exchange it catches 35% more bugs before they hit prod. That's fewer 2am pages and less time hunting regressions. It's not AI hype — we'll run it on last month's merged PRs and you can see exactly what it would've caught.' To executives: 'This is an $80K-a-year decision that pays for itself. Production bugs are our most expensive failures. This tool catches 35% more of them before they ship, which means fewer outages and fewer fire drills. I recommend a 30-day pilot with one team, and we only expand if the data holds.'", "successCriteria": ["The two pitches sound clearly different in language and framing", "The engineering pitch uses peer-level framing and addresses the speed + 'AI hype' objections", "The executive pitch leads with the bottom line and frames in cost/risk/revenue", "Each pitch speaks to that audience's WIIFM", "Each pitch names and addresses that audience's most likely objection"], "durationSecs": 120}
+        ]
+      },
+      "relatedDrill": "two-audiences",
+      "practicePrompt": "Take a message you need to deliver and rewrite it twice — once for an expert peer, once for a non-technical executive.",
+      "position": 2
+    },
+    {
+      "id": "lesson-body-language",
+      "moduleId": "mod-vocal-foundations",
+      "title": "Lesson 2.4: Body Language & Stage Presence",
+      "summary": "Your body speaks before you say a word. Learn to use posture, gestures, eye contact, and space to project calm authority — in the room and on camera.",
+      "estimatedMinutes": 14,
+      "body": {
+        "blocks": [
+          {"heading": "Your Body Speaks First", "text": "The audience reads your body before they process a single word. A slumped posture, shifting weight, or crossed arms tells them you're unsure — no matter how good your script is. Presence starts from the ground up.\n\nThe foundation is your **stance**:\n• **Plant your feet** shoulder-width apart, weight evenly distributed. This stops the nervous rocking that signals anxiety.\n• **Open your chest.** Roll your shoulders back and down. An open torso reads as confidence and makes your breath (and voice) deeper.\n• **Lift your chin to level.** Eyes on the horizon, not the floor or your notes.\n\nBefore you speak, take one full breath in this stance. You've just told the room 'I belong here'."},
+          {"heading": "Gestures: Purposeful vs. Nervous Fidgeting", "text": "There are two kinds of movement: gestures that add meaning, and fidgets that leak anxiety.\n\n**Purposeful gestures** illustrate your words. Hold up three fingers when you say 'three things.' Push your palm forward for 'stop.' Spread your hands wide for 'huge.' These land in 'the box' — the space between your shoulders and waist, in front of your body.\n\n**Nervous fidgets** are repetitive and meaningless: clicking a pen, jingling keys, touching your face, gripping the podium. The audience locks onto the motion and stops hearing you.\n\nThe fix for 'what do I do with my hands?': when not gesturing, rest them at your sides or lightly together at your navel. It feels exposed; to the audience it looks calm and controlled."},
+          {"heading": "Eye Contact: The 3-5 Second Anchor", "text": "Most nervous speakers either scan the room like a sprinkler or stare at one 'safe' face. Both break connection. The technique is **anchoring**: hold steady eye contact with one person for one complete thought — about 3 to 5 seconds — then deliberately move to someone new.\n\n• In a **small room**, rotate through actual individuals.\n• In a **large room**, divide the audience into zones — front-left, center, back-right — and deliver a full thought to each zone.\n\nWhy 3-5 seconds? Less feels shifty; more feels like a stare-down. One thought per person is the natural rhythm — and it slows you down, fixing rushing as a bonus."},
+          {"heading": "Owning the Space, Your Face, and the Camera", "text": "**Use the stage with intent.** Plant and deliver a point, then *walk* to a new spot to start a new section. Pacing constantly is fidgeting with your feet; moving on purpose signals structure.\n\n**Make your face congruent.** Saying 'I'm thrilled' with a flat, tense face creates a mismatch the audience distrusts instantly. Let positive content reach your eyes.\n\n**On-camera is different.** When presenting to a webcam: look at the **lens**, not the faces on screen; raise the camera to eye level; shrink your gestures to stay in frame; and lean in slightly, since the frame flattens energy."}
+        ],
+        "examples": [
+          {"before": "Speaker stands with weight on one hip, arms crossed, eyes darting between the slides and the floor, one hand jingling keys in a pocket.", "after": "Speaker plants both feet, drops shoulders back, rests hands lightly at the navel, and holds a back-row attendee's gaze for a full sentence before moving to the next zone.", "note": "Nothing about the script changed. The audience now reads the speaker as a credible authority instead of a nervous presenter."},
+          {"before": "'We have three priorities this quarter' — said with hands frozen at the podium, no gesture, eyes on notes.", "after": "'We have three priorities this quarter' — said while holding up three fingers in the box, then anchoring eye contact on one person as each priority is named.", "note": "A single purposeful gesture turns an abstract number into something the audience can see and remember."}
+        ],
+        "takeaways": [
+          "Plant your feet shoulder-width, open your chest, and take one breath before you speak.",
+          "Gesture inside 'the box' to add meaning; kill repetitive fidgets (pens, pockets, face-touching).",
+          "Anchor eye contact for one full thought (3-5 seconds) per person or zone, then move.",
+          "Move on the stage to mark transitions, not to burn nervous energy.",
+          "On camera: look at the lens, raise it to eye level, and keep gestures inside the frame."
+        ],
+        "links": [
+          {"title": "TED: Amy Cuddy — Your body language may shape who you are", "url": "https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are"}
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Stand up. Plant both feet shoulder-width apart and distribute your weight evenly. Resist the urge to shift.", "durationSecs": 15},
+          {"step": 2, "instruction": "Roll your shoulders back and down, lift your chin to level, and take one slow breath into your belly.", "durationSecs": 15},
+          {"step": 3, "instruction": "Let your hands rest lightly together at your navel. Hold this 'ready stance' silently for 10 seconds.", "durationSecs": 15},
+          {"step": 4, "instruction": "Say: 'There are three things I want you to remember.' On 'three,' raise three fingers into the box.", "durationSecs": 15},
+          {"step": 5, "instruction": "Pick three objects across the room. Deliver one short sentence to each, holding your gaze for a full 4 seconds.", "durationSecs": 30}
+        ],
+        "drills": [
+          {"id": "presence-anchor-drill", "title": "Deliberate Gestures & Eye-Contact Anchoring", "situation": "You're opening an all-hands meeting in a room of about 30 people. You want to look calm and in command from the very first sentence.", "background": "Deliver this exact passage: 'This quarter, we did three things differently. We listened to customers. We shipped faster. And we cut the noise. Today, I'll show you what each one bought us.' As you say it, you must (1) hold the ready stance, (2) make one purposeful gesture for 'three things' and each item, and (3) anchor your eyes on a different person or zone for each sentence.", "task": "Speak the passage aloud while standing. Plant your feet, gesture with intent inside the box, and move your eye contact to a new anchor on every sentence — holding each for 3-5 seconds. No fidgeting, no pacing.", "starterPhrase": "This quarter, we did three things differently...", "modelAnswer": "(Planted, hands at navel) 'This quarter, we did three things differently.' (raise three fingers, anchor on person A) 'We listened to customers.' (one finger, anchor on person B) 'We shipped faster.' (two fingers, anchor on person C) 'And we cut the noise.' (three fingers, anchor on back zone) (hands open, sweep the room) 'Today, I'll show you what each one bought us.'", "successCriteria": ["Feet stayed planted and still — no rocking or pacing", "At least three purposeful gestures landed inside the box", "Eye contact moved to a new anchor each sentence, held ~3-5 seconds", "Hands rested calmly between gestures", "Facial expression matched the confident tone of the words"], "durationSecs": 60}
+        ]
+      },
+      "relatedDrill": "presence-anchor-drill",
+      "practicePrompt": "Stand and deliver any 30-second message: plant your feet, gesture inside the box, and move your eye contact to a new anchor each sentence.",
+      "position": 4
+    },
+    {
+      "id": "lesson-filler-words",
+      "moduleId": "mod-vocal-foundations",
+      "title": "Lesson 2.5: Eliminating Filler Words",
+      "summary": "Um, uh, like, you know — fillers quietly erode your authority. Learn why they happen and how to replace every one with a powerful silent pause.",
+      "estimatedMinutes": 10,
+      "body": {
+        "blocks": [
+          {"heading": "What Fillers Are and Why They Happen", "text": "Filler words are the sounds we make while our brain catches up to our mouth: **um, uh, er, like, you know, so, basically, actually, right, I mean.** A few are invisible. A steady stream makes you sound unsure and hard to follow.\n\nHere's the key insight: fillers are not a vocabulary problem — they're a **silence-avoidance problem.** When you finish a thought and need a moment to find the next one, your brain hits a tiny gap of silence. That silence feels dangerous, so you fill it out loud: 'uhhh.' You're literally thinking aloud.\n\nThe goal isn't to talk faster. It's to get comfortable letting that thinking-time be *silent* instead of *audible*."},
+          {"heading": "The Silent Pause Is the Replacement", "text": "Every filler is a pause that got vocalized. So the cure is simple: **replace the filler with a silent pause.**\n\nThe two sound completely different to your audience:\n• 'So our results, um, were, uh, pretty good this quarter' → sounds nervous and tentative.\n• 'Our results [pause] were strong this quarter' → sounds deliberate and confident.\n\nThe pause does double duty: it gives YOU the thinking time you needed, and it gives the AUDIENCE a moment to absorb your last point. What feels like awkward dead air to you reads as composure to them. You almost cannot pause too much."},
+          {"heading": "The Catch-and-Replace Technique", "text": "You can't delete a habit you can't hear. Catch-and-replace builds that awareness in real time:\n\n1. **Catch.** Notice the *instant* a filler is about to launch — usually at the end of a clause.\n2. **Close.** Physically close your mouth. An 'um' cannot escape closed lips.\n3. **Breathe & replace.** Take a small breath in the silence. That breath IS your pause.\n4. **Continue.** Start the next thought cleanly.\n\nA companion trick: **end your sentences with a full stop, not a runway.** Most fillers happen at the *seams* between sentences. Land each sentence with a downward pitch and let it end."},
+          {"heading": "Build Awareness: Know Your Count", "text": "Awareness is the entire game. You almost certainly use more fillers than you think, because they're invisible to the speaker.\n\nMake it measurable:\n• **Record yourself** for 60 seconds and play it back. Count every um, uh, like, you know. That's your **baseline.**\n• Use SpeakFlow's analyzer, which automatically **counts your fillers** as you practice. Treat that count like a score — your only job each session is to beat your last number.\n• Adopt a **tracker mindset**: aim for 'fewer than last time,' not zero overnight. Going from 12 fillers per minute to 4 is a massive, audible win."}
+        ],
+        "examples": [
+          {"before": "So, um, basically what we're trying to do here is, like, improve the, you know, the onboarding flow, and, uh, hopefully that, like, helps with retention.", "after": "We're improving the onboarding flow. [pause] That directly improves retention.", "note": "Nine fillers removed. The message is shorter, clearer, and sounds decisive instead of tentative."},
+          {"before": "The results were, uh, actually, you know, kind of surprising, so, I mean, we should probably, like, dig into them.", "after": "The results were surprising. [pause] We need to dig into them.", "note": "The fillers clustered at the seams between thoughts. Landing each sentence with a clean stop removed every one."}
+        ],
+        "takeaways": [
+          "Fillers (um, uh, like, you know, so, basically) are vocalized silence — a habit, not a vocabulary gap.",
+          "Replace every filler one-for-one with a silent pause; it buys you thinking time and reads as confidence.",
+          "Catch-and-replace: notice the trigger, close your mouth, breathe in the silence, continue cleanly.",
+          "End sentences with a clean stop — fillers hide in the seams between glued-together thoughts.",
+          "Record yourself or use the analyzer to learn your filler count, then beat your last number."
+        ],
+        "links": [
+          {"title": "Wikipedia: Filler (linguistics)", "url": "https://en.wikipedia.org/wiki/Filler_(linguistics)"}
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Pick a simple topic (your weekend, your job, a hobby). Record 30 seconds of yourself speaking about it normally.", "durationSecs": 30},
+          {"step": 2, "instruction": "Play it back and count every filler — um, uh, like, you know, so. Write the number down. This is your baseline.", "durationSecs": 30},
+          {"step": 3, "instruction": "Speak on the same topic again. Every time you feel an 'um' coming, close your mouth and take a small silent breath instead.", "durationSecs": 30},
+          {"step": 4, "instruction": "Record this second attempt and count again. Compare the two numbers — that drop is your progress.", "durationSecs": 30}
+        ],
+        "drills": [
+          {"id": "filler-to-pause-drill", "title": "Replace Every Filler With a Silent Pause", "situation": "A colleague asks you to 'quickly explain what you're working on right now' in a hallway conversation. You want to sound clear and in command, not rambling.", "background": "You'll speak for 45-60 seconds about a real project or topic you know well — no script. The single rule: every time a filler word tries to escape (um, uh, like, you know, so, basically, actually), you replace it with a deliberate silent pause. Close your mouth, breathe, and continue.", "task": "Speak for 45-60 seconds on your chosen topic. Catch each filler before it leaves your mouth and swap it for a silent pause. Land each sentence with a clean stop.", "starterPhrase": "Right now I'm working on...", "modelAnswer": "Right now I'm working on our new onboarding flow. [pause] The old version took users about three weeks to feel productive. [pause] We're rebuilding it around hands-on projects instead of training videos. [pause] My focus this week is the first-day experience. [pause] If we get that right, everything after it gets easier.", "successCriteria": ["Spoke for at least 45 seconds without reading a script", "Used silent pauses where fillers would normally appear", "Noticeably fewer fillers than a normal, unmonitored attempt", "Sentences ended with clean stops rather than 'and so... um...' seams", "Pauses sounded deliberate and calm, not panicked"], "durationSecs": 60}
+        ]
+      },
+      "relatedDrill": "filler-to-pause-drill",
+      "practicePrompt": "Record yourself speaking for 60 seconds, count your fillers, then redeliver replacing each one with a silent pause — and beat your count.",
+      "position": 5
+    },
+    {
+      "id": "lesson-rule-of-three",
+      "moduleId": "mod-executive-clarity",
+      "title": "Lesson 3.5: The Rule of Three",
+      "summary": "Three is the magic number of persuasion. Learn why the brain loves triads and how to structure points, sentences, and whole talks in threes.",
+      "estimatedMinutes": 11,
+      "body": {
+        "blocks": [
+          {"heading": "Why the Brain Loves Three", "text": "Three is the smallest number that creates a pattern. One is an instance. Two is a coincidence. Three is a trend — enough to feel complete, few enough to remember.\n\nThree does three things at once:\n• **Rhythm** — Triads have a built-in cadence: da-da-DA.\n• **Memorability** — Audiences can hold and repeat three points hours later. Ask for five and they'll remember two.\n• **Completeness** — Three signals 'the full picture' without exhausting anyone.\n\nThis is why the most quoted lines in history come in threes."},
+          {"heading": "The Greatest Hits Are All Triads", "text": "The most enduring phrases in public life are built on three:\n\n• 'Life, liberty, and the pursuit of happiness.' (Declaration of Independence)\n• 'Blood, sweat, and tears.' (Churchill)\n• 'Stop, look, listen.' (railway safety slogan)\n• 'Government of the people, by the people, for the people.' (Lincoln)\n• 'Veni, vidi, vici' — 'I came, I saw, I conquered.' (Caesar)\n\nNotice the pattern: each item is short, parallel in form, and builds toward the most important word last. That last-position punch is the most powerful slot in any triad."},
+          {"heading": "Tricolon & Parallel Structure", "text": "The technical name for a three-part phrase is a **tricolon**. Its power comes from **parallel structure** — each part shares the same grammatical shape.\n\nParallel: 'We will build, we will ship, we will win.' (verb + verb + verb)\nNot parallel: 'We will build, shipping is next, and winning is the goal.' (the rhythm collapses)\n\nThe fix: make every item start the same way and carry the same weight. Then put your strongest, most concrete idea in position three. A reliable formula: **two to set the pattern, one to land the point.**"},
+          {"heading": "Structuring a Whole Talk in Threes", "text": "The Rule of Three is the strongest skeleton for an entire talk. Tell the audience up front: 'I'm going to make three points.' Now they have a mental container.\n\nSteve Jobs built his entire Stanford address around 'three stories from my life. That's it. No big deal. Just three stories.'\n\nHow to build it:\n1. State your one big message (your BLUF from Lesson 3.1).\n2. Break it into exactly three supporting pillars.\n3. Order the pillars so the most important comes last.\n4. Use each pillar as a signpost: 'First... Second... Third...'\n\nThree pillars are easy to remember and easy for the audience to repeat — which is how your idea travels beyond the room."}
+        ],
+        "examples": [
+          {"before": "Our new platform is fast, and it's also pretty secure, plus we've made the onboarding a lot simpler than it used to be, and reliability has improved too.", "after": "Our platform is faster, safer, and simpler. Faster: sub-second load times. Safer: end-to-end encryption by default. Simpler: five-minute setup, no manual.", "note": "Four vague claims become three parallel pillars, each with one piece of proof. The triad is instantly repeatable."},
+          {"before": "I think we should probably invest in the team because morale matters and also retention is expensive and skills development is good for the long term.", "after": "We should invest in the team for three reasons: it lifts morale, it cuts the cost of churn, and it builds the skills we'll need next year.", "note": "Parallel structure ('it lifts... it cuts... it builds...') turns a ramble into a clean tricolon with the strongest reason last."}
+        ],
+        "takeaways": [
+          "Three is the smallest number that forms a memorable, complete pattern.",
+          "Use parallel structure: match verb to verb, phrase to phrase, so the triad has rhythm.",
+          "Put your strongest, most concrete point in position three — the ear is waiting for it.",
+          "Structure whole talks around exactly three pillars and announce them up front.",
+          "Two items set the pattern; the third lands the punch."
+        ],
+        "links": [
+          {"title": "Wikipedia: Rule of Three (writing)", "url": "https://en.wikipedia.org/wiki/Rule_of_three_(writing)"}
+        ],
+        "videos": [
+          {"title": "Steve Jobs' 2005 Stanford Commencement Address", "youtubeId": "UF8uR6Z6KLc", "startSec": 0, "endSec": 90, "watchFor": "In the first 90 seconds, Jobs announces the entire structure: 'Today I want to tell you three stories from my life. That's it. No big deal. Just three stories.' Naming the three up front instantly gives the audience a mental container for everything that follows."}
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Pick one topic you could talk about (a project, a product, an idea you believe in).", "durationSecs": 15},
+          {"step": 2, "instruction": "Write your single big message in one sentence.", "durationSecs": 20},
+          {"step": 3, "instruction": "Brainstorm every supporting point you can think of — aim for six or more.", "durationSecs": 30},
+          {"step": 4, "instruction": "Ruthlessly cut down to exactly THREE pillars. Combine or delete the rest.", "durationSecs": 30},
+          {"step": 5, "instruction": "Rewrite the three pillars so they share the same grammatical shape (parallel structure).", "durationSecs": 30},
+          {"step": 6, "instruction": "Reorder so your strongest pillar comes third. Say all three aloud as a tricolon.", "durationSecs": 20}
+        ],
+        "drills": [
+          {"id": "rule-of-three-drill", "title": "Three Pillars Pitch", "situation": "You're at a company all-hands. The CEO points at you: 'Give everyone the case for our new initiative — but keep it to three points.' The room turns toward you.", "background": "The initiative is a shift to a four-day work week. The scattered notes in your head: people are burning out, a competitor tried it and saw productivity hold steady, recruiters say candidates ask about flexibility, focus time is fragmented by meetings, and leadership is nervous about client coverage. Compress all of this into exactly three parallel pillars, strongest last.", "task": "Pitch the four-day week in under 60 seconds using exactly three parallel pillars. Announce the three up front, give each a one-line proof point, and put the most persuasive pillar third.", "starterPhrase": "Moving to a four-day week does three things for us...", "modelAnswer": "Moving to a four-day week does three things for us: it protects our people, it sharpens our focus, and it wins us the talent war. It protects our people — burnout is our top reason for attrition, and a real day of rest reverses that. It sharpens our focus — fewer days forces us to kill low-value meetings and guard deep work. And it wins us the talent war — every strong candidate now asks about flexibility, and a competitor who tried this kept productivity flat while their offer-acceptance rate jumped. Same output, happier team, easier hiring.", "successCriteria": ["You announced exactly three points up front", "All three pillars share parallel grammatical structure", "Each pillar has a concrete proof point", "Your strongest pillar lands in position three", "Delivered in under 60 seconds"], "durationSecs": 60}
+        ]
+      },
+      "relatedDrill": "rule-of-three-drill",
+      "practicePrompt": "Take any idea you care about and pitch it in three parallel pillars — announce them up front and put your strongest point last.",
+      "position": 5
+    },
+    {
+      "id": "lesson-structuring-thinking",
+      "moduleId": "mod-executive-clarity",
+      "title": "Lesson 3.6: Structuring Your Thinking",
+      "summary": "Clear speech starts before you open your mouth. Learn to organize messy thoughts, present top-down, and signpost so listeners never get lost.",
+      "estimatedMinutes": 14,
+      "body": {
+        "blocks": [
+          {"heading": "How You Think Is Not How You Should Present", "text": "Your brain thinks in a tangle. You discover an idea, chase a tangent, hit a dead end, double back, and only at the end realize your actual point. That messy exploration is how good thinking happens — but it's a terrible way to deliver it.\n\nThe mistake most people make is narrating their thought process in real time: 'So I was looking at the numbers, and then I noticed something weird, which made me wonder about X...' By the time you reach your point, the listener is lost.\n\nSeparate two jobs. **Thinking** is bottom-up: you climb toward a conclusion. **Presenting** is top-down: you state the conclusion first, then hand over the supporting evidence."},
+          {"heading": "Organize Before You Open Your Mouth", "text": "Even ten seconds of structuring beats zero. Before you speak, run a quick mental sort:\n\n1. **Land on the headline.** 'If they remember only one sentence, what is it?' That's your opening line.\n2. **Group the rest.** Dump every related point into two or three buckets. Listeners can't hold ten flat items, but they can hold three groups.\n3. **Order the buckets.** Most important first (or build to it if persuading). Drop anything that doesn't fit.\n\nThis is a beginner-friendly version of **MECE** — Mutually Exclusive, Collectively Exhaustive: your groups shouldn't overlap, and together they should cover the whole topic."},
+          {"heading": "Signpost So Nobody Gets Lost", "text": "Signposting is telling the listener where you are and where you're going. It's the verbal equivalent of road signs, and the single fastest upgrade to perceived clarity.\n\n• **Preview the map:** 'I have three points. First the problem, then the cost, then my recommendation.'\n• **Mark each turn:** 'First...' 'Second...' 'My third and most important point...'\n• **Signal the destination:** 'So to land this...' or 'The bottom line is...'\n\nSignposting frees the listener from tracking the structure themselves, so they can spend all their attention on your content."},
+          {"heading": "One Idea Per Sentence — and Clean Transitions", "text": "When people are nervous, they staple ideas together with 'and... and... and...' until one sentence carries four thoughts. The listener can't tell which idea matters.\n\nThe discipline: **one idea per sentence.** Make a point. Stop. Make the next point.\n\nThen connect sentences with **transitions**:\n• To add: 'On top of that...'\n• To contrast: 'But here's the catch...'\n• To conclude: 'Which brings me to...'\n\nStructure tells the audience what you're saying; transitions tell them how the pieces relate."}
+        ],
+        "examples": [
+          {"before": "So we've been seeing some issues and I think the main thing is that response times are up but also there's been a bunch of complaints and the team is stretched thin and we're not really sure if it's the new release or the traffic spike but either way we probably need to do something.", "after": "We have a reliability problem, and I'm recommending a rollback today. Here's the situation in three parts. First, the symptom: response times have doubled since Tuesday's release. Second, the impact: support complaints are up 60% and on-call is overwhelmed. Third, the fix: roll back now, then re-ship next week with the load fix. I need your go-ahead in the next hour.", "note": "The conclusion moves to the front, the tangle becomes three clean buckets, and signposting lets the listener follow effortlessly."},
+          {"before": "The campaign did okay and engagement was decent and we got some signups and the cost was a bit higher than expected but not terrible and we learned some stuff about the audience.", "after": "The campaign was a qualified win. Three takeaways. The wins: 1,200 signups, 30% above target. The cost: 15% over budget, driven by one channel. The lesson: our audience responds to video, not static ads — so next time we lead with video.", "note": "Five ideas crammed into one sentence become three labeled buckets, each a single clean idea."}
+        ],
+        "takeaways": [
+          "Think bottom-up in private; present top-down in public — conclusion first.",
+          "Before speaking, find your one headline, group the rest into two or three buckets, and order them.",
+          "Make buckets MECE: non-overlapping and, together, complete.",
+          "Signpost relentlessly: preview the map, mark each turn, signal the destination.",
+          "One idea per sentence, joined by clean transitions, beats run-on 'and... and...' chains."
+        ],
+        "links": [
+          {"title": "Wikipedia: MECE Principle", "url": "https://en.wikipedia.org/wiki/MECE_principle"}
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Think of something you need to explain soon (an update, a recommendation, an answer).", "durationSecs": 15},
+          {"step": 2, "instruction": "Write the single headline sentence — what they must remember if they forget everything else.", "durationSecs": 20},
+          {"step": 3, "instruction": "Brain-dump every related point in any order. Don't filter yet.", "durationSecs": 30},
+          {"step": 4, "instruction": "Sort the points into two or three non-overlapping buckets. Delete anything that doesn't fit.", "durationSecs": 30},
+          {"step": 5, "instruction": "Add signposts: 'I have [N] points. First... Second...' Then say it aloud, one idea per sentence.", "durationSecs": 40}
+        ],
+        "drills": [
+          {"id": "structuring-thinking-drill", "title": "From Brain Dump to Signposted Answer", "situation": "Your director stops by: 'I've got two minutes. How's the website redesign going? Give me the real picture.' She wants signal, not a stream of consciousness.", "background": "The unstructured tangle in your head: 'The mockups are done and the team loves them, but the developer got pulled to the mobile launch, so we're behind, and legal hasn't approved the privacy copy yet, and staging keeps crashing, but we got great user-test feedback, and the launch is supposed to be the 30th but I don't think we hit it, maybe the 10th, and I haven't told marketing yet.'", "task": "Restructure the brain dump into a clear, signposted answer of about 30 seconds. Lead with the bottom line (we'll miss the date), then group the details into buckets — what's done, what's blocking us, the new plan — using explicit signposts. One idea per sentence.", "starterPhrase": "Bottom line: we're going to miss the 30th by about ten days — here's why and what I'm doing about it.", "modelAnswer": "Bottom line: we're going to miss the 30th by about ten days — here's why and what I'm doing about it. Quick picture in three parts. What's done: the mockups are finished, the team loves them, and user testing came back very positive. What's blocking us: our developer got pulled to the mobile launch, legal hasn't cleared the privacy copy, and staging keeps crashing. The plan: I'm requesting the developer back part-time, chasing legal today, and re-targeting the 10th. I'll brief marketing this afternoon.", "successCriteria": ["Opened with the bottom line, not the backstory", "Grouped the messy details into clear buckets (done / blockers / plan)", "Used explicit signposts", "One idea per sentence — no run-on 'and... and...' chains", "Delivered in roughly 30 seconds"], "durationSecs": 60}
+        ]
+      },
+      "relatedDrill": "structuring-thinking-drill",
+      "practicePrompt": "Take a messy update from your day, find the one headline, sort the rest into three buckets, and deliver it with signposts in 30 seconds.",
+      "position": 6
+    },
+    {
+      "id": "lesson-openings-closings",
+      "moduleId": "mod-executive-clarity",
+      "title": "Lesson 3.7: Openings & Closings That Land",
+      "summary": "Audiences remember the first 30 seconds and the last 15 seconds most. Learn to open with a hook, never with logistics, and close with a call to action that sticks.",
+      "estimatedMinutes": 12,
+      "body": {
+        "blocks": [
+          {"heading": "Why the Edges Matter Most", "text": "Memory is lopsided. The serial-position effect shows that people remember the beginning (primacy) and the end (recency) of a sequence far better than the middle. For a speaker, two moments do disproportionate work: your first 30 seconds and your last 15 seconds.\n\nThe first 30 seconds decide whether the audience gives you their attention. The last 15 seconds decide what they carry out of the room. Invest the most preparation per second on your opening and closing — most speakers wing both and over-rehearse the middle. Reverse that."},
+          {"heading": "Five Hooks That Earn the First 30 Seconds", "text": "A hook is a deliberate opening designed to create attention or tension. Pick one and rehearse it word-for-word:\n\n1. **The Question** — 'How many of you have sat in a meeting that should have been an email?'\n2. **The Startling Stat** — 'The average knowledge worker is interrupted every 11 minutes — and it takes 23 minutes to refocus.'\n3. **The Story** — 'It's 2am. My phone lights up. Production is down, and 40,000 customers can't check out.'\n4. **The Bold Claim** — 'Most of what we teach about productivity is making us slower.'\n5. **The Relevant Quote** — 'Eisenhower said, \"Plans are useless, but planning is indispensable.\" Here's why that matters for our roadmap.'\n\nThe hook should land in your first one or two sentences — before any preamble."},
+          {"heading": "Kill the Throat-Clear: Never Open With Logistics", "text": "The most common opening in the world is the weakest: 'Hi, um, my name is ___, and today I'm going to talk about ___.' This is throat-clearing. It spends your most valuable moment on information the audience either already has or doesn't care about yet.\n\nLogistics aren't forbidden; they're just not the opening. Hook first, then orient. The same applies to apologies ('Sorry, I didn't have much time') and tech fumbling ('Can everyone see my screen?'). Open cold, open strong, handle logistics after the hook has done its job."},
+          {"heading": "Bookends & the Closing Call to Action", "text": "The strongest closings use the **bookend (callback) technique**: end by returning to the image, question, or story you opened with — now resolved. If you opened with '40,000 customers can't check out,' you close with 'Today, that 2am page never comes.'\n\nThen land a **call to action**: one clear, specific thing you want the audience to think, feel, or do. 'Approve the pilot by Friday.' 'Stay hungry. Stay foolish.'\n\nNever trail off: 'So, yeah... that's about it... any questions?' Decide your final sentence in advance, deliver it slower and lower than the rest, then stop talking."}
+        ],
+        "examples": [
+          {"before": "Hi everyone, um, my name is Priya and I'm a product manager on the growth team, and today I wanted to talk a little bit about, uh, some ideas around our onboarding funnel.", "after": "Forty percent of the people who sign up for our product never make it to their second screen. [PAUSE] They want what we built — and we lose them in ninety seconds. I'm Priya from the growth team, and I'm going to show you the three fixes that win them back.", "note": "The hook (startling stat) lands first. Name and roadmap arrive after attention is earned, costing nothing."},
+          {"before": "So that's kind of everything I had. Um, I think that covers it. Yeah. Any questions?", "after": "Remember those forty percent we lose in ninety seconds? [PAUSE] With these three fixes, we keep them. I need sign-off on the pilot by Friday — then we stop leaking the customers we already won.", "note": "A bookend callback to the opening stat, plus a specific call to action delivered as the final line — no trailing off."}
+        ],
+        "takeaways": [
+          "Primacy and recency mean the first 30 seconds and last 15 seconds carry the most weight — prepare them the most.",
+          "Open with one of five hooks: question, startling stat, story, bold claim, or relevant quote.",
+          "Never open with 'Hi, my name is...' or logistics — hook first, orient second.",
+          "Use the bookend technique: close by calling back to your opening, now resolved.",
+          "End on a specific call to action delivered slower and lower — then stop."
+        ],
+        "links": [
+          {"title": "Wikipedia: Serial-position effect (primacy & recency)", "url": "https://en.wikipedia.org/wiki/Serial-position_effect"}
+        ],
+        "videos": [
+          {"title": "Steve Jobs' 2005 Stanford Address — A Masterclass Closing", "youtubeId": "UF8uR6Z6KLc", "watchFor": "Skip to the final two minutes. Jobs doesn't trail off — he closes with a four-word call to action, 'Stay hungry. Stay foolish.', delivered slowly and at a low pitch, then simply says 'Thank you all very much.' That is a closing engineered to be remembered."}
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Pick a topic you might present soon (a project update, a pitch, a status report).", "durationSecs": 15},
+          {"step": 2, "instruction": "Write a one-sentence hook using ONE of the five types. No 'Hi, my name is.'", "durationSecs": 40},
+          {"step": 3, "instruction": "Write your closing call to action: the single thing you want the audience to do or remember.", "durationSecs": 40},
+          {"step": 4, "instruction": "Add a bookend: tweak the closing so it calls back to your opening hook, now resolved.", "durationSecs": 30},
+          {"step": 5, "instruction": "Deliver the hook, then the closing, back to back, out loud. Drop your pitch and slow down on the final line, then stop.", "durationSecs": 25}
+        ],
+        "drills": [
+          {"id": "openings-closings-drill", "title": "Hook It and Land It", "situation": "You've been given a five-minute slot at next week's all-hands to convince the company that remote-first work is making the team stronger. You don't have to write the whole talk — just the two moments that matter most.", "background": "You have data and a story: engineering velocity is up 18% since going remote-first, voluntary attrition dropped from 14% to 6%, and one of your best engineers, a single parent in a rural town, told you she would have quit if forced back into the office. The room is skeptical — several leaders believe remote work hurts collaboration.", "task": "Deliver TWO things back to back: (1) a 20-second opening hook using one of the five hook types — no name, no logistics, no apology; and (2) a 15-second closing that calls back to your opening and ends on a specific call to action. Do not trail off.", "starterPhrase": "Last spring, one of our best engineers almost quit...", "modelAnswer": "Last spring, one of our best engineers — a single mom three hours from the nearest office — sat me down and said, 'If I have to come back in, I'm gone.' [PAUSE] We didn't lose her. We kept her, and our velocity went up eighteen percent. (closing) That engineer who almost walked away? She shipped our biggest launch this quarter. Remote-first didn't weaken this team — it kept our best people. So before we debate going back, approve the six-month remote-first extension. Let's not lose the next one.", "successCriteria": ["Opening uses a clear hook type — no 'Hi, my name is' or logistics", "Opening lands within the first one or two sentences and runs about 20 seconds", "Closing calls back to the opening image or character (bookend)", "Closing ends on a specific call to action, not a trail-off", "Final line is delivered slower and lower, then you stop talking"], "durationSecs": 60}
+        ]
+      },
+      "relatedDrill": "openings-closings-drill",
+      "practicePrompt": "Pick any topic and craft a 20-second hook and a 15-second bookended closing — deliver both out loud, back to back.",
+      "position": 7
+    },
+    {
+      "id": "lesson-problem-solution-benefit",
+      "moduleId": "mod-executive-clarity",
+      "title": "Lesson 3.8: Problem-Solution-Benefit",
+      "summary": "The go-to structure for pitches and persuasion: name the pain sharply, present the fix clearly, then quantify the benefit/ROI. Learn PSB and when to use it instead of BLUF, SCQA, or the Pyramid.",
+      "estimatedMinutes": 12,
+      "body": {
+        "blocks": [
+          {"heading": "The Structure That Sells", "text": "When you're trying to get a yes — funding, headcount, a customer, a green light — raw conclusions aren't enough. People approve things that solve a pain they feel and that pay off in a way they can measure. Problem-Solution-Benefit (PSB) is built for exactly that moment.\n\nThree moves, always in order:\n1. **Problem** — the specific, costly pain that exists today.\n2. **Solution** — your clear, concrete fix.\n3. **Benefit** — the quantified payoff of adopting it.\n\nLead with the problem and you create demand before you offer supply. Skip it and your solution sounds like a feature nobody asked for. End on the benefit and you leave them holding the number that justifies the yes."},
+          {"heading": "Problem: Make the Pain Specific and Costly", "text": "A vague problem produces a vague reaction. 'Our process is inefficient' earns a shrug. Make the pain:\n\n• **Specific** — 'Sales reps re-enter every lead by hand into three systems.'\n• **Quantified** — 'That's 6 hours per rep per week — across 20 reps, 120 hours a week gone.'\n• **Felt** — 'That's three full-time salaries spent on copy-paste instead of closing.'\n\nIf your audience doesn't nod here, nothing downstream will land."},
+          {"heading": "Solution & Benefit: Clear Fix, Quantified ROI", "text": "**Solution** — state your fix plainly, in one or two sentences. Name the mechanism, not every feature. 'We integrate the three systems so a lead entered once flows everywhere automatically.'\n\n**Benefit** — this is where pitches are won. Translate the solution into a number the decision-maker values: time, money, risk, or revenue. Don't say 'it saves time.' Say 'it returns 120 hours a week to selling — roughly $400K in additional pipeline capacity a year, at a cost of $30K. That's a 13x return.'\n\nThe benefit must close the loop with the problem. When problem and benefit are the same currency, the yes feels obvious."},
+          {"heading": "When to Use PSB vs Other Structures", "text": "PSB is one tool among several. Choose by intent:\n\n• **PSB** — for persuasion and pitches, when you need someone to ADOPT or FUND something.\n• **BLUF (Lesson 3.1)** — for fast updates when the audience knows the context and just wants your answer first.\n• **SCQA (Lesson 3.4)** — for framing when the audience doesn't yet realize there's a problem.\n• **Pyramid Principle (Lesson 3.3)** — for complex arguments with multiple supporting reasons.\n\nThey overlap and can nest: a PSB pitch can open with a BLUF-style headline. Pick the structure whose primary job matches yours — here, that job is to persuade."}
+        ],
+        "examples": [
+          {"before": "We've built a new internal tool that integrates our CRM, marketing platform, and billing system. It has a clean UI and automated syncing, and we think it could really help the sales team. We'd love some budget to roll it out.", "after": "Our 20 sales reps re-enter every lead by hand into three systems — 6 hours each per week, 120 hours total, the equivalent of three full-time salaries spent on copy-paste [Problem]. We've built an integration so a lead entered once syncs everywhere automatically [Solution]. That returns 120 selling hours a week — about $400K in added pipeline capacity a year, against a $30K rollout cost. A 13x return [Benefit]. I'm asking to fund the company-wide rollout this quarter.", "note": "Same tool. The 'after' defines the pain in a number, states the fix in one line, and closes with a quantified ROI that makes the ask obvious."}
+        ],
+        "takeaways": [
+          "PSB is the persuasion structure: Problem, then Solution, then Benefit — in that order.",
+          "Lead with the problem to create demand before you present the fix.",
+          "Make the pain specific, quantified, and felt — a vague problem gets a vague reaction.",
+          "Quantify the benefit as ROI in a currency the decision-maker values, and close the loop with the problem.",
+          "Use PSB to win a yes; use BLUF for fast updates, SCQA for framing, and the Pyramid for complex multi-reason arguments."
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Pick something you want approved: a product, a tool, an initiative, a budget.", "durationSecs": 20},
+          {"step": 2, "instruction": "Write the Problem in one or two sentences. Name who hurts, attach a number, tie it to a consequence.", "durationSecs": 45},
+          {"step": 3, "instruction": "Write the Solution in one sentence — the mechanism that fixes that exact problem. No feature dump.", "durationSecs": 30},
+          {"step": 4, "instruction": "Write the Benefit as a quantified ROI in the same currency as the problem.", "durationSecs": 45},
+          {"step": 5, "instruction": "Deliver all three out loud in order, ending with your specific ask. Keep it under 60 seconds.", "durationSecs": 30}
+        ],
+        "drills": [
+          {"id": "psb-pitch-drill", "title": "Pitch It in 60 Seconds: Problem -> Solution -> Benefit", "situation": "You're in an elevator with your VP of Engineering on the way to a leadership offsite. You have about 60 seconds to pitch an initiative you believe in before the doors open.", "background": "The initiative: a centralized internal status dashboard. Today, every team posts deploy and incident updates in different Slack channels, so during an outage on-call engineers waste an average of 25 minutes figuring out what's broken and who owns it. Last quarter there were 12 incidents — roughly 5 hours of coordination delay, during windows when revenue is bleeding at about $8K per minute. The dashboard takes one engineer three weeks to build (~$15K) and would cut that coordination time in half.", "task": "Deliver a 60-second pitch using Problem -> Solution -> Benefit, in that order. Define the pain with a specific number, state the solution in a sentence, quantify the benefit/ROI, and end with a clear ask.", "starterPhrase": "Right now, every time we have an outage...", "modelAnswer": "Right now, every time we have an outage, on-call engineers burn 25 minutes just hunting across Slack channels to figure out what's broken and who owns it. Last quarter that was 12 incidents — five hours of pure coordination delay, while we're losing roughly $8K a minute [Problem]. So I want to build one centralized status dashboard where every team's deploys and incidents land in a single place, auto-updated [Solution]. One engineer, three weeks, about $15K. It cuts that coordination time in half — and even shaving two hours of downtime a year off our biggest incidents pays for itself many times over [Benefit]. Give me one engineer for three weeks and I'll have a working version before the next on-call rotation.", "successCriteria": ["Followed the order: Problem, then Solution, then Benefit", "Defined the problem with a specific number", "Stated the solution clearly in roughly one sentence — no feature dump", "Quantified the benefit/ROI and tied it back to the problem's currency", "Ended with a specific ask, delivered in about 60 seconds"], "durationSecs": 60}
+        ]
+      },
+      "relatedDrill": "psb-pitch-drill",
+      "practicePrompt": "Pitch one product or initiative in 60 seconds using Problem -> Solution -> Benefit, ending with a quantified ROI and a clear ask.",
+      "position": 8
+    },
+    {
+      "id": "lesson-ethos-pathos-logos",
+      "moduleId": "mod-persuasion",
+      "title": "Lesson 4.1: Ethos, Pathos, Logos",
+      "summary": "Aristotle's three appeals are the operating system of persuasion. Learn to build credibility (ethos), emotion (pathos), and logic (logos) — and to blend all three like the great speakers do.",
+      "estimatedMinutes": 14,
+      "body": {
+        "blocks": [
+          {"heading": "The Three Appeals (Why This Still Wins After 2,300 Years)", "text": "Aristotle noticed that every persuasive message pulls on three levers. Pull only one and you're fragile. Pull all three and you're almost impossible to ignore.\n\n• **Ethos** — credibility and character. Why should they trust YOU?\n• **Pathos** — emotion. Why should they CARE?\n• **Logos** — logic and evidence. Why is this actually TRUE?\n\nMost professionals over-index on logos. They believe the best argument wins. It doesn't. The best-delivered argument wins — and that means the audience trusts the speaker (ethos) and feels the stakes (pathos) before they weigh the data (logos)."},
+          {"heading": "Building Ethos — Earn the Right to Be Believed", "text": "Ethos is established in the first 30 seconds, often before you make a single claim. Build it with:\n\n• **Relevant experience** — 'I've shipped 14 launches; three of them failed for this exact reason.'\n• **Named credibility** — cite the source, the study, the customer, the number.\n• **Calibrated honesty** — admitting a limitation ('This won't fix everything') makes the rest more believable.\n• **Composure** — steady pace, no hedging, a pitch that drops at the end of statements (see Module 2).\n\nBorrowed ethos ('experts say') is weak. Specific ethos ('our own A/B test on 40,000 users showed') is strong."},
+          {"heading": "Building Pathos — Make Them Feel the Stakes", "text": "Pathos is not manipulation; it's making the abstract concrete enough to feel. Tools:\n\n• **One real person** — a single named customer beats a million anonymous ones.\n• **Show, don't tell** — describe the support agent at 11pm rebooting the server by hand, not 'operational inefficiency.'\n• **Contrast** — paint the painful present, then the better future.\n• **Stakes language** — what's lost if nothing changes, what's gained if it does.\n\nUse pathos to open the door; use logos to walk through it."},
+          {"heading": "Building Logos — and the Right Balance", "text": "Logos is your structure and proof: data, a clear cause-and-effect chain, a named framework, a cost/benefit.\n\nThe balance depends on your audience:\n• **Skeptical/technical audience** -> lead heavier on logos, but anchor it with ethos up front.\n• **Disengaged or fearful audience** -> lead with pathos to earn attention, then deliver logos.\n• **Cold audience who doesn't know you** -> lead with ethos so they'll accept the rest.\n\nGreat speakers blend, they don't silo. In one minute Bryan Stevenson establishes ethos, pathos, and logos — and each appeal makes the others land harder."}
+        ],
+        "examples": [
+          {"before": "We should migrate to the new database. Query latency drops 60%, storage costs fall 30%, and it supports horizontal scaling. The benchmarks are attached.", "after": "I've run three migrations like this, and I've also seen one go sideways — so I don't say this lightly: we should migrate to the new database. [ethos] Last Tuesday our checkout timed out for 4,000 customers during peak hours; I watched the on-call engineer manually restart shards at midnight. That can't keep happening. [pathos] The new database cuts query latency 60%, drops storage cost 30%, and scales horizontally. [logos] I'm asking for a two-week pilot starting Monday.", "note": "Identical recommendation and data. Adding ethos and pathos turns a spec sheet into a decision the room feels ready to make."},
+          {"before": "I really think we need to do something about burnout, it's a big problem and people are unhappy.", "after": "I've run this team for three years and reviewed every exit interview [ethos]. Maria — one of our best engineers — told me she cried in her car before standup for a month before she quit [pathos]. Our attrition is up 22% and replacement cost is roughly $80K per engineer [logos]. We can fix this with a four-week workload reset. Here's the plan.", "note": "Vague concern becomes a credible, emotional, evidence-backed case for action."}
+        ],
+        "takeaways": [
+          "Every persuasive message pulls three levers: ethos (trust), pathos (emotion), logos (logic).",
+          "Most people over-rely on logos. The best-delivered argument wins, not just the best argument.",
+          "Build ethos with specific, relevant credibility — not 'experts say.'",
+          "Build pathos with one real person and sensory detail, not abstract statistics.",
+          "Blend all three: emotion earns attention, credibility earns trust, evidence justifies the decision."
+        ],
+        "links": [
+          {"title": "Wikipedia: Modes of Persuasion (Ethos, Pathos, Logos)", "url": "https://en.wikipedia.org/wiki/Modes_of_persuasion"}
+        ],
+        "videos": [
+          {"title": "Bryan Stevenson — 'We need to talk about an injustice' (TED)", "youtubeId": "IKdwdPk_scU", "startSec": 0, "endSec": 240, "watchFor": "Watch the first 4 minutes and tag each appeal in real time. Stevenson establishes ethos (his legal work), pathos (the story about his grandmother), and logos (incarceration statistics). Notice how he leads with character and emotion to earn the right to deliver the hard data later."}
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Pick a real recommendation you need to make (a tool, a hire, a policy).", "durationSecs": 20},
+          {"step": 2, "instruction": "Write your ETHOS line: one sentence of specific, relevant credibility.", "durationSecs": 40},
+          {"step": 3, "instruction": "Write your PATHOS line: name one real person or vivid moment that makes the stakes feel real.", "durationSecs": 40},
+          {"step": 4, "instruction": "Write your LOGOS line: 1-2 concrete numbers or a clear cause-and-effect chain.", "durationSecs": 40},
+          {"step": 5, "instruction": "Deliver all three in sequence — ethos, then pathos, then logos — ending with a specific ask.", "durationSecs": 40}
+        ],
+        "drills": [
+          {"id": "three-appeals-drill", "title": "All Three Appeals, One Recommendation", "situation": "You're in a budget meeting. The VP says: 'Make your case for the new customer-support tool in under a minute — convince me.'", "background": "The facts: you've managed support for 5 years. Tickets are up 35% this quarter and average response time has slipped from 2 hours to 9 hours. One loyal customer, a bakery owner named Dev, publicly tweeted that he felt 'ghosted' after waiting two days. The new tool ($24K/year) auto-triages tickets and, in a 30-day trial, cut first-response time by 70%.", "task": "Make the recommendation using all three appeals IN SEQUENCE: first establish ethos, then pathos, then logos, and finish with a clear ask. Keep it under 60 seconds.", "starterPhrase": "I've run this support team for five years, so I don't ask for budget lightly...", "modelAnswer": "I've run this support team for five years, so I don't ask for budget lightly. [ethos] Last week Dev — a bakery owner who's been with us since day one — tweeted that he felt ghosted after waiting two days for help. I never want to read that again. [pathos] Here's why it's happening: tickets are up 35% and our first-response time has slipped from 2 hours to 9. In a 30-day trial, this tool auto-triaged the queue and cut first-response time by 70%, for $24K a year. [logos] I'm asking you to approve it for next quarter so we stop losing the customers who built this company. [ask]", "successCriteria": ["Clearly hit all three appeals in order: ethos, then pathos, then logos", "Ethos was specific and relevant (not 'experts say')", "Pathos used one real, named person or a vivid moment", "Logos included concrete numbers", "Ended with a clear, specific ask"], "durationSecs": 60}
+        ]
+      },
+      "relatedDrill": "three-appeals-drill",
+      "practicePrompt": "Take a recommendation you need to make and deliver it three ways — once as ethos only, once as pathos only, once as logos only — then blend all three.",
+      "position": 1
+    },
+    {
+      "id": "lesson-monroe-motivated-sequence",
+      "moduleId": "mod-persuasion",
+      "title": "Lesson 4.2: Monroe's Motivated Sequence",
+      "summary": "A five-step structure engineered to move an audience from attention to action. Learn Attention, Need, Satisfaction, Visualization, and Action — and why Visualization separates pros from amateurs.",
+      "estimatedMinutes": 14,
+      "body": {
+        "blocks": [
+          {"heading": "A Structure Built for Action, Not Just Agreement", "text": "Most arguments aim to make people agree. Monroe's Motivated Sequence aims to make people ACT. Developed by Alan H. Monroe at Purdue in the 1930s, it maps onto how humans actually decide: grab me, show me the problem, solve it, let me feel the payoff, then tell me exactly what to do.\n\nThe five steps, always in order:\n1. **Attention** — earn the right to be heard\n2. **Need** — establish the problem and make it theirs\n3. **Satisfaction** — present your solution clearly\n4. **Visualization** — paint the future, vividly\n5. **Action** — ask for a specific, concrete commitment\n\nIt's the backbone of great TED talks, sales pitches, fundraising appeals, and internal change proposals."},
+          {"heading": "The Five Steps, Worked Example (Remote-Work Policy)", "text": "**1. Attention** — open with a hook: 'Last month we lost two senior engineers in the same week. Both gave the same reason.'\n\n**2. Need** — name the problem and make the audience feel it: 'Our best people are commuting 90 minutes a day. Our last engagement survey scored flexibility a 3 out of 10. This is costing us talent we can't replace.'\n\n**3. Satisfaction** — present the solution: 'I propose a hybrid policy: three days remote, two in-office, with core hours 10 to 2.'\n\n**4. Visualization** — paint the future (see below).\n\n**5. Action** — make the ask unmistakable: 'I'm asking this leadership team to approve a 90-day pilot starting the first of next month. I need a yes or no by Friday.'"},
+          {"heading": "Visualization — The Step That Wins (vs. Problem-Solution-Benefit)", "text": "Many people know Problem-Solution-Benefit. Monroe's looks similar — but Visualization is the differentiator, and most speakers skip it.\n\nVisualization makes the audience *live* the outcome before they decide. Three ways to do it:\n• **Positive** — vividly describe the better world if they say yes.\n• **Negative** — vividly describe the painful world if they do nothing.\n• **Contrast** — show both, back to back.\n\nPositive example: 'Picture six months from now. Maria isn't crawling through traffic — she's shipped two features by the time the old commute would've ended. Our engagement score on flexibility has climbed from a 3 to an 8. And when a competitor tries to poach her, she says no, because she already has what she'd be leaving for.'\n\nVisualization converts logical agreement into emotional ownership."},
+          {"heading": "Common Mistakes (and Fixes)", "text": "❌ **Weak Action step.** 'So... let me know what you think.' -> ✅ Ask for one specific, time-bound commitment.\n\n❌ **Skipping Visualization.** Jumping from solution straight to the ask. -> ✅ Spend 15-30 seconds letting them feel the future.\n\n❌ **A Need step that's all data, no stakes.** -> ✅ Pair the numbers with one human consequence.\n\n❌ **A generic Attention hook** ('Today I want to talk about...'). -> ✅ Open with a startling fact, a question, or a story."}
+        ],
+        "examples": [
+          {"before": "We have a problem with remote work flexibility and people are unhappy about commuting. I think a hybrid policy would help with retention and productivity, so we should probably consider approving something like that.", "after": "Last month we lost two senior engineers in the same week — both blamed the commute. [Attention/Need] I propose a hybrid policy: three days remote, two in-office, with core hours 10 to 2. [Satisfaction] Picture six months out: Maria ships two features in the time her old commute used to eat, our flexibility score climbs from 3 to 8, and she turns down a poaching offer because she already has what she'd be leaving for. [Visualization] I'm asking this team to approve a 90-day pilot starting the 1st — I need a yes or no by Friday. [Action]", "note": "The 'after' walks the five steps. The Visualization step makes the audience feel the win before they vote."}
+        ],
+        "takeaways": [
+          "Monroe's Motivated Sequence is built to drive ACTION, not just agreement.",
+          "The five steps, always in order: Attention, Need, Satisfaction, Visualization, Action.",
+          "Visualization is the differentiator from Problem-Solution-Benefit — make the audience live the future.",
+          "Use positive, negative, or contrast visualization to fit your audience.",
+          "End with a specific, time-bound ask — never 'let me know what you think.'"
+        ],
+        "links": [
+          {"title": "Wikipedia: Monroe's Motivated Sequence", "url": "https://en.wikipedia.org/wiki/Monroe%27s_motivated_sequence"}
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Pick a change you want to persuade someone to make (a policy, a purchase, a cause).", "durationSecs": 20},
+          {"step": 2, "instruction": "ATTENTION: write a hook — a startling fact, a question, or a one-line story.", "durationSecs": 40},
+          {"step": 3, "instruction": "NEED: state the problem in 2 sentences and add one human consequence.", "durationSecs": 40},
+          {"step": 4, "instruction": "SATISFACTION: state your solution in one clear, concrete sentence.", "durationSecs": 30},
+          {"step": 5, "instruction": "VISUALIZATION: spend 20-30 seconds painting the specific future if they say yes.", "durationSecs": 45},
+          {"step": 6, "instruction": "ACTION: write one specific, time-bound ask. Then deliver all five steps in sequence.", "durationSecs": 45}
+        ],
+        "drills": [
+          {"id": "monroe-pitch-drill", "title": "The 90-Second Five-Step Pitch", "situation": "Your city council has an open-comment slot. You have 90 seconds to persuade them to fund a safe cycling lane on Main Street.", "background": "The facts: Main Street has had 11 cyclist injuries in two years, including a 14-year-old hit last spring on her way to school. A protected bike lane costs $180K. A comparable lane on Oak Street cut injuries by 80% and increased foot traffic to local shops by 15%. The council votes on next year's budget in two weeks.", "task": "Deliver a 90-second persuasive pitch that hits ALL FIVE steps in order — Attention, Need, Satisfaction, Visualization, Action. Make the Visualization vivid, and end with a specific ask tied to the vote.", "starterPhrase": "Last spring, a 14-year-old was hit by a car on Main Street on her way to school...", "modelAnswer": "Last spring, a 14-year-old was hit by a car on Main Street on her way to school. [Attention] She wasn't the first — there have been 11 cyclist injuries on that road in two years, and every parent here knows it could be their kid next. [Need] The fix is proven: a protected bike lane, $180K, the same design we already built on Oak Street. [Satisfaction] Picture next September. Kids ride to school on a lane separated from traffic. Injuries drop the way they dropped 80% on Oak. Parents stop white-knuckling the morning drop-off, and the shops on Main see the same 15% bump in foot traffic Oak's businesses got. [Visualization] You vote on the budget in two weeks. I'm asking each of you to fund the Main Street protected lane — so no parent gets that phone call again. [Action]", "successCriteria": ["Hit all five steps in order: Attention, Need, Satisfaction, Visualization, Action", "The Attention step was a hook, not a generic intro", "The Need step paired a number with a human consequence", "The Visualization step painted a specific, vivid future", "The Action step was a specific, time-bound ask tied to the vote"], "durationSecs": 90}
+        ]
+      },
+      "relatedDrill": "monroe-pitch-drill",
+      "practicePrompt": "Pick a change you care about and deliver a 90-second pitch hitting all five steps — spend the most energy on Visualization.",
+      "position": 2
+    },
+    {
+      "id": "lesson-impromptu-prep",
+      "moduleId": "mod-thinking-on-feet",
+      "title": "Lesson 6.1: Impromptu Speaking with PREP",
+      "summary": "Most of your speaking happens with zero warning. Learn lightweight structures that turn a panicked 'um...' into a crisp, confident answer in seconds.",
+      "estimatedMinutes": 12,
+      "body": {
+        "blocks": [
+          {"heading": "Why Impromptu Speaking Feels Terrifying (And the Real Fix)", "text": "Most of your professional speaking is spontaneous, not planned. The cold-call in a meeting. 'Quick, what do you think?' The surprise toast. You can't rehearse these — and that's why they spike your heart rate.\n\nThe panic isn't a confidence problem. It's a navigation problem. When you're put on the spot, your brain scrambles to do two things at once: figure out WHAT to say and HOW to organize it. That overload produces the 'uhh... so... I mean...' spiral.\n\nThe fix: pre-load a structure. If you already know the SHAPE of your answer before you know the content, your brain only has one job. A structure is a map — and you can't get lost if you have a map."},
+          {"heading": "The PREP Framework", "text": "PREP is the single most useful impromptu structure. Four beats, in order:\n\n1. **P — Point**: State your answer in one sentence. 'I think we should ship the beta next week.'\n2. **R — Reason**: Give the why. 'Because every extra week of delay costs us momentum with early adopters.'\n3. **E — Example**: Make it concrete. 'When we delayed the last release, we lost three pilot customers.'\n4. **P — Point**: Restate your point as a clean landing. 'So let's ship next week and iterate live.'\n\nThe magic is the bookends. Starting AND ending with your point makes you sound decisive and gives you a graceful exit instead of trailing off."},
+          {"heading": "Two More Structures for Any Situation", "text": "PREP is your default, but keep two more in your back pocket:\n\n**Past — Present — Future**: Perfect for status updates and introductions. 'Six months ago we were losing market share [past]. Today we've stabilized and grown 8% [present]. Next quarter we double down on retention [future].'\n\n**What — So What — Now What**: Ideal for reactions and feedback. 'We hit 95% uptime this month [what]. That matters because reliability is our #1 churn driver [so what]. So I'm proposing we invest in on-call tooling next sprint [now what].'\n\nAll three share the same DNA: a clear opening, a middle that adds meaning, and a forward-looking close."},
+          {"heading": "Buy Thinking Time Gracefully — and Stay Concise", "text": "You don't have to answer the instant someone stops talking. Buy 3-5 seconds without saying 'um':\n\n• **Repeat or reframe the question**: 'So the real question is whether we prioritize speed or polish...'\n• **Take a strategic pause**: A 2-3 second silence reads as thoughtful, not lost.\n• **Narrate your structure**: 'There are two things to consider here.'\n\nThen be ruthlessly concise. The #1 impromptu mistake is over-talking: you find a decent answer, then keep going and bury it. When you hit your final 'Point,' STOP."}
+        ],
+        "examples": [
+          {"before": "Um, so, that's a good question... I guess it depends, there are a lot of factors, like the timeline and the budget and also the team's bandwidth, but yeah, I think maybe we could possibly consider it?", "after": "We should green-light the project [Point]. The ROI math clears our 3x threshold [Reason] — the last initiative with these numbers paid back in five months [Example]. So I'd approve it and start next sprint [Point].", "note": "Same uncertainty, but PREP converts a hedge-filled ramble into a 12-second decisive answer."},
+          {"before": "(Boss: 'What's the status on the migration?') Uh, well, we've been working on it, there have been some challenges, the team's been busy, but we're making progress I think.", "after": "Last week we were blocked on the data export [Past]. That's resolved and we're now 70% migrated [Present]. We'll be fully cut over by Friday [Future].", "note": "Past-Present-Future gives a vague status update a clear timeline and a confident shape."},
+          {"before": "(Surprise toast) Oh wow, I didn't prepare anything... uh... Sarah's great... we've worked together a while... congrats Sarah! (sits down)", "after": "When Sarah joined, our team was drowning in missed deadlines [What]. She rebuilt how we plan, and we haven't slipped a launch since [So What]. So here's to Sarah: may she keep making the impossible look easy [Now What]. Cheers!", "note": "Even a toast has a structure. What-So What-Now What turns a mumble into a moment."}
+        ],
+        "takeaways": [
+          "Impromptu panic is a navigation problem — pre-load a structure and your brain only has to fill in content.",
+          "PREP is your default: Point, Reason, Example, Point. Bookend with your conclusion to sound decisive.",
+          "Keep Past-Present-Future (updates) and What-So What-Now What (reactions) ready as backups.",
+          "Buy time gracefully by reframing the question or taking a 2-3 second pause — never 'um'.",
+          "When you hit your final Point, STOP. Concise and structured beats long and rambling."
+        ],
+        "links": [
+          {"title": "Matt Abrahams — 'Think Fast. Talk Smart' (TEDx)", "url": "https://www.youtube.com/watch?v=o3K_HbpWNpg"}
+        ],
+        "videos": [
+          {"title": "Think Fast, Talk Smart: Communication Techniques (Stanford GSB)", "youtubeId": "HAnw168huqA", "watchFor": "Matt Abrahams teaches the exact skill of speaking when you're put on the spot. Watch for his message that spontaneous speaking is more common than planned speaking, and his structure advice — especially 'What, So What, Now What' — as a map that keeps you from getting lost mid-answer."}
+        ],
+        "steps": [
+          {"step": 1, "instruction": "Have someone (or your AI coach) ask you a random opinion question, e.g. 'Should companies allow fully remote work?'", "durationSecs": 5},
+          {"step": 2, "instruction": "PAUSE for 3 full seconds. Don't say 'um'. Just think: what's my one-sentence Point?", "durationSecs": 5},
+          {"step": 3, "instruction": "State your Point — your answer in one decisive sentence.", "durationSecs": 8},
+          {"step": 4, "instruction": "Give one Reason — the 'because' behind your point.", "durationSecs": 10},
+          {"step": 5, "instruction": "Add one Example — a specific story, number, or instance.", "durationSecs": 12},
+          {"step": 6, "instruction": "Restate your Point as a clean closing line. Then STOP talking.", "durationSecs": 5}
+        ],
+        "drills": [
+          {"id": "prep-surprise-question", "title": "PREP Under Fire: The Surprise Question", "situation": "You're in an all-hands, half-listening, when the VP turns to you: 'You've been close to this — should we sunset the legacy product or keep maintaining it? What's your take?' Forty pairs of eyes swing to you.", "background": "What you know: the legacy product still generates $2M/year but from only 8% of customers. It costs roughly $600K/year to maintain and ties up two senior engineers. Most of those customers have a clear migration path to your new platform. You have about five seconds to think and forty-five to answer.", "task": "Answer using PREP. Open with your one-sentence Point, give one Reason, one concrete Example or number, then restate your Point and stop. Take a deliberate pause before you begin instead of filling it with 'um'.", "starterPhrase": "We should sunset it — on a planned timeline.", "modelAnswer": "We should sunset the legacy product on a planned 12-month timeline [Point]. It's draining two senior engineers and $600K a year to serve just 8% of customers, and almost all of them have a clean path to our new platform [Reason]. When we migrated the enterprise tier last year, 90% of accounts moved over within two quarters with zero churn [Example]. So let's announce a sunset date, give those customers a guided migration, and free the team for higher-leverage work [Point].", "successCriteria": ["Opened with a clear one-sentence Point", "Gave a specific Reason and a concrete Example or number", "Closed by restating the Point, then stopped", "Took a deliberate pause to start — no 'um' or rambling preamble", "Delivered in under 45 seconds"], "durationSecs": 60}
+        ]
+      },
+      "relatedDrill": "prep-surprise-question",
+      "practicePrompt": "Have someone ask you a random opinion question. Pause 3 seconds, then answer in PREP: Point, Reason, Example, Point.",
+      "position": 1
+    },
+    {
+      "id": "lesson-qa-handling",
+      "moduleId": "mod-thinking-on-feet",
+      "title": "Lesson 6.2: Handling Q&A and Tough Questions",
+      "summary": "The Q&A can make or break a talk. Learn to listen fully, defuse hostile questions, handle 'I don't know' with grace, and end on your terms.",
+      "estimatedMinutes": 14,
+      "body": {
+        "blocks": [
+          {"heading": "Listen Fully, Then Pause", "text": "Most people lose the Q&A before they open their mouth. The moment a question starts, they begin formulating their answer — and stop listening. They answer the question they THOUGHT was asked, not the one that was.\n\nDiscipline #1: listen to the entire question. Let the asker fully finish.\n\nDiscipline #2: pause before answering. A 2-3 second silence after a question makes you look thoughtful and in control, prevents a defensive knee-jerk, and gives your brain time to choose a structure. To you the pause feels like forever; to the audience it reads as gravitas. Silence is not weakness; rushing is."},
+          {"heading": "The ARC Method: Acknowledge, Respond, Conclude", "text": "Every answer should follow a clean three-part arc:\n\n1. **A — Acknowledge**: Show you heard and value the question. 'That's a fair challenge.' This buys you a beat AND builds rapport.\n2. **R — Respond**: Answer concisely. Make ONE clear point. A focused answer is more credible than an exhaustive one.\n3. **C — Conclude**: Land it and stop. 'So that's why we're confident in the timeline.'\n\nMost bad answers happen in the 'Respond' phase when there's no 'Conclude' to put on the brakes — the speaker keeps talking and talks their way into trouble."},
+          {"heading": "Bridging: Defusing Hostile or Loaded Questions", "text": "Hostile and loaded questions hide a negative frame. 'Why has your team failed to fix this for months?' If you repeat the frame — 'Well, the reason we've failed is...' — you've endorsed the attack.\n\nRule: never repeat negative language. Acknowledge the underlying concern, then BRIDGE to territory you can speak to powerfully:\n• 'The real issue here is...'\n• 'What I can tell you is...'\n• 'Let me put that in context...'\n\nSo 'Why have you failed for months?' becomes: 'I understand the frustration — reliability is exactly what we're focused on. What I can tell you is we shipped three fixes this month and uptime is now at 99.9%.'"},
+          {"heading": "Handling 'I Don't Know' — and Ending on Your Terms", "text": "Saying 'I don't know' with confidence builds MORE credibility than bluffing. The graceful formula: admit it, commit to follow up, then redirect to what you do know. 'I don't have that exact figure in front of me — I'll get it to you by end of day. What I can say is the trend has been positive three quarters running.'\n\nFinally, end Q&A on YOUR terms. Don't let it fizzle on a negative question. Take 'one last question,' answer it, and deliver a planned 15-second closing that returns to your core message. The asker gets the last question; you get the last word."}
+        ],
+        "examples": [
+          {"before": "(Question: 'Why did your rollout completely fail last quarter?') Well, the rollout failed because we underestimated the complexity and we had some staffing gaps and the testing wasn't where it needed to be, so yeah, it was rough.", "after": "I hear the concern, and getting rollouts right is a top priority for us [Acknowledge]. What I can tell you is we rebuilt our launch process after last quarter — staged rollouts, automated testing — and the two releases since have shipped on time with zero incidents [Respond + bridge]. So we've turned that lesson into a real advantage [Conclude].", "note": "The 'before' repeats the word 'failed' and piles on negatives. The 'after' acknowledges, refuses the negative frame, bridges to facts, and lands on strength."},
+          {"before": "(Question you can't answer) Um, I think it's probably around... maybe 15%? I'm not totally sure, it could be higher, somewhere in that range I'd guess.", "after": "I don't want to guess at a number I'm not certain of — I'll send you the exact figure by this afternoon [admit + commit]. What I can tell you is the metric has improved every quarter this year [redirect to strength].", "note": "Honest beats a bluff every time. Admitting the gap preserves your credibility on everything else."},
+          {"before": "(Loaded: 'Isn't it true that this strategy just protects management's bonuses?') No, that's not... I mean, it's not about bonuses, that's not what this is... look, that's not fair to say.", "after": "I understand why incentives are top of mind — they should be scrutinized [Acknowledge]. The real issue is whether this strategy creates long-term value for everyone, and on that the numbers are clear: it ties payouts directly to customer retention, not short-term targets [bridge + Respond]. That alignment is exactly the point [Conclude].", "note": "The 'before' gets defensive and flustered. The 'after' acknowledges, bridges away from the loaded frame, and answers from strength."}
+        ],
+        "takeaways": [
+          "Listen to the ENTIRE question, then pause 2-3 seconds. The pause reads as gravitas and prevents a defensive reaction.",
+          "Use ARC for every answer: Acknowledge, Respond (one clear point), Conclude — then stop.",
+          "Never repeat the negative language in a hostile or loaded question. Acknowledge the concern, then bridge to facts.",
+          "'I don't know' said with confidence beats a bluff. Admit, commit to follow up, redirect to what you do know.",
+          "End Q&A on your terms: take a 'last question,' then deliver a planned closing so your message gets the final word."
+        ],
+        "videos": [
+          {"title": "Think Fast, Talk Smart: Communication Techniques (Stanford GSB)", "youtubeId": "HAnw168huqA", "watchFor": "Watch how Matt Abrahams frames Q&A as a high-stakes spontaneous-speaking situation. Note his emphasis on managing anxiety, listening, and using a simple structure to stay concise and in control instead of getting defensive under pressure."}
+        ],
+        "drills": [
+          {"id": "qa-hostile-bridge", "title": "The Hostile Question: Acknowledge, Bridge, Respond", "situation": "You've just finished presenting your team's new pricing model. A skeptical stakeholder leans forward, arms crossed: 'Let's be honest — isn't this price hike just a cash grab that's going to drive away your loyal customers?' The room turns to you.", "background": "The facts: the new pricing is a 12% increase, the first in four years. It funds 24/7 support and a faster release cycle customers have requested. Your beta cohort on the new plan showed HIGHER retention — churn dropped 3 points. You also grandfather existing customers at their current rate for 12 months. The question is loaded with negative framing you must NOT repeat.", "task": "Respond using Acknowledge -> Bridge -> Respond. Acknowledge the concern without getting defensive, bridge away from the loaded 'cash grab' frame, and respond with concrete facts. Do not repeat the words 'cash grab' or 'drive away.' End on a confident conclusion, then stop.", "starterPhrase": "I understand the worry — pricing changes always deserve scrutiny.", "modelAnswer": "I understand the worry — pricing changes always deserve scrutiny, and loyalty matters enormously to us [Acknowledge]. The real question is whether customers get more value for the change, and here's what the data shows [Bridge]: this is our first adjustment in four years, it funds the 24/7 support and faster releases people have been asking for, and our beta customers on the new plan actually churned 3 points LESS, not more. On top of that, every existing customer keeps their current rate for a full year [Respond]. So this isn't about extracting more — it's about investing in the experience that keeps people with us [Conclude].", "successCriteria": ["Acknowledged the concern calmly without getting defensive", "Did NOT repeat the loaded framing ('cash grab', 'drive away')", "Bridged to your own frame ('the real question is...')", "Responded with at least two concrete facts or numbers", "Ended on a confident conclusion and stopped"], "durationSecs": 60}
+        ]
+      },
+      "relatedDrill": "qa-hostile-bridge",
+      "practicePrompt": "Have someone ask you a hostile, loaded question about your work. Respond with Acknowledge, Bridge, Respond — without repeating any negative wording.",
       "position": 2
     }
   ]
